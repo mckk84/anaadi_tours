@@ -1,0 +1,26 @@
+.header-logo {
+    max-width: 250px;
+    height: 100px;
+}
+
+.header_logo {
+    width: 100px;
+    float: left;
+    display: block;
+}
+
+.header_logo_title {
+    width: 145px;
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    float: right;
+    margin-top: 15px;
+}
+.header_logo_title_sub {
+    display: inline-block;
+    width: 145px;
+    font-size: 17px;
+    font-weight: 500;
+    float: right;
+}
