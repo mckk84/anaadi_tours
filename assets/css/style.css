@@ -282,7 +282,7 @@ h5,
 .h6,
 h6 {
   font-family: var(--title-font);
-  color: var(--title-color);
+  color: var(--theme-color);
   text-transform: none;
   font-weight: 700;
   line-height: 1.4;
@@ -2233,7 +2233,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
   padding-top: 40px;
   display: block;
   text-align: center;
-  background-color: var(--smoke-color);
+  background-color: var(--white-color);
 }
 
 .th-menu-wrapper .mobile-logo svg {
@@ -2254,12 +2254,12 @@ input[type=time]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   z-index: 1;
   color: var(--white-color);
-  background-color: var(--title-color);
+  background-color: var(--theme-color);
   border-radius: 50%;
 }
 
 .th-menu-wrapper .th-menu-toggle:hover {
-  background-color: var(--title-color);
+  background-color: var(--theme-color);
   color: var(--white-color);
 }
 
@@ -2267,7 +2267,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
   width: 100%;
   max-width: 310px;
   background-color: #fff;
-  border-right: 3px solid var(--title-color);
+  border-right: 3px solid var(--theme-color);
   height: 100%;
   position: relative;
   left: -110%;
@@ -2318,7 +2318,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
   line-height: 1.4;
   font-size: 16px;
   text-transform: capitalize;
-  color: var(--title-color);
+  color: var(--black-color);
   padding-left: 0px;
 }
 

@@ -11,8 +11,9 @@
 }
 
 .header-button .th-btn {
-    margin-left: 10px;
+    margin-left: 5px;
     padding: 10px 15px;
+    font-size: 14px;
 }
 
 .th-btn.th-icon:after {
@@ -67,4 +68,18 @@ select, .form-control, .form-select, textarea, input {
     border-radius: 8px;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
+}
+
+.info-box_text .details p {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.header-layout1 .main-menu {
+    position: relative;
+    padding-left: 50px;
+}
+
+.header-layout1 .main-menu > ul > li {
+    margin: 0px 15px;
 }
