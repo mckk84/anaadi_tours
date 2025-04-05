@@ -1,3 +1,8 @@
+.header-logo {
+    max-width: 280px;
+    overflow: hidden;
+}
+
 .header_logo {
     width: 135px;
     float: left;
@@ -9,6 +14,27 @@
     margin-left: 5px;
     padding: 10px 15px;
     font-size: 14px;
+}
+
+.header_logo_title {
+    display: block;
+    float: left;
+    margin-top: 20px;
+    font-size: 35px;
+    color: var(--theme-color);
+    width: 100px;
+    line-height: 50px;
+    font-weight: 700;
+}
+.header_logo_title_sub {
+    float: left;
+    display: block;
+    margin-top: 0px;
+    font-size: 17px;
+    color: var(--theme-color);
+    width: 131px;
+    line-height: 25px;
+    font-weight: 600;
 }
 
 .th-btn.th-icon:after {
@@ -76,9 +102,14 @@ select, .form-control, .form-select, textarea, input {
 }
 
 .header-layout1 .main-menu > ul > li {
-    margin: 0px 15px;
+    margin: 0px 10px;
 }
 
 .testi-area13 {
     background-color: var(--white-color);
+}
+
+.header-layout1 .main-menu {
+    position: relative;
+    padding-left: 30px;
 }

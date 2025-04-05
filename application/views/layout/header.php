@@ -55,27 +55,8 @@
 				<div class="widget">
 					<div class="th-widget-about">
 						<div class="about-logo"><a href="home-travel.html"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels"></a></div>
-						<p class="about-text">Rapidiously myocardinate cross-platform intellectual capital model. Appropriately create interactive infrastructures</p>
+						<p class="about-text">Anaadi Tours and Travels is a trusted travel tour package operator based in Bangalore. Get the best deals, customized tour packages, and more from the best travel agency in Bangalore.</p>
 						<div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></div>
-					</div>
-				</div>
-				<div class="widget">
-					<h3 class="widget_title">Recent Posts</h3>
-					<div class="recent-post-wrap">
-						<div class="recent-post">
-							<div class="media-img"><a href="blog-details.html"><img src="<?=base_url()?>assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a></div>
-							<div class="media-body">
-								<div class="recent-post-meta"><a href="blog.html"><i class="far fa-calendar"></i>24 Jun , 2025</a></div>
-								<h4 class="post-title"><a class="text-inherit" href="blog-details.html">Where Vision Meets Concrete Reality</a></h4>
-							</div>
-						</div>
-						<div class="recent-post">
-							<div class="media-img"><a href="blog-details.html"><img src="<?=base_url()?>assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a></div>
-							<div class="media-body">
-								<div class="recent-post-meta"><a href="blog.html"><i class="far fa-calendar"></i>22 Jun , 2025</a></div>
-								<h4 class="post-title"><a class="text-inherit" href="blog-details.html">Raising the Bar in Construction.</a></h4>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="widget">
@@ -84,21 +65,19 @@
 						<div class="info-box_text">
 							<div class="icon"><img src="<?=base_url()?>assets/img/icon/phone.svg" alt="img"></div>
 							<div class="details">
-								<p><a href="tel:+01234567890" class="info-box_link">+01 234 567 890</a></p>
-								<p><a href="tel:+09876543210" class="info-box_link">+09 876 543 210</a></p>
+								<p><a href="tel:+918048660847">+91 8048660847</a></p>
 							</div>
 						</div>
 						<div class="info-box_text">
 							<div class="icon"><img src="<?=base_url()?>assets/img/icon/envelope.svg" alt="img"></div>
 							<div class="details">
-								<p><a href="mailto:mailinfo00@tourm.com" class="info-box_link">mailinfo00@tourm.com</a></p>
-								<p><a href="mailto:support24@tourm.com" class="info-box_link">support24@tourm.com</a></p>
+								<p><a href="mailto:nandish@anaadi.co" class="info-box_link">nandish@anaadi.co</a></p>
 							</div>
 						</div>
 						<div class="info-box_text">
 							<div class="icon"><img src="<?=base_url()?>assets/img/icon/location-dot.svg" alt="img"></div>
 							<div class="details">
-								<p>789 Inner Lane, Holy park, California, USA</p>
+								<p>#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</p>
 							</div>
 						</div>
 					</div>
@@ -166,14 +145,14 @@
 				<div class="menu-area">
 					<div class="container">
 						<div class="row align-items-center justify-content-between">
-							<div class="col-auto">
+							<div class="col-auto p-0">
 								<div class="header-logo"><a title="Anaadi Tours and Travels" href="index.html">
 									<img class="header_logo" src="<?=base_url()?>assets/img/alogo.png" alt="Anaadi Tours and Travels">
-									<!-- <span class="header_logo_title">ANAADI</span>
-									<span class="header_logo_title_sub">Tours and Travels</span> -->		
+									<span class="header_logo_title">Anaadi</span>
+									<span class="header_logo_title_sub">Tours & Travels</span>		
 								</a></div>
 							</div>
-							<div class="col-auto me-xl-auto">
+							<div class="col-auto p-0 me-xl-auto">
 								<nav class="main-menu d-none d-xl-inline-block">
 									<ul>
 										<li><a href="<?=base_url()?>">Home</a></li>
@@ -198,7 +177,7 @@
 								</nav>
 								<button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
 							</div>
-							<div class="col-auto d-none d-xl-block">
+							<div class="col-auto p-0 d-none d-xl-block">
 								<div class="header-button">
 									<a href="#login-form" class="popup-content th-btn th-icon">Login / Signup</a>
 									<a href="booknow.html" class="th-btn th-icon">Book Now</a>
