@@ -45,7 +45,7 @@
 			<div class="preloader-inner"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt=""></div>
 			<div id="loader" class="th-preloader">
 				<div class="animation-preloader">
-					<div class="h5">Anaadi Tours and Travels</div>
+					<div class="txt-loading"><span preloader-text="Anaadi" class="characters">Anaadi </span><span preloader-text="tours" class="characters">tours </span><span preloader-text="and" class="characters">and </span><span preloader-text="Travels" class="characters">Travels </span></div>
 				</div>
 			</div>
 		</div>

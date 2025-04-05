@@ -83,3 +83,7 @@ select, .form-control, .form-select, textarea, input {
 .header-layout1 .main-menu > ul > li {
     margin: 0px 15px;
 }
+
+.testi-area13 {
+    background-color: var(--white-color);
+}
