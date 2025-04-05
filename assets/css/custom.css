@@ -113,3 +113,12 @@ select, .form-control, .form-select, textarea, input {
     position: relative;
     padding-left: 30px;
 }
+
+.breadcumb-wrapper {
+    position: relative;
+    background-color: var(--title-color);
+    background-position: left top;
+    padding: 80px 0;
+    overflow: hidden;
+    text-align: center;
+}

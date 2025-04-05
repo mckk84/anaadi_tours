@@ -110,7 +110,7 @@
 								<li><a href="<?=base_url('/Internationaldestinations')?>">International Destinations</a></li>
 							</ul>
 						</li>
-						<li><a href="<?=base_url('/Services')?>">Our Service</a></li>
+						<li><a href="<?=base_url('/Services')?>">Services</a></li>
 						<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
 					</ul>
 				</div>
@@ -124,7 +124,7 @@
 							<div class="header-links">
 								<ul>
 									<li class="d-none d-xl-inline-block"><i class="fa-sharp fa-regular fa-location-dot"></i> <span>#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</span></li>
-									<li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock"></i> <span>Sun to Friday: 8.00 am - 7.00 pm</span></li>
+									<li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock"></i> <span>Sun to Friday: 10.00 AM - 7.00 PM</span></li>
 								</ul>
 							</div>
 						</div>
@@ -132,8 +132,8 @@
 							<div class="header-right">
 								<div class="header-links">
 									<ul>
-										<li class="d-none d-md-inline-block"><i class="fa-regular fa-phone"></i><a href="tel:+918048660847">+91 8048660847</a></li>
-										<li class="d-none d-md-inline-block"><i class="fa-regular fa-envelope"></i><a href="mailto:nandish@anaadi.co">nandish@anaadi.co</a></li>
+										<li class="d-none d-md-inline-block"><i class="fa-regular fa-phone"></i><a href="tel:+916364328383">+91 6364328383</a></li>
+										<li class="d-none d-md-inline-block"><i class="fa-regular fa-envelope"></i><a href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
 									</ul>
 								</div>
 							</div>
@@ -171,7 +171,7 @@
 												<li><a href="<?=base_url('/Internationaldestinations')?>">International Destinations</a></li>
 											</ul>
 										</li>
-										<li><a href="<?=base_url('/Services')?>">Our Service</a></li>
+										<li><a href="<?=base_url('/Services')?>">Services</a></li>
 										<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
 									</ul>
 								</nav>
