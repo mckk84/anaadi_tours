@@ -90,7 +90,7 @@ Last Update: 20-07-2024
 :root {
   --theme-color: #E3010F;
   --primary-color: #1CA8CB;
-  --title-color: #113D48;
+  --title-color: #1CA8CB; /*#113D48*/
   --body-color: #6E7070;
   --smoke-color: #E9F6F9;
   --smoke-color2: #F3F4F6;

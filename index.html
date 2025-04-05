@@ -37,15 +37,15 @@
 		<link rel="stylesheet" href="assets/css/custom.css">
 	</head>
 	<body>
-		<!-- <div id="preloader" class="preloader">
+		<div id="preloader" class="preloader">
 			<button class="th-btn preloaderCls">Cancel Preloader</button>
 			<div class="preloader-inner"><img src="assets/img/anaadi_logo.png" alt=""></div>
 			<div id="loader" class="th-preloader">
 				<div class="animation-preloader">
-					<div class="txt-loading">Anaadi Tours and Travels</div>
+					<div class="text-primary">Anaadi Tours and Travels</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<div class="sidemenu-wrapper sidemenu-info">
 			<div class="sidemenu-content">
 				<button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
@@ -112,25 +112,20 @@
 				<div class="mobile-logo"><a href="home-travel.html"><img src="assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels"></a></div>
 				<div class="th-mobile-menu">
 					<ul>
-						<li class="menu-item-has-children mega-menu-wrap">
-							<a class="active" href="home-travel.html">Home</a>
-							<ul class="sub-menu">
-								<li><a href="home-travel.html">Home Travel</a></li>
-								<li><a href="home-tour.html">Home Tour</a></li>
-								<li><a href="home-agency.html">Home Agency</a></li>
-								<li><a href="home-yacht.html">Home Yacht</a></li>
-								<li><a href="home-beach.html">Home Beach</a></li>
-								<li><a href="home-resort.html">Home Resort</a></li>
-								<li><a href="home-countryside-hotel.html">Home Countryside Hotel</a></li>
-								<li><a href="home-forest.html">Home Forest</a></li>
-							</ul>
-						</li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li class="menu-item-has-children">
-							<a href="#">Destination</a>
+							<a href="#">Domestic Tours</a>
 							<ul class="sub-menu">
-								<li><a href="destination.html">Destination</a></li>
-								<li><a href="destination-details.html">Destination Details</a></li>
+								<li><a href="destination.html">Domestic Tours</a></li>
+								<li><a href="destination-details.html">Domestic Destinations</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">International Tours</a>
+							<ul class="sub-menu">
+								<li><a href="destination.html">International Tours</a></li>
+								<li><a href="destination-details.html">International Destinations</a></li>
 							</ul>
 						</li>
 						<li class="menu-item-has-children">
@@ -138,46 +133,6 @@
 							<ul class="sub-menu">
 								<li><a href="service.html">Services</a></li>
 								<li><a href="service-details.html">Service Details</a></li>
-							</ul>
-						</li>
-						<li class="menu-item-has-children">
-							<a href="#">Activities</a>
-							<ul class="sub-menu">
-								<li><a href="activities.html">activities</a></li>
-								<li><a href="activities-details.html">activities Details</a></li>
-							</ul>
-						</li>
-						<li class="menu-item-has-children">
-							<a href="#">Pages</a>
-							<ul class="sub-menu">
-								<li class="menu-item-has-children">
-									<a href="#">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="shop-details.html">Shop Details</a></li>
-										<li><a href="cart.html">Cart Page</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="wishlist.html">Wishlist</a></li>
-									</ul>
-								</li>
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="tour.html">Our Tour</a></li>
-								<li><a href="tour-details.html">Tour Details</a></li>
-								<li><a href="resort.html">Resort page</a></li>
-								<li><a href="resort-details.html">Resort Details</a></li>
-								<li><a href="tour-details.html">Tour Details</a></li>
-								<li><a href="tour-guide.html">Tour Guider</a></li>
-								<li><a href="tour-guider-details.html">Tour Guider Details</a></li>
-								<li><a href="faq.html">Faq Page</a></li>
-								<li><a href="price.html">Price Package</a></li>
-								<li><a href="error.html">Error Page</a></li>
-							</ul>
-						</li>
-						<li class="menu-item-has-children">
-							<a href="#">Blog</a>
-							<ul class="sub-menu">
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="blog-details.html">Blog Details</a></li>
 							</ul>
 						</li>
 						<li><a href="contact.html">Contact us</a></li>
@@ -253,7 +208,10 @@
 								<button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
 							</div>
 							<div class="col-auto d-none d-xl-block">
-								<div class="header-button"><a href="contact.html" class="th-btn style3 th-icon">Book Now</a></div>
+								<div class="header-button">
+									<a href="#login-form" class="popup-content th-btn th-icon">Login / Signup</a>
+									<a href="booknow.html" class="th-btn th-icon">Book Now</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1027,11 +985,12 @@
 		</div>
 		<div id="login-form" class="popup-login-register mfp-hide">
 			<ul class="nav" id="pills-tab" role="tablist">
-				<li class="nav-item" role="presentation"><button class="nav-menu" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Login</button></li>
-				<li class="nav-item" role="presentation"><button class="nav-menu active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Register</button></li>
+				<li class="nav-item" role="presentation"><button class="nav-menu active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Login</button></li>
+				<li class="nav-item" role="presentation"><button class="nav-menu" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Register</button></li>
+				<li class="nav-item" role="presentation"><button class="nav-menu" id="pills-forgot-tab" data-bs-toggle="pill" data-bs-target="#pills-forgot" type="button" role="tab" aria-controls="pills-forgot" aria-selected="true">Forgot Password</button></li>
 			</ul>
 			<div class="tab-content" id="pills-tabContent">
-				<div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 					<h3 class="box-title mb-30">Sign in to your account</h3>
 					<div class="th-login-form">
 						<form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST" class="login-form ajax-contact">
@@ -1040,13 +999,13 @@
 								<div class="form-group col-12"><label>Password</label> <input type="password" class="form-control" name="pasword" id="pasword" required="required"></div>
 								<div class="form-btn mb-20 col-12"><button class="th-btn btn-fw th-radius2">Send Message</button></div>
 							</div>
-							<div id="forgot_url"><a href="my-account.html">Forgot password?</a></div>
+							<div id="forgot_url"><button class="nav-menu border-0 bg-white" id="pills-forgot-tab" data-bs-toggle="pill" data-bs-target="#pills-forgot" type="button" role="tab" aria-controls="pills-forgot" aria-selected="true">Forgot Password?</button></div>
 							<p class="form-messages mb-0 mt-3"></p>
 						</form>
 					</div>
 				</div>
-				<div class="tab-pane fade active show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					<h3 class="th-form-title mb-30">Sign in to your account</h3>
+				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					<h3 class="th-form-title mb-30">Sign in for new account</h3>
 					<form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST" class="login-form ajax-contact">
 						<div class="row">
 							<div class="form-group col-12"><label>Username*</label> <input type="text" class="form-control" name="usename" id="usename" required="required"></div>
@@ -1056,6 +1015,16 @@
 							<div class="form-group col-12"><label for="new_email_confirm">Confirm email*</label> <input type="text" class="form-control" name="new_email_confirm" id="new_email_confirm" required="required"></div>
 							<div class="statement"><span class="register-notes">A password will be emailed to you.</span></div>
 							<div class="form-btn mt-20 col-12"><button class="th-btn btn-fw th-radius2">Sign up</button></div>
+						</div>
+						<p class="form-messages mb-0 mt-3"></p>
+					</form>
+				</div>
+				<div class="tab-pane fade" id="pills-forgot" role="tabpanel" aria-labelledby="pills-forgot-tab">
+					<h3 class="th-form-title mb-30">Forgot Password</h3>
+					<form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST" class="login-form ajax-contact">
+						<div class="row">
+							<div class="form-group col-12"><label for="new_email">Your email*</label> <input type="text" class="form-control" name="new_email" id="new_email" required="required"></div>
+							<div class="form-btn mt-20 col-12"><button class="th-btn btn-fw th-radius2">Reset Password</button></div>
 						</div>
 						<p class="form-messages mb-0 mt-3"></p>
 					</form>
