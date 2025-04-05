@@ -1102,7 +1102,7 @@ ul.wp-block-rss a {
 
 @media (min-width: 1300px) {
   .row {
-    --bs-gutter-x: 24px;
+    --bs-gutter-x: 20px;
   }
 }
 
@@ -1432,12 +1432,15 @@ input[type="radio"]:checked ~ label::before {
 }
 
 label {
-  margin-bottom: 0.5em;
-  margin-top: -0.3em;
-  display: block;
-  color: var(--title-color);
-  font-family: var(--body-font);
-  font-size: 16px;
+    margin-bottom: 0.5em;
+    margin-top: -0.3em;
+    display: block;
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-size: 18px;
+    float: left;
+    padding: 15px 15px 10px 0px;
+    min-width: 100px;
 }
 
 textarea.is-invalid,
@@ -8987,8 +8990,11 @@ heding animation  end
 }
 
 .th-widget-contact {
-  max-width: 260px;
   margin-bottom: -0.4em;
+}
+
+.menu-all-pages-container {
+    padding-left: 10px;
 }
 
 .info-box_text {

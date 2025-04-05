@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 	{
 		$data['page_title'] = 'Anaadi Tours and Travels | Home';
 		$data['user'] = $this->session->userdata("Auth");
-		
+			
         $this->load->view('layout/header', $data);
         $this->load->view('front/home', $data);
         $this->load->view('layout/footer');

@@ -112,6 +112,17 @@
 						</li>
 						<li><a href="<?=base_url('/Services')?>">Services</a></li>
 						<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
+						<?php if( isset($user) && isset($user['Authorization']) && $user['Authorization'] == true ){?>
+						<li class="menu-item-has-children">
+							<a href="#"><?=$user['name']?></a>
+							<ul class="sub-menu">
+								<li><a href="<?=base_url('/Account')?>">My Account</a></li>
+								<li><a href="<?=base_url('/Auth/signoff')?>">Logout</a></li>
+							</ul>
+						</li>
+						<?php } else { ?>
+						<li><a href="#login-form" class="popup-content th-btn">Login / Signup</a></li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
@@ -179,8 +190,22 @@
 							</div>
 							<div class="col-auto p-0 d-none d-xl-block">
 								<div class="header-button">
-									<a href="#login-form" class="popup-content th-btn th-icon">Login / Signup</a>
-									<a href="booknow.html" class="th-btn th-icon">Book Now</a>
+									<?php if( isset($user) && isset($user['Authorization']) && $user['Authorization'] == true ){?>
+									<nav class="main-menu d-none d-xl-inline-block">
+										<ul>
+											<li class="menu-item-has-children">
+												<a href="#"><?=$user['name']?></a>
+												<ul class="sub-menu">
+													<li><a href="<?=base_url('/Account')?>">My Account</a></li>
+													<li><a href="<?=base_url('/Auth/signoff')?>">Logout</a></li>
+												</ul>
+											</li>
+										</ul>
+									</nav>
+									<?php } else { ?>
+									<a href="#login-form" class="popup-content th-btn">Login / Signup</a>
+									<?php } ?>
+									<a href="booknow.html" class="th-btn">Book Now</a>
 								</div>
 							</div>
 						</div>

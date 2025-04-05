@@ -14,16 +14,20 @@
 						</div>
 					</div>
 					<div class="row justify-content-between">
-						<div class="col-md-4 col-xl-4">
+						<div class="col-md-4 col-xl-6">
 							<div class="widget footer-widget">
 								<div class="th-widget-about">
-									<div class="about-logo"><a href="<?=base_url()?>"><img src="assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels"></a></div>
+									<div class="about-logo">
+										<img class="header_logo" src="assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels">
+										<span class="w-60 header_logo_title">Anaadi</span>
+										<span class="w-60 header_logo_title_sub">Tours & Travels</span>
+									</div>
 									<p class="about-text">Anaadi Tours and Travels is a trusted travel tour package operator based in Bangalore. Get the best deals, customized tour packages, and more from the best travel agency in Bangalore.</p>
 									<div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-xl-4">
+						<div class="col-md-4 col-xl-3">
 							<div class="widget widget_nav_menu footer-widget">
 								<h3 class="widget_title">Quick Links</h3>
 								<div class="menu-all-pages-container">
@@ -38,7 +42,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-xl-4">
+						<div class="col-md-4 col-xl-3">
 							<div class="widget footer-widget">
 								<h3 class="widget_title">Address</h3>
 								<div class="th-widget-contact">
@@ -94,29 +98,27 @@
 			</ul>
 			<div class="tab-content" id="pills-tabContent">
 				<div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					<h3 class="box-title mb-30">Sign in to your account</h3>
+					<h3 class="box-title mb-20">Sign in to your account</h3>
 					<div class="th-login-form">
-						<form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST" class="login-form ajax-contact">
+						<form action="<?=base_url('/Auth/login')?>" method="POST" class="login-form">
 							<div class="row">
-								<div class="form-group col-12"><label>Username or email</label> <input type="text" class="form-control" name="email" id="email" required="required"></div>
-								<div class="form-group col-12"><label>Password</label> <input type="password" class="form-control" name="pasword" id="pasword" required="required"></div>
-								<div class="form-btn mb-20 col-12"><button class="th-btn btn-fw th-radius2">Send Message</button></div>
+								<div class="form-group col-12"><label>Email</label> <input type="email" class="form-control" name="email" id="email" required="required"></div>
+								<div class="form-group col-12"><label>Password</label> <input type="password" class="form-control" name="current-password" id="current-password" required="required"></div>
+								<div class="form-btn mb-20 col-12"><button class="th-btn btn-fw th-radius2">Login</button></div>
 							</div>
-							<div id="forgot_url"><button class="nav-menu border-0 bg-white" id="pills-forgot-tab" data-bs-toggle="pill" data-bs-target="#pills-forgot" type="button" role="tab" aria-controls="pills-forgot" aria-selected="true">Forgot Password?</button></div>
+							<div id="forgot_url"><button class="nav-menu border-0 bg-white" type="button">Forgot Password?</button></div>
 							<p class="form-messages mb-0 mt-3"></p>
 						</form>
 					</div>
 				</div>
 				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					<h3 class="th-form-title mb-30">Sign in for new account</h3>
-					<form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST" class="login-form ajax-contact">
+					<h3 class="th-form-title mb-20">Sign in for new account</h3>
+					<form action="<?=base_url('/Auth/signup')?>" method="POST" class="signup-form">
 						<div class="row">
-							<div class="form-group col-12"><label>Username*</label> <input type="text" class="form-control" name="usename" id="usename" required="required"></div>
-							<div class="form-group col-12"><label>First name*</label> <input type="text" class="form-control" name="firstname" id="firstname" required="required"></div>
-							<div class="form-group col-12"><label>Last name*</label> <input type="text" class="form-control" name="lastname" id="lastname" required="required"></div>
-							<div class="form-group col-12"><label for="new_email">Your email*</label> <input type="text" class="form-control" name="new_email" id="new_email" required="required"></div>
-							<div class="form-group col-12"><label for="new_email_confirm">Confirm email*</label> <input type="text" class="form-control" name="new_email_confirm" id="new_email_confirm" required="required"></div>
-							<div class="statement"><span class="register-notes">A password will be emailed to you.</span></div>
+							<div class="form-group col-12"><label>Name</label> <input type="text" class="form-control" maxlength="100" name="name" id="name" required="required"></div>
+							<div class="form-group col-12"><label for="new_email">Email</label> <input type="email" maxlength="100" class="form-control" name="new_email" id="new_email" required="required"></div>
+							<div class="form-group col-12"><label for="new_phone">Phone</label> <input type="number" maxlength="10" class="form-control" name="new_phone" id="new_phone" required="required"></div>
+							<div class="form-group col-12"><label for="current-password">Password</label> <input type="password" maxlength="10" class="form-control" name="current-password" id="current-password" required="required"></div>
 							<div class="form-btn mt-20 col-12"><button class="th-btn btn-fw th-radius2">Sign up</button></div>
 						</div>
 						<p class="form-messages mb-0 mt-3"></p>
@@ -137,6 +139,7 @@
 		<script src="assets/js/matterjs-custom.js"></script>
 		<script src="assets/js/nice-select.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
 	</body>
 
 </html>
