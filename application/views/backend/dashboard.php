@@ -24,7 +24,7 @@
         
         <div class="col-lg-12 p-0">
           <div class="row">
-            <h1>Dashboard</h1>
+            <h4>Dashboard</h4>
           </div>
         </div><!-- End Left side columns -->
 

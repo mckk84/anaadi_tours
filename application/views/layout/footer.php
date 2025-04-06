@@ -1,4 +1,4 @@
-<footer class="footer-wrapper footer-layout1">
+		<footer class="footer-wrapper footer-layout1">
 			<div class="widget-area">
 				<div class="container">
 					<div class="newsletter-area">
@@ -8,7 +8,7 @@
 									<h2 class="newsletter-title text-capitalize mb-0">get updated with latest newsletter</h2>
 								</div>
 								<div class="col-lg-7">
-									<form class="newsletter-form"><input class="form-control" type="email" placeholder="Enter Email" required=""> <button type="submit" class="th-btn style3">Subscribe Now <img src="<?=base_url()?>assets/img/icon/plane.svg" alt=""></button></form>
+									<form class="newsletter-form"><input class="form-control" type="email" placeholder="Enter Email" required=""> <button type="submit" class="th-btn">Subscribe Now <img src="<?=base_url()?>assets/img/icon/plane.svg" alt=""></button></form>
 								</div>
 							</div>
 						</div>

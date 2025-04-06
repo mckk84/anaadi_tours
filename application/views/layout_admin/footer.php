@@ -2,7 +2,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><a class="text-warning" href="https://rocknrollrental.com">ROCK N ROLL RENTALS</a></strong>. All Rights Reserved
+      &copy; Copyright <strong><a class="text-warning" href="https://anaadi.co">Anaadi Tours & Travels</a></strong>. All Rights Reserved
          Designed by <a class="text-warning" href="https://jvmtech.in/"><strong>JVM TECH SOLUTIONS</strong></a>
     </div>
   </footer><!-- End Footer -->
@@ -11,7 +11,6 @@
 
   <script type="text/javascript">
     let base_url = '<?=base_url()?>';
-    let booking_url = '<?=base_url('admin/Bookings')?>';
   </script>
   <!-- Vendor JS Files -->
   <script src="<?=base_url()?>assets/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

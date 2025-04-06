@@ -17,7 +17,7 @@ body {
   font-family: "Nunito", sans-serif;
   background: #FFF;
   color: #444444;
-  font-size: 0.80rem;
+  font-size: 14px;
 }
 
 a {
@@ -235,10 +235,9 @@ h6 {
 
 .card-title {
   padding: 10px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #3674B5;
-  font-family: "Poppins", sans-serif;
 }
 
 .card-title span {
@@ -250,7 +249,6 @@ h6 {
 .card-body {
   padding: 0 10px 10px 10px;
   overflow: auto;
-  max-height: 70%;
 }
 
 .card-img-overlay {
@@ -260,7 +258,6 @@ h6 {
 /* Alerts */
 .alert-heading {
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
   font-size: 20px;
 }
 
@@ -309,7 +306,6 @@ h6 {
 /* Breadcrumbs */
 .breadcrumb {
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
   color: #899bbd;
   font-weight: 600;
 }
@@ -376,7 +372,6 @@ h6 {
   font-size: 20px;
   font-weight: 600;
   color: #3674B5;
-  font-family: "Nunito", sans-serif;
 }
 
 .header {
@@ -1486,4 +1481,18 @@ table.small th {
 
 .text-theme{
   color: #E3010F;
+}
+
+.modal-header {
+    padding: 10px 15px;
+    background-color: #f8d7da;
+}
+
+.modal {
+  color: black;
+}
+
+.form-group{
+  float: left;
+  margin-left: 10px;
 }

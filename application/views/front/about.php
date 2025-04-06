@@ -14,9 +14,9 @@
         <div class="row">
             <div class="col-xl-7">
                 <div class="img-box3">
-                    <div class="img1"><img src="<?=base_url()?>assets/img/normal/about_3_1.jpg" alt="About"></div>
-                    <div class="img2"><img src="<?=base_url()?>assets/img/normal/about_3_2.jpg" alt="About"></div>
-                    <div class="img3 movingX"><img src="<?=base_url()?>assets/img/normal/about_3_3.jpg" alt="About"></div>
+                    <div class="img1"><img src="<?=base_url()?>assets/img/travel/JogFalls.jpg" alt="About"></div>
+                    <div class="img2"><img src="<?=base_url()?>assets/img/travel/Om-Beach-portrait.jpg" alt="About"></div>
+                    <div class="img3 movingX"><img src="<?=base_url()?>assets/img/travel/Mysorepalace.jpg" alt="About"></div>
                 </div>
             </div>
             <div class="col-xl-5">
@@ -32,21 +32,21 @@
                             <div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_1.svg" alt=""></div>
                             <div class="about-item_centent">
                                 <h5 class="box-title">Exclusive Trip</h5>
-                                <p class="about-item_text">There are many variations of passages of available but the majority.</p>
+                                <p class="about-item_text">We plan trip accordingly to customer requirement in best way to satisfy them. Also we provide unique and customized itineraries to our customers with 24/7 support.</p>
                             </div>
                         </div>
                         <div class="about-item style2">
                             <div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_2.svg" alt=""></div>
                             <div class="about-item_centent">
                                 <h5 class="box-title">Safety First Always</h5>
-                                <p class="about-item_text">There are many variations of passages of available but the majority.</p>
+                                <p class="about-item_text">No compromise for Safety, Comfort and On time travel. We provide utmost importance for safety and comfort for clients.</p>
                             </div>
                         </div>
                         <div class="about-item style2">
-                            <div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_3.svg" alt=""></div>
+                            <div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/choose_3_1.svg" alt=""></div>
                             <div class="about-item_centent">
-                                <h5 class="box-title">Professional Guide</h5>
-                                <p class="about-item_text">There are many variations of passages of available but the majority.</p>
+                                <h5 class="box-title">Convenience</h5>
+                                <p class="about-item_text">We will provide you all type of solutions accordingly with convenience. As we are the trusted travel partner you will be offered with lot of benefits.</p>
                             </div>
                         </div>
                     </div>

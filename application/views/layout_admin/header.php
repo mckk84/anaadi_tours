@@ -105,12 +105,17 @@
         <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
             <a href="<?=base_url('admin/Tours')?>">
-              <i class="bi bi-card-list"></i><span>Tours</span>
+              <i class="bi bi-list"></i><span>Tours</span>
             </a>
           </li>
           <li>
-            <a href="<?=base_url('admin/Tours')?>">
-              <i class="bi bi-currency-rupee"></i><span>Tours</span>
+            <a href="<?=base_url('admin/Tourcategory')?>">
+              <i class="bi bi-list"></i><span>Tour Category</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?=base_url('admin/Services')?>">
+              <i class="bi bi-list"></i><span>Services</span>
             </a>
           </li>
           <li>

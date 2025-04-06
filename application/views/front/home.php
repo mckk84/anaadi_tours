@@ -191,9 +191,9 @@
 		<div class="row">
 			<div class="col-xl-6">
 				<div class="img-box6">
-					<div class="img1"><img src="<?=base_url()?>assets/img/normal/about_6_1.jpg" alt="About"></div>
-					<div class="img2"><img src="<?=base_url()?>assets/img/normal/about_6_2.jpg" alt="About"></div>
-					<div class="img3"><img src="<?=base_url()?>assets/img/normal/about_6_3.jpg" alt="About"></div>
+					<div class="img1"><img src="<?=base_url()?>assets/img/travel/OmBeach.jpg" alt="About"></div>
+					<div class="img2"><img src="<?=base_url()?>assets/img/travel/JogFallsSmall.jpg" alt="About"></div>
+					<div class="img3"><img src="<?=base_url()?>assets/img/travel/MysorepalaceSmall.jpg" alt="About"></div>
 				</div>
 			</div>
 			<div class="col-xl-6">
@@ -201,21 +201,21 @@
 					<div class="title-area mb-20">
 						<span class="sub-title style1">Let’s Go Together</span>
 						<h2 class="sec-title mb-20">Begin Your Travel Story with Us</h2>
-						<p class="sec-text mb-30">There are many variations of passages of available but the majority have suffered alteration in some form, by injected hum randomised words which don't look even slightly.</p>
+						<p class="sec-text mb-30">We are here to provide you one stop solution for all your travel needs.</p>
 					</div>
 					<div class="about-item-wrap">
 						<div class="about-item">
-							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/map3.svg" alt=""></div>
+							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_1.svg" alt=""></div>
 							<div class="about-item_centent">
 								<h5 class="box-title">Exclusive Trip</h5>
-								<p class="about-item_text">There are many variations of passages of available but the majority.</p>
+								<p class="about-item_text">We plan trip accordingly to customer requirement in best way to satisfy them. Also we provide unique and customized itineraries to our customers with 24/7 support.</p>
 							</div>
 						</div>
 						<div class="about-item">
-							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/guide.svg" alt=""></div>
+							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_2.svg" alt=""></div>
 							<div class="about-item_centent">
-								<h5 class="box-title">Professional Guide</h5>
-								<p class="about-item_text">There are many variations of passages of available but the majority.</p>
+								<h5 class="box-title">Safety First Always</h5>
+								<p class="about-item_text">No compromise for Safety, Comfort and On time travel. We provide utmost importance for safety and comfort for clients.</p>
 							</div>
 						</div>
 					</div>
@@ -334,66 +334,39 @@
 			<div class="row gy-3 justify-content-between align-items-center">
 				<div class="col-lg-6">
 					<div class="title-area">
-						<span class="sub-title style1">Why Choose Cruise</span>
+						<span class="sub-title style1">Why Choose Anaadi</span>
 						<h2 class="sec-title">Making Every Journey Extraordinary.</h2>
 					</div>
 				</div>
 				<div class="col-lg-5">
-					<p class="mb-60">A cruise tour is a unique and luxurious way to explore multiple destinations while enjoying a floating resort experience. Combining the thrill of travel with the comfort of world-class amenities, a cruise offers something for everyone—adventure seekers, relaxation enthusiasts, and even families.</p>
+					<p class="mb-60">Anaadi Tours and Travels combines the thrill of travel with the comfort of world-class amenities, a offers something for everyone—adventure seekers, relaxation enthusiasts, and even families.</p>
 				</div>
 			</div>
 			<div class="row gy-80">
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_1.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_1.svg" alt="Convenience"></div>
 						<div class="media-body">
 							<h3 class="box-title">Convenience</h3>
-							<p class="box-text">Travel to multiple destinations without the hassle of airport lines or frequent packing.</p>
+							<p class="box-text">We will provide you all type of solutions accordingly with convenience. As we are the trusted travel partner you will be offered with lot of benefits.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_2.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/about_1_2.svg"alt="Comfort & Saftey"></div>
 						<div class="media-body">
-							<h3 class="box-title">Value for Money</h3>
-							<p class="box-text">Cruises often provide all-inclusive packages, making them cost-effective compared to separate.</p>
+							<h3 class="box-title">Comfort & Saftey</h3>
+							<p class="box-text">No compromise for Safety, Comfort and On time travel. We provide utmost importance for safety and comfort for clients.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_3.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_3.svg" alt="Perfect for All Ages"></div>
 						<div class="media-body">
 							<h3 class="box-title">Perfect for All Ages</h3>
-							<p class="box-text">With activities for kids, teens, adults, and seniors, a cruise is ideal for family vacations.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4">
-					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_4.svg" alt="image"></div>
-						<div class="media-body">
-							<h3 class="box-title">Scenic Views</h3>
-							<p class="box-text">Wake up to ever-changing scenery, from pristine beaches to icy fjords, right from your window or balcony.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4">
-					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_5.svg" alt="image"></div>
-						<div class="media-body">
-							<h3 class="box-title">World-Class Dining</h3>
-							<p class="box-text">Cruise ships feature multiple restaurants, serving everything from gourmet cuisine to casual dining.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4">
-					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_6.svg" alt="image"></div>
-						<div class="media-body">
-							<h3 class="box-title">Multiple Destinations</h3>
-							<p class="box-text">Popular routes include the Caribbean Islands, Mediterranean coasts, Alaskan glaciers.</p>
+							<p class="box-text">With activities for kids, teens, adults, and seniors, we offer tour packages for family vacations.</p>
 						</div>
 					</div>
 				</div>
@@ -411,15 +384,6 @@
 						<div class="media-body">
 							<h3 class="box-number"><span class="counter-number">12</span></h3>
 							<h6 class="counter-title">Years Experience</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-3">
-					<div class="counter-item">
-						<div class="counter-shape"></div>
-						<div class="media-body">
-							<h3 class="box-number"><span class="counter-number">97</span>%</h3>
-							<h6 class="counter-title">Retention Rate</h6>
 						</div>
 					</div>
 				</div>
