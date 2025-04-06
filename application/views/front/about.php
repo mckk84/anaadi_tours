@@ -65,7 +65,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-xl-6">
                 <div class="testi-image2">
-                    <div class="testi-img"><img src="assets/img/normal/testimonials.png" alt="Testimonials"></div>
+                    <div class="testi-img"><img src="<?=base_url()?>assets/img/normal/testimonials.png" alt="Testimonials"></div>
                 </div>
             </div>
             <div class="col-xl-6">
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                         <div class="slider-pagination"></div>
-                        <div class="icon-box"><button data-slider-prev="#testiSlide13" class="slider-arrow style7 default"><img src="assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide13" class="slider-arrow style7 default"><img src="assets/img/icon/left-arrow2.svg" alt=""></button></div>
+                        <div class="icon-box"><button data-slider-prev="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/left-arrow2.svg" alt=""></button></div>
                     </div>
                 </div>
             </div>

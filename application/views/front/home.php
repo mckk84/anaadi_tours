@@ -3,7 +3,7 @@
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<div class="hero-inner">
-					<div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_2.jpg"></div>
+					<div class="th-hero-bg" data-bg-src="<?=base_url()?>assets/img/hero/hero_bg_1_2.jpg"></div>
 					<div class="container">
 						<div class="hero-style1">
 							<span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Get unforgetable pleasure with us</span>
@@ -27,70 +27,70 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_1.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_2.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_3.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_4.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_5.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_1.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_2.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_3.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_4.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_5.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
@@ -112,70 +112,70 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_1.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_2.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_3.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_4.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_5.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_1.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_2.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_3.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_4.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="category-card style3">
-							<div class="box-img global-img"><img src="assets/img/category/category_3_5.jpg" alt="Image"></div>
+							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
 							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
 							<a class="line-btn" href="destination.html">See more</a>
 						</div>
@@ -186,14 +186,14 @@
 		</div>
 	</div>
 </section>
-<div class="about-area position-relative overflow-hidden space" id="about-sec" data-bg-src="assets/img/bg/about_bg_1.jpg">
+<div class="about-area position-relative overflow-hidden space" id="about-sec" data-bg-src="<?=base_url()?>assets/img/bg/about_bg_1.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-6">
 				<div class="img-box6">
-					<div class="img1"><img src="assets/img/normal/about_6_1.jpg" alt="About"></div>
-					<div class="img2"><img src="assets/img/normal/about_6_2.jpg" alt="About"></div>
-					<div class="img3"><img src="assets/img/normal/about_6_3.jpg" alt="About"></div>
+					<div class="img1"><img src="<?=base_url()?>assets/img/normal/about_6_1.jpg" alt="About"></div>
+					<div class="img2"><img src="<?=base_url()?>assets/img/normal/about_6_2.jpg" alt="About"></div>
+					<div class="img3"><img src="<?=base_url()?>assets/img/normal/about_6_3.jpg" alt="About"></div>
 				</div>
 			</div>
 			<div class="col-xl-6">
@@ -205,14 +205,14 @@
 					</div>
 					<div class="about-item-wrap">
 						<div class="about-item">
-							<div class="about-item_img"><img src="assets/img/icon/map3.svg" alt=""></div>
+							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/map3.svg" alt=""></div>
 							<div class="about-item_centent">
 								<h5 class="box-title">Exclusive Trip</h5>
 								<p class="about-item_text">There are many variations of passages of available but the majority.</p>
 							</div>
 						</div>
 						<div class="about-item">
-							<div class="about-item_img"><img src="assets/img/icon/guide.svg" alt=""></div>
+							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/guide.svg" alt=""></div>
 							<div class="about-item_centent">
 								<h5 class="box-title">Professional Guide</h5>
 								<p class="about-item_text">There are many variations of passages of available but the majority.</p>
@@ -225,7 +225,7 @@
 		</div>
 	</div>
 </div>
-<section class="tour-area position-relative bg-top-center overflow-hidden space" id="service-sec" data-bg-src="assets/img/bg/tour_bg_1.jpg">
+<section class="tour-area position-relative bg-top-center overflow-hidden space" id="service-sec" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3">
@@ -241,7 +241,7 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="tour-box th-ani gsap-cursor">
-							<div class="tour-box_img global-img"><img src="assets/img/tour/tour_box_1.jpg" alt="image"></div>
+							<div class="tour-box_img global-img"><img src="<?=base_url()?>assets/img/tour/tour_box_1.jpg" alt="image"></div>
 							<div class="tour-content">
 								<h3 class="box-title"><a href="tour-details.html">Greece Tour Package</a></h3>
 								<div class="tour-rating">
@@ -255,7 +255,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="tour-box th-ani gsap-cursor">
-							<div class="tour-box_img global-img"><img src="assets/img/tour/tour_box_2.jpg" alt="image"></div>
+							<div class="tour-box_img global-img"><img src="<?=base_url()?>assets/img/tour/tour_box_2.jpg" alt="image"></div>
 							<div class="tour-content">
 								<h3 class="box-title"><a href="tour-details.html">Italy Tour package</a></h3>
 								<div class="tour-rating">
@@ -269,7 +269,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="tour-box th-ani gsap-cursor">
-							<div class="tour-box_img global-img"><img src="assets/img/tour/tour_box_3.jpg" alt="image"></div>
+							<div class="tour-box_img global-img"><img src="<?=base_url()?>assets/img/tour/tour_box_3.jpg" alt="image"></div>
 							<div class="tour-content">
 								<h3 class="box-title"><a href="tour-details.html">Dubai Tour Package</a></h3>
 								<div class="tour-rating">
@@ -283,7 +283,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="tour-box th-ani gsap-cursor">
-							<div class="tour-box_img global-img"><img src="assets/img/tour/tour_box_4.jpg" alt="image"></div>
+							<div class="tour-box_img global-img"><img src="<?=base_url()?>assets/img/tour/tour_box_4.jpg" alt="image"></div>
 							<div class="tour-content">
 								<h3 class="box-title"><a href="tour-details.html">Switzerland</a></h3>
 								<div class="tour-rating">
@@ -297,7 +297,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="tour-box th-ani gsap-cursor">
-							<div class="tour-box_img global-img"><img src="assets/img/tour/tour_box_1.jpg" alt="image"></div>
+							<div class="tour-box_img global-img"><img src="<?=base_url()?>assets/img/tour/tour_box_1.jpg" alt="image"></div>
 							<div class="tour-content">
 								<h3 class="box-title"><a href="tour-details.html">Greece Tour Package</a></h3>
 								<div class="tour-rating">
@@ -311,7 +311,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="tour-box th-ani gsap-cursor">
-							<div class="tour-box_img global-img"><img src="assets/img/tour/tour_box_2.jpg" alt="image"></div>
+							<div class="tour-box_img global-img"><img src="<?=base_url()?>assets/img/tour/tour_box_2.jpg" alt="image"></div>
 							<div class="tour-content">
 								<h3 class="box-title"><a href="tour-details.html">Italy Tour package</a></h3>
 								<div class="tour-rating">
@@ -345,7 +345,7 @@
 			<div class="row gy-80">
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="assets/img/icon/choose_3_1.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_1.svg" alt="image"></div>
 						<div class="media-body">
 							<h3 class="box-title">Convenience</h3>
 							<p class="box-text">Travel to multiple destinations without the hassle of airport lines or frequent packing.</p>
@@ -354,7 +354,7 @@
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="assets/img/icon/choose_3_2.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_2.svg" alt="image"></div>
 						<div class="media-body">
 							<h3 class="box-title">Value for Money</h3>
 							<p class="box-text">Cruises often provide all-inclusive packages, making them cost-effective compared to separate.</p>
@@ -363,7 +363,7 @@
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="assets/img/icon/choose_3_3.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_3.svg" alt="image"></div>
 						<div class="media-body">
 							<h3 class="box-title">Perfect for All Ages</h3>
 							<p class="box-text">With activities for kids, teens, adults, and seniors, a cruise is ideal for family vacations.</p>
@@ -372,7 +372,7 @@
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="assets/img/icon/choose_3_4.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_4.svg" alt="image"></div>
 						<div class="media-body">
 							<h3 class="box-title">Scenic Views</h3>
 							<p class="box-text">Wake up to ever-changing scenery, from pristine beaches to icy fjords, right from your window or balcony.</p>
@@ -381,7 +381,7 @@
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="assets/img/icon/choose_3_5.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_5.svg" alt="image"></div>
 						<div class="media-body">
 							<h3 class="box-title">World-Class Dining</h3>
 							<p class="box-text">Cruise ships feature multiple restaurants, serving everything from gourmet cuisine to casual dining.</p>
@@ -390,7 +390,7 @@
 				</div>
 				<div class="col-md-6 col-xl-4">
 					<div class="choose-item">
-						<div class="box-icon"><img src="assets/img/icon/choose_3_6.svg" alt="image"></div>
+						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_6.svg" alt="image"></div>
 						<div class="media-body">
 							<h3 class="box-title">Multiple Destinations</h3>
 							<p class="box-text">Popular routes include the Caribbean Islands, Mediterranean coasts, Alaskan glaciers.</p>
@@ -451,7 +451,7 @@
 		<div class="row justify-content-center align-items-center">
 			<div class="col-xl-6">
 				<div class="testi-image2">
-					<div class="testi-img"><img src="assets/img/normal/testimonials.png" alt="Testimonials"></div>
+					<div class="testi-img"><img src="<?=base_url()?>assets/img/normal/testimonials.png" alt="Testimonials"></div>
 				</div>
 			</div>
 			<div class="col-xl-6">
@@ -530,7 +530,7 @@
 							</div>
 						</div>
 						<div class="slider-pagination"></div>
-						<div class="icon-box"><button data-slider-prev="#testiSlide13" class="slider-arrow style7 default"><img src="assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide13" class="slider-arrow style7 default"><img src="assets/img/icon/left-arrow2.svg" alt=""></button></div>
+						<div class="icon-box"><button data-slider-prev="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/left-arrow2.svg" alt=""></button></div>
 					</div>
 				</div>
 			</div>
@@ -557,7 +557,7 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
+							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
 							<div class="blog-box_content">
 								<div class="blog-meta"><a class="author" href="blog.html">July 05 2024</a> <a href="blog.html">6 min read</a></div>
 								<h3 class="box-title"><a href="blog-details.html">10 Reason why you should visit New Jersy</a></h3>
@@ -567,7 +567,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
+							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
 							<div class="blog-box_content">
 								<div class="blog-meta"><a class="author" href="blog.html">July 06 2024</a> <a href="blog.html">7 min read</a></div>
 								<h3 class="box-title"><a href="blog-details.html">The best time to visit japan & enjoy the cherry blossoms</a></h3>
@@ -577,7 +577,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
+							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
 							<div class="blog-box_content">
 								<div class="blog-meta"><a class="author" href="blog.html">July 07 2024</a> <a href="blog.html">8 min read</a></div>
 								<h3 class="box-title"><a href="blog-details.html">The 7 amazing destinations for adventure seekers</a></h3>
@@ -587,7 +587,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
+							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
 							<div class="blog-box_content">
 								<div class="blog-meta"><a class="author" href="blog.html">July 09 2024</a> <a href="blog.html">9 min read</a></div>
 								<h3 class="box-title"><a href="blog-details.html">10 Reason why you should visit New Jersy</a></h3>
@@ -597,7 +597,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
+							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
 							<div class="blog-box_content">
 								<div class="blog-meta"><a class="author" href="blog.html">July 10 2024</a> <a href="blog.html">10 min read</a></div>
 								<h3 class="box-title"><a href="blog-details.html">The best time to visit japan & enjoy the cherry blossoms</a></h3>
@@ -607,7 +607,7 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
+							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
 							<div class="blog-box_content">
 								<div class="blog-meta"><a class="author" href="blog.html">July 12 2024</a> <a href="blog.html">11 min read</a></div>
 								<h3 class="box-title"><a href="blog-details.html">The 7 amazing destinations for adventure seekers</a></h3>
@@ -618,8 +618,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="shape-mockup shape1 d-none d-xxl-block" data-bottom="20%" data-left="-17%"><img src="assets/img/shape/shape_1.png" alt="shape"></div>
-		<div class="shape-mockup shape2 d-none d-xl-block" data-bottom="5%" data-left="-17%"><img src="assets/img/shape/shape_2.png" alt="shape"></div>
-		<div class="shape-mockup shape3 d-none d-xxl-block" data-bottom="12%" data-left="-10%"><img src="assets/img/shape/shape_3.png" alt="shape"></div>
+		<div class="shape-mockup shape1 d-none d-xxl-block" data-bottom="20%" data-left="-17%"><img src="<?=base_url()?>assets/img/shape/shape_1.png" alt="shape"></div>
+		<div class="shape-mockup shape2 d-none d-xl-block" data-bottom="5%" data-left="-17%"><img src="<?=base_url()?>assets/img/shape/shape_2.png" alt="shape"></div>
+		<div class="shape-mockup shape3 d-none d-xxl-block" data-bottom="12%" data-left="-10%"><img src="<?=base_url()?>assets/img/shape/shape_3.png" alt="shape"></div>
 	</div>
 </section> -->

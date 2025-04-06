@@ -32,7 +32,7 @@ class Login extends CI_Controller
         
         if(!isset($isLoggedIn) || $isLoggedIn != TRUE)
         {
-            $data['page_title'] = 'Rock N Roll Bike Rentals | Admin';
+            $data['page_title'] = 'Anaadi Tours & Travels | Admin';
             $this->load->view('backend/login', $data);
         }
         else
