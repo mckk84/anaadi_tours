@@ -96,43 +96,7 @@
 				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
 			</svg>
 		</div>
-		<div id="login-form" class="popup-login-register mfp-hide">
-			<ul class="nav" id="pills-tab" role="tablist">
-				<li class="nav-item" role="presentation"><button class="nav-menu active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Login</button></li>
-				<li class="nav-item" role="presentation"><button class="nav-menu" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Register</button></li>
-				
-			</ul>
-			<div class="tab-content" id="pills-tabContent">
-				<div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					<h3 class="box-title mb-20">Sign in to your account</h3>
-					<div class="th-login-form">
-						<form action="<?=base_url('/Auth/login')?>" method="POST" class="login-form">
-							<div class="row">
-								<div class="form-group col-12"><label>Email</label> <input type="email" class="form-control" name="email" id="email" required="required"></div>
-								<div class="form-group col-12"><label>Password</label> <input type="password" class="form-control" name="current-password" id="current-password" required="required"></div>
-								<div class="form-btn mb-20 col-12"><button class="th-btn btn-fw th-radius2">Login</button></div>
-							</div>
-							<div id="forgot_url"><button class="nav-menu border-0 bg-white" type="button">Forgot Password?</button></div>
-							<p class="form-messages mb-0 mt-3"></p>
-						</form>
-					</div>
-				</div>
-				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-					<h3 class="th-form-title mb-20">Sign in for new account</h3>
-					<form action="<?=base_url('/Auth/signup')?>" method="POST" class="signup-form">
-						<div class="row">
-							<div class="form-group col-12"><label>Name</label> <input type="text" class="form-control" maxlength="100" name="name" id="name" required="required"></div>
-							<div class="form-group col-12"><label for="new_email">Email</label> <input type="email" maxlength="100" class="form-control" name="new_email" id="new_email" required="required"></div>
-							<div class="form-group col-12"><label for="new_phone">Phone</label> <input type="number" maxlength="10" class="form-control" name="new_phone" id="new_phone" required="required"></div>
-							<div class="form-group col-12"><label for="current-password">Password</label> <input type="password" maxlength="10" class="form-control" name="current-password" id="current-password" required="required"></div>
-							<div class="form-btn mt-20 col-12"><button class="th-btn btn-fw th-radius2">Sign up</button></div>
-						</div>
-						<p class="form-messages mb-0 mt-3"></p>
-					</form>
-				</div>
-				
-			</div>
-		</div>
+		
 		
 		<script src="<?=base_url()?>assets/js/jquery.magnific-popup.min.js"></script>
 		<script src="<?=base_url()?>assets/js/jquery.counterup.min.js"></script>

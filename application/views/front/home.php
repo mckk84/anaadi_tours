@@ -16,176 +16,6 @@
 		</div>
 	</div>
 </div>
-<section class="category-area4 space">
-	<div class="container th-container">
-		<div class="title-area text-center">
-			<span class="sub-title">Domestic Tours</span>
-			<h2 class="sec-title">Explore Our Paradise</h2>
-		</div>
-		<div class="slider-area">
-			<div class="swiper th-slider has-shadow categorySlider4" id="categorySlider4" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-				</div>
-				<div class="slider-pagination"></div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="category-area4 space">
-	<div class="container th-container">
-		<div class="title-area text-center">
-			<span class="sub-title">International Tours</span>
-			<h2 class="sec-title">Explore Our Paradise</h2>
-		</div>
-		<div class="slider-area">
-			<div class="swiper th-slider has-shadow categorySlider4" id="categorySlider4" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Amazon</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Angel Falls, Venezuela</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The great wall of china</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card style3">
-							<div class="box-img global-img"><img src="<?=base_url()?>assets/img/category/category_3_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">The Azores, Portugal</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-				</div>
-				<div class="slider-pagination"></div>
-			</div>
-		</div>
-	</div>
-</section>
 <div class="about-area position-relative overflow-hidden space" id="about-sec" data-bg-src="<?=base_url()?>assets/img/bg/about_bg_1.jpg">
 	<div class="container">
 		<div class="row">
@@ -199,8 +29,8 @@
 			<div class="col-xl-6">
 				<div class="ps-xl-5 ms-xl-3">
 					<div class="title-area mb-20">
-						<span class="sub-title style1">Let’s Go Together</span>
-						<h2 class="sec-title mb-20">Begin Your Travel Story with Us</h2>
+						<span class="sub-title style1">Welcome to Anaadi Tours & Travels</span>
+						<h3 class="sec-title mb-20">Begin Your Travel Story with Us</h3>
 						<p class="sec-text mb-30">We are here to provide you one stop solution for all your travel needs.</p>
 					</div>
 					<div class="about-item-wrap">
@@ -225,6 +55,177 @@
 		</div>
 	</div>
 </div>
+<section class="category-area3 bg-smoke space" data-bg-src="assets/img/bg/line-pattern3.png">
+	<div class="container th-container">
+		<div class="title-area text-center">
+			<span class="sub-title">Wornderful Place For You</span>
+			<h2 class="sec-title">Domestic Tours</h2>
+		</div>
+		<div class="slider-area">
+			<div class="swiper th-slider has-shadow category-slider3" id="categorySlider3" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Karnataka</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Kerala</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Tamil Nadu</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Kolkata</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Jodhpur</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Delhi</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Hiking</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Airbirds</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Wildlife</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Walking</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+				</div>
+				<div class="slider-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="category-area3 bg-smoke space" data-bg-src="assets/img/bg/line-pattern3.png">
+	<div class="container th-container">
+		<div class="title-area text-center">
+			<span class="sub-title">Wornderful Place For You</span>
+			<h2 class="sec-title">Domestic Tours</h2>
+		</div>
+		<div class="slider-area">
+			<div class="swiper th-slider has-shadow category-slider3" id="categorySlider3" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Thailand</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Singapore</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Africa</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Malaysia</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Australia</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Hiking</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Airbirds</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Wildlife</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="category-card single2">
+							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
+							<h3 class="box-title"><a href="destination.html">Walking</a></h3>
+							<a class="line-btn" href="destination.html">See more</a>
+						</div>
+					</div>
+				</div>
+				<div class="slider-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="tour-area position-relative bg-top-center overflow-hidden space" id="service-sec" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
 	<div class="container">
 		<div class="row">

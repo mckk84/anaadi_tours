@@ -4,10 +4,10 @@
 }
 
 .header_logo {
-    width: 135px;
+    width: 100px;
     float: left;
     display: block;
-    margin-top: 4px;
+    margin: 4px;
 }
 
 .header-button .th-btn {
@@ -19,7 +19,7 @@
 .header_logo_title {
     display: block;
     float: left;
-    margin-top: 20px;
+    margin-top: 8px;
     font-size: 35px;
     color: var(--theme-color);
     width: 100px;

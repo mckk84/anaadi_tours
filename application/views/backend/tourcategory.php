@@ -149,11 +149,10 @@
     $("#submitcategory").click(function (event) {
         event.preventDefault(); // Prevent default form submission
         
-
         let form = $("#addcategory");
         let mbody = $("#addcategory .modal-body");
         let url = form.attr('action');
-
+        
         var sub_category = $("#addcategory input[name='sub_category']").val().trim();
         if( sub_category == "" )
         {

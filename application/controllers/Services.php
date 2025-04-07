@@ -7,6 +7,11 @@ class Services extends CI_Controller {
 	{
 		$data['page_title'] = 'Anaadi Tours and Travels | Services';
 		$data['user'] = $this->session->userdata("Auth");
+
+		$this->load->model('tours_model');
+
+		$data['domestic_tours'] = $this->tours_model->getMenuByCategoryId(1);
+		$data['international_tours'] = $this->tours_model->getMenuByCategoryId(2);
 		
         $this->load->view('layout/header', $data);
         $this->load->view('front/services', $data);

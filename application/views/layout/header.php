@@ -26,8 +26,6 @@
 		<meta name="twitter:image" content="https://www.adaadi.co/assets/img/anaadi_logo.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com/">
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-		<link rel="preconnect" href="https://fonts.googleapis.com/">
-		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Manrope:wght@200..800&amp;family=Montez&amp;display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?=base_url()?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="<?=base_url()?>assets/css/fontawesome.min.css">
@@ -112,17 +110,6 @@
 						</li>
 						<li><a href="<?=base_url('/Services')?>">Services</a></li>
 						<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
-						<?php if( isset($user) && isset($user['Authorization']) && $user['Authorization'] == true ){?>
-						<li class="menu-item-has-children">
-							<a href="#"><?=$user['name']?></a>
-							<ul class="sub-menu">
-								<li><a href="<?=base_url('/Account')?>">My Account</a></li>
-								<li><a href="<?=base_url('/Auth/signoff')?>">Logout</a></li>
-							</ul>
-						</li>
-						<?php } else { ?>
-						<li><a href="#login-form" class="popup-content th-btn">Login / Signup</a></li>
-						<?php } ?>
 					</ul>
 				</div>
 			</div>
@@ -171,15 +158,32 @@
 										<li class="menu-item-has-children">
 											<a href="#">Domestic Tours</a>
 											<ul class="sub-menu">
-												<li><a href="<?=base_url('/Domestictours')?>">Domestic Tours</a></li>
-												<li><a href="<?=base_url('/Domesticdestination')?>">Domestic Destinations</a></li>
+												<?php foreach ($domestic_tours as $tourcategory => $tours) { ?>
+												<li class="menu-item-has-children">
+													<a href="#"><?=$tourcategory?></a>
+													<ul class="sub-menu">
+														<?php foreach ($tours as $key => $tour) { ?>
+														<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
+														<?php } ?>
+													</ul>
+												</li>
+												<?php } ?>
 											</ul>
 										</li>
+										
 										<li class="menu-item-has-children">
 											<a href="#">International Tours</a>
 											<ul class="sub-menu">
-												<li><a href="<?=base_url('/Internationaltours')?>">International Tours</a></li>
-												<li><a href="<?=base_url('/Internationaldestinations')?>">International Destinations</a></li>
+												<?php foreach ($international_tours as $tourcategory => $tours) { ?>
+												<li class="menu-item-has-children">
+													<a href="#"><?=$tourcategory?></a>
+													<ul class="sub-menu">
+														<?php foreach ($tours as $key => $tour) { ?>
+														<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
+														<?php } ?>
+													</ul>
+												</li>
+												<?php } ?>
 											</ul>
 										</li>
 										<li><a href="<?=base_url('/Services')?>">Services</a></li>
@@ -190,21 +194,6 @@
 							</div>
 							<div class="col-auto p-0 d-none d-xl-block">
 								<div class="header-button">
-									<?php if( isset($user) && isset($user['Authorization']) && $user['Authorization'] == true ){?>
-									<nav class="main-menu d-none d-xl-inline-block">
-										<ul>
-											<li class="menu-item-has-children">
-												<a href="#"><?=$user['name']?></a>
-												<ul class="sub-menu">
-													<li><a href="<?=base_url('/Account')?>">My Account</a></li>
-													<li><a href="<?=base_url('/Auth/signoff')?>">Logout</a></li>
-												</ul>
-											</li>
-										</ul>
-									</nav>
-									<?php } else { ?>
-									<a href="#login-form" class="popup-content th-btn">Login / Signup</a>
-									<?php } ?>
 									<a href="booknow.html" class="th-btn">Book Now</a>
 								</div>
 							</div>

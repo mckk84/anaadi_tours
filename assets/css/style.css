@@ -109,8 +109,8 @@ Last Update: 20-07-2024
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1320px;
   --container-gutters: 24px;
-  --section-space: 120px;
-  --section-space-mobile: 80px;
+  --section-space: 80px;
+  --section-space-mobile: 60px;
   --section-title-space: 60px;
   --ripple-ani-duration: 2s;
 }

@@ -57,6 +57,12 @@ function checkOrderEdit($date, $time)
     return true;
 }
 
+function create_slug($string)
+{
+   $slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
+   return $slug;
+}
+
 function getNewImage($target_folder, $name, $imageFileType)
 {
     $temp_image_name = ucwords(strtolower($name));

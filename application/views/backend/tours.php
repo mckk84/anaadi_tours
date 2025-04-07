@@ -26,6 +26,57 @@
                   </div>
                   <?php } ?>
               </div>
+
+              <?php if( count($records) > 0 ) { ?>
+                <table class="table datatable table-hover table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Tour Category</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Duration</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Start</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">Images</th>
+                      <th scope="col">Added By</th>
+                      <th scope="col">Added On</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach($records as $index => $row) {
+
+                      $img = explode(",", $row['images']);
+                    ?>
+                    <tr>
+                      <th scope="row"><?=$row['id']?></th>
+                      <td><?=$row['category']?></td>
+                      <td><?=$row['tourcategory']?></td>
+                      <td><?=$row['title']?></td>
+                      <td><?=$row['duration_nights']?> Nights, <?=$row['duration_days']?> Days</td>
+                      <td><?=$row['price']?></td>
+                      <td><?=$row['start_location']?></td>
+                      <td><?=$row['destination_location']?></td>
+                      <td><img class="thumb_image img-fluid" src="<?=base_url('assets/images/tours/'.$img[0])?>"></td>
+                      <td><?=$row['created_by']?></td>
+                      <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>
+                      <td><div class="d-flex justify-content-center">
+                        <?php if( isset($user['user_type']) && $user['user_type'] == 'Admin' ){?>
+                        <a title="Edit Record" href="<?=base_url('admin/Tours/edittour/'.$row['id'])?>" class="fs-6 text-warning float-right mx-2"><i class="bi bi-pencil-fill"></i></a>
+                        <a title="Delete Record" href="javascript:void(0)" record-data="<?=$row['id']?>" class="delete-record fs-6 text-danger float-right mx-2"><i class="bi bi-trash-fill"></i></a>
+                        <?php } else { ?>
+                          <a title="Edit Record" href="javascript:void(0)" record-data="<?=$row['id']?>" class="fs-6 text-warning float-right mx-2"><i class="bi bi-pencil-fill"></i></a>
+                        <?php } ?>
+                      </div></td>
+                    </tr>
+                     <?php } ?>
+                  </tbody>
+                </table>  
+
+              <?php } ?>
+
             </div>
 
           </div>
