@@ -55,6 +55,8 @@
 		</div>
 	</div>
 </div>
+
+<?php if( count($domestic_tours) > 0 ){ ?>
 <section class="category-area3 bg-smoke space" data-bg-src="assets/img/bg/line-pattern3.png">
 	<div class="container th-container">
 		<div class="title-area text-center">
@@ -64,167 +66,53 @@
 		<div class="slider-area">
 			<div class="swiper th-slider has-shadow category-slider3" id="categorySlider3" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
 				<div class="swiper-wrapper">
+					<?php foreach ($domestic_tours as $tour_category => $tours) { 
+						$images = explode(",", $tours[0]['images']);
+					?>
 					<div class="swiper-slide">
 						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Karnataka</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
+							<div class="box-img global-img"><img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="<?=$tour_category?> Tours"></div>
+							<h3 class="box-title"><a href="<?=base_url('Domestictours/'.$tour_category)?>"><?=$tour_category?></a></h3>
+							<a class="line-btn" href="<?=base_url('Domestictours/'.$tour_category)?>">See more</a>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Kerala</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Tamil Nadu</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Kolkata</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Jodhpur</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Delhi</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Hiking</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Airbirds</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Wildlife</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Walking</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
+					<?php } ?>
 				</div>
 				<div class="slider-pagination"></div>
 			</div>
 		</div>
 	</div>
 </section>
+<?php } ?>
+
+<?php if( count($international_tours) > 0 ){ ?>
 <section class="category-area3 bg-smoke space" data-bg-src="assets/img/bg/line-pattern3.png">
 	<div class="container th-container">
 		<div class="title-area text-center">
 			<span class="sub-title">Wornderful Place For You</span>
-			<h2 class="sec-title">Domestic Tours</h2>
+			<h2 class="sec-title">International Tours</h2>
 		</div>
 		<div class="slider-area">
 			<div class="swiper th-slider has-shadow category-slider3" id="categorySlider3" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"5"}}}'>
 				<div class="swiper-wrapper">
+					<?php foreach ($international_tours as $tour_category => $tours) { 
+						$images = explode(",", $tours[0]['images']);
+					?>
 					<div class="swiper-slide">
 						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Thailand</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
+							<div class="box-img global-img"><img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="<?=$tour_category?> Tours"></div>
+							<h3 class="box-title"><a href="<?=base_url('Internationaltours/'.$tour_category)?>"><?=$tour_category?></a></h3>
+							<a class="line-btn" href="<?=base_url('Internationaltours/'.$tour_category)?>">See more</a>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Singapore</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Africa</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Malaysia</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Australia</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">New Zealand</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Hiking</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Airbirds</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Wildlife</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="category-card single2">
-							<div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div>
-							<h3 class="box-title"><a href="destination.html">Walking</a></h3>
-							<a class="line-btn" href="destination.html">See more</a>
-						</div>
-					</div>
+					<?php } ?>
 				</div>
 				<div class="slider-pagination"></div>
 			</div>
 		</div>
 	</div>
-</section>
+</section>	
+<?php } ?>
 
 <section class="tour-area position-relative bg-top-center overflow-hidden space" id="service-sec" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
 	<div class="container">
@@ -329,6 +217,7 @@
 		</div>
 	</div>
 </section>
+
 <div class="gallery-area">
 	<div class="overflow-hidden space">
 		<div class="container">

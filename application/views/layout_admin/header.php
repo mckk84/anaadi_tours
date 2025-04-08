@@ -114,6 +114,11 @@
             </a>
           </li>
           <li>
+            <a href="<?=base_url('admin/Tourtypes')?>">
+              <i class="bi bi-list"></i><span>Tour Types</span>
+            </a>
+          </li>
+          <li>
             <a href="<?=base_url('admin/Services')?>">
               <i class="bi bi-list"></i><span>Services</span>
             </a>

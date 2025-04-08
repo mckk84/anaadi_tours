@@ -54,6 +54,11 @@ $route['admin'] = "admin/Login";
 $route['admin/(:any)'] = "admin/$1";
 
 $route['Tour/(:any)'] = "Tour/index";
+$route['Domestictours/(:any)'] = "Domestictours/index";
+$route['Domestictours/(:any)/(:any)'] = "Domestictours/index";
+
+$route['Internationaltours/(:any)'] = "Internationaltours/index";
+$route['Internationaltours/(:any)/(:any)'] = "Internationaltours/index";
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';

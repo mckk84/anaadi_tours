@@ -7,7 +7,7 @@
 
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Services <button type="button" class="new-category btn btn-md btn-primary float-right">Add <i class="bi bi-plus-circle ms-1"></i></button></h5>
+                <h5 class="card-title">Tour Types <button type="button" class="new-category btn btn-md btn-primary float-right">Add <i class="bi bi-plus-circle ms-1"></i></button></h5>
                 <div class="col-lg-12 showalert">
                 <?php if( count($records) == 0 ){?>
                   <div class="alert alert-danger">No records found.</div>
@@ -33,9 +33,7 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Services</th>
-                      <th scope="col">Image</th>
-                      <th scope="col">Description</th>
+                      <th scope="col">Type</th>
                       <th scope="col">Added By</th>
                       <th scope="col">Added On</th>
                       <th scope="col">Action</th>
@@ -45,9 +43,7 @@
                     <?php foreach($records as $index => $row) {?>
                     <tr>
                       <th scope="row"><?=$row['id']?></th>
-                      <td><?=$row['service_name']?></td>
-                      <td><img style="max-width: 50px;" class="img-fluid" src="<?=base_url('assets/images/services/'.$row['image'])?>"></td>
-                      <td><?=$row['description']?></td>
+                      <td><?=$row['type']?></td>
                       <td><?=$row['created_by']?></td>
                       <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>
                       <td><div class="d-flex justify-content-center">
@@ -75,36 +71,19 @@
   </main><!-- End #main -->
 
 <div class="modal fade" id="add-category" tabindex="-1" data-bs-backdrop="false">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <form id="addcategory" action="<?=base_url('admin/Services/save_record')?>" method="POST">
+      <form id="addcategory" action="<?=base_url('admin/Tourtypes/save_record')?>" method="POST">
           <input type="hidden" name="record_id" value="">
           <div class="modal-header">
-            <h5 class="modal-title">Add Service</h5>
+            <h5 class="modal-title">Add Type</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-8">
-                <div class="col-md-12 mx-auto mb-2">
-                  <label for="validationDefault02" class="form-label">Service</label>
-                  <input type="text" maxlength="100" autocomplete="off" class="form-control" name="service_name" id="validationDefault02" value="" required>
-                </div>
-                <div class="col-md-12 mx-auto mb-2">
-                  <label for="validationDefault02" class="form-label">Service Description</label>
-                  <textarea class="form-control" name="description" rows="4"></textarea>
-                </div>
-                <div class="col-md-12 mx-auto">
-                  <label for="validationDefault05" class="form-label">Service Icon Image</label>
-                  <input type="file" class="form-control" onchange="loadFile(event)" name="service_image" id="validationDefault05" value="" required>
-                </div>
+              <div class="col-md-10 mx-auto">
+                <label for="validationDefault02" class="form-label">Tour Type</label>
+                <input type="text" maxlength="100" autocomplete="off" class="form-control" name="type" id="validationDefault02" value="" required>
               </div>
-              <div class="col-md-3">
-                <div class="w-100 px-2 mb-2 float-left">
-                    <img class="img-fluid" id="imagepreview" src="" />
-                </div>
-              </div>
-            </div>
           </div>
           <div class="modal-footer">
               <button class="btn btn-primary" id="submitcategory" type="button">Submit</button>
@@ -117,18 +96,9 @@
 
 <script type="text/javascript">
 
-  var loadFile = function(event) 
-  {
-    var output = document.getElementById("imagepreview");
-    output.src = URL.createObjectURL(event.target.files[0]);
-    output.onload = function() {
-      URL.revokeObjectURL(output.src) // free memory
-    }      
-  };
-
   $(document).ready(function(){
 
-    var module_url = '<?=base_url('/admin/Services')?>';
+    var module_url = '<?=base_url('/admin/Tourtypes')?>';
 
     //edit customer
     $(".new-category").click(function (event) {
@@ -151,9 +121,8 @@
                 {
                   $('#add-category').modal('show');    
                   $('#add-category input[name="record_id"]').val(d.record.id);
-                  $('#add-category input[name="service_name"]').val(d.record.service_name);
-                  $('#add-category textarea[name="description"]').val(d.record.description);
-                  $('#add-category #imagepreview').attr('src', "<?=base_url('assets/images/services/')?>"+d.record.image);
+                  $('#add-category input[name="type"]').val(d.record.type);
+                  $('#add-category select[name="category"]').val(d.record.category_id);
                 }
                 else
                 {
@@ -170,32 +139,17 @@
     $("#submitcategory").click(function (event) {
         event.preventDefault(); // Prevent default form submission
         
+        let form = $("#addcategory");
         let mbody = $("#addcategory .modal-body");
+        let url = form.attr('action');
         
-        var service_name = $("#addcategory input[name='service_name']").val().trim();
-        if( service_name == "" )
+        var type = $("#addcategory input[name='type']").val().trim();
+        if( type == "" )
         {
-          $("#addcategory input[name='service_name']").focus();
+          $("#addcategory input[name='type']").focus();
           return false;
         }
 
-        var service_name = $("#addcategory input[name='service_name']").val().trim();
-        if( service_name == "" )
-        {
-          $("#addcategory input[name='service_name']").focus();
-          return false;
-        }
-        var description = $("#addcategory textarea[name='description']").val().trim();
-        if( description == "" )
-        {
-          $("#addcategory textarea[name='description']").focus();
-          return false;
-        }
-
-        let form = $("#addcategory")[0];
-        var formData = new FormData(form);
-        let url = $("#addcategory").attr('action');
-        
         $(this).prop('disabled', true);
         $(this).html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Please wait..");
         
@@ -206,10 +160,7 @@
         $.ajax({
             type: "POST",
             url: url,
-            data: formData, 
-            contentType: false,       
-            cache: false,             
-            processData:false, 
+            data: form.serialize(), // Serialize form data
             success: function (data) {
                 var d = JSON.parse(data);
                 if( d.error == 1 )
@@ -222,7 +173,6 @@
                 {
                     mbody.append("<div class='alert alert-success mt-1 mb-0'>"+d.success_message+"</div>");
                     $("#submitcategory").html("Success");
-                    $("#add-category").modal('hide');   
                     setTimeout(function(){
                         window.location.reload();
                     }, 2000);

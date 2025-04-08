@@ -204,3 +204,49 @@ select, .form-control, .form-select, textarea, input {
 .img-box3 .img2 img {
     max-width: 400px;
 }
+
+.newsletter-top .newsletter-title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.tour-box_img img {
+    height: 230px;
+}
+
+.tour-box .box-title {
+    height: 40px;
+    display: inline-block;
+}
+
+.tour-box_price{
+    margin-bottom: 10px;
+}
+.recent-post .post-title {
+    font-size: 15px;
+}
+
+.recent-post .recent-post-meta a {
+    font-size: 14px;
+}
+
+.search-form-area .search-form input {
+    background-color: var(--white-color);
+    border: 1px solid grey;
+}
+
+.tour-box .currency {
+    font-size: 18px;
+}
+
+.global-img img {
+    width: 20%;
+    object-fit: cover;
+    -webkit-transition: 1.3s all ease;
+    transition: 1.3s all ease;
+    margin: 10px;
+}
+
+.text-left{
+    text-align: left;
+}
