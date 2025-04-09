@@ -1,4 +1,4 @@
-<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/breadcumb-bg.jpg">
+<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title"><?=$tourcategory?> Tours</h1>
@@ -44,7 +44,7 @@
                                             <span class="h3 box-title">
                                                 <a href="<?=base_url('Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a>
                                             </span>
-                                            <h4 class="tour-box_price"><span class="currency"><?=$tour['price']?></span>/Person</h4>
+                                            <!--<h4 class="tour-box_price"><span class="currency"><?=$tour['price']?></span>/Person</h4>-->
                                             <div class="tour-action"><span><i class="fa-light fa-clock"></i><?=$tour['duration_days']?> Days</span> <a href="<?=base_url('Tour/'.$tour['url_title'])?>" class="th-btn style4">Detail View</a></div>
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@
                                         <div class="tour-box_img global-img"><img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="<?=$tour['title']?>"></div>
                                         <div class="tour-content">
                                             <h3 class="box-title"><a href="tour-details.html"><?=$tour['title']?></a></h3>
-                                            <h4 class="tour-box_price"><span class="currency"><?=$tour['price']?></span>/Person</h4>
+                                            <!--<h4 class="tour-box_price"><span class="currency"><?=$tour['price']?></span>/Person</h4>-->
                                             <div class="tour-action"><span><i class="fa-light fa-clock"></i><?=$tour['duration_days']?> Days</span> <a href="<?=base_url('Tour/'.$tour['url_title'])?>" class="th-btn style4">Detail View</a></div>
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                                 <?php } ?>
                             </div>
                         </div>
-                        <div class="widget widget_offer" data-bg-src="<?=base_url()?>assets/img/bg/widget_bg_1.jpg">
+                        <div class="widget widget_offer">
                             <div class="offer-banner">
                                 <div class="offer">
                                     <h6 class="box-title">Need Help? We Are Here To Help You</h6>
@@ -118,7 +118,7 @@
                                         <h6 class="offer-title">You Get Online support</h6>
                                         <a class="offter-num" href="tel:+91 6364328383">+91 6364328383</a>
                                     </div>
-                                    <a href="<?=base_url('Contact')?>" class="th-btn style2 th-icon">Read More</a>
+                                    <a href="<?=base_url('Contact')?>" class="th-btn th-icon">Contact</a>
                                 </div>
                             </div>
                         </div>

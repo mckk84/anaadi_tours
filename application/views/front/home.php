@@ -78,7 +78,6 @@
 					</div>
 					<?php } ?>
 				</div>
-				<div class="slider-pagination"></div>
 			</div>
 		</div>
 	</div>
@@ -107,7 +106,6 @@
 					</div>
 					<?php } ?>
 				</div>
-				<div class="slider-pagination"></div>
 			</div>
 		</div>
 	</div>

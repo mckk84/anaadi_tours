@@ -9,11 +9,12 @@ class Tours_model extends CI_Model
     function getAll()
     {
         $this->db->order_by('tbl_tours.id', 'DESC');
-        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tourcategory.sub_category as tourcategory,tbl_users.name as created_by');
+        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tour_types.type, tbl_tourcategory.sub_category as tourcategory,tbl_users.name as created_by');
         $this->db->from('tbl_tours');
         $this->db->join('tbl_users', 'tbl_users.userId = tbl_tours.created_by',  'left');
         $this->db->join('tbl_category', 'tbl_tours.category_id = tbl_category.id',  'left');
         $this->db->join('tbl_tourcategory', 'tbl_tours.tourcategory_id = tbl_tourcategory.id',  'left');
+        $this->db->join('tbl_tour_types', 'tbl_tours.type_id = tbl_tour_types.id',  'left');
         $query = $this->db->get();
         if ($query->num_rows() > 0){
             return $query->result_array();
@@ -26,11 +27,12 @@ class Tours_model extends CI_Model
     {
         $this->db->limit($limit);
         $this->db->order_by('tbl_tours.id', 'DESC');
-        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tourcategory.sub_category as tourcategory,tbl_users.name as created_by');
+        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tour_types.type, tbl_tourcategory.sub_category as tourcategory,tbl_users.name as created_by');
         $this->db->from('tbl_tours');
         $this->db->join('tbl_users', 'tbl_users.userId = tbl_tours.created_by',  'left');
         $this->db->join('tbl_category', 'tbl_tours.category_id = tbl_category.id',  'left');
         $this->db->join('tbl_tourcategory', 'tbl_tours.tourcategory_id = tbl_tourcategory.id',  'left');
+        $this->db->join('tbl_tour_types', 'tbl_tours.type_id = tbl_tour_types.id',  'left');
         $query = $this->db->get();
         if ($query->num_rows() > 0){
             return $query->result_array();
@@ -56,11 +58,12 @@ class Tours_model extends CI_Model
     public function getTour($url_title)
     {
         $this->db->order_by('tbl_tours.id', 'DESC');
-        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tourcategory.sub_category as tourcategory,tbl_users.name as created_by');
+        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tour_types.type, tbl_tourcategory.sub_category as tourcategory,tbl_users.name as created_by');
         $this->db->from('tbl_tours');
         $this->db->join('tbl_users', 'tbl_users.userId = tbl_tours.created_by',  'left');
         $this->db->join('tbl_category', 'tbl_tours.category_id = tbl_category.id',  'left');
         $this->db->join('tbl_tourcategory', 'tbl_tours.tourcategory_id = tbl_tourcategory.id',  'left');
+        $this->db->join('tbl_tour_types', 'tbl_tours.type_id = tbl_tour_types.id',  'left');
         $this->db->where('tbl_tours.url_title', $url_title);
         $query = $this->db->get();
         if ($query->num_rows() > 0){
@@ -117,8 +120,12 @@ class Tours_model extends CI_Model
         }
     }
 
-    public function getByTourCategory($category)
+    public function getByTourCategory($category, $limit = 0)
     {
+        if( $limit > 0 )
+        {
+            $this->db->limit($limit);    
+        }
         $this->db->order_by('tbl_tours.id', 'DESC');
         $this->db->select('*');
         $this->db->from('tbl_tours');
@@ -133,8 +140,12 @@ class Tours_model extends CI_Model
         }
     }
 
-    public function getByTourCategoryType($category, $type)
+    public function getByTourCategoryType($category, $type, $limit = 0)
     {
+        if( $limit > 0 )
+        {
+            $this->db->limit($limit);    
+        }
         $this->db->order_by('tbl_tours.id', 'DESC');
         $this->db->select('*');
         $this->db->from('tbl_tours');

@@ -1,4 +1,4 @@
-<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/breadcumb-bg.jpg">
+<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Contact Us</h1>

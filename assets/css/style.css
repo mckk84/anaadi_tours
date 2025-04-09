@@ -2369,12 +2369,12 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 .th-mobile-menu ul .menu-item-has-children > a .th-mean-expand:before {
-  content: '\f067';
+  content: '\f054';
   font-family: var(--icon-font);
 }
 
 .th-mobile-menu ul .menu-item-has-children > a:after {
-  content: "\f067";
+  content: "\f054";
   font-family: var(--icon-font);
   width: 22px;
   height: 22px;
@@ -2389,11 +2389,11 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 .th-mobile-menu ul .menu-item-has-children.th-active > a .th-mean-expand:before {
-  content: '\f068';
+  content: '\f054';
 }
 
 .th-mobile-menu ul .menu-item-has-children.th-active > a:after {
-  content: "\f068";
+  content: "\f054";
 }
 
 .th-mobile-menu > ul {
@@ -6008,7 +6008,6 @@ a.text-theme:hover,
 }
 
 .widget_offer .offer-banner .box-title {
-  color: var(--white-color);
   margin: -0.4rem 0px 22px;
 }
 
@@ -6032,7 +6031,6 @@ a.text-theme:hover,
 }
 
 .widget_offer .offer-title {
-  color: var(--white-color);
   font-weight: 500;
   margin-top: 15px;
   margin-bottom: 2px;
@@ -6041,13 +6039,12 @@ a.text-theme:hover,
 .widget_offer .offter-num {
   font-weight: 400;
   font-size: 18px;
-  color: var(--white-color);
   margin-bottom: 0px;
 }
 
-.tour-booking .widget_subtitle {
+/*.tour-booking .widget_subtitle {
   color: var(--title-color);
-}
+}*/
 
 .tour-booking .widget_price {
   font-size: 28px;
@@ -7710,14 +7707,14 @@ ol.wp-block-rss {
 }
 
 .main-menu ul.sub-menu li.menu-item-has-children > a:after {
-  content: "\2b";
+  content: "\f054";
   float: right;
   top: 1px;
   display: inline-block;
 }
 
 .main-menu ul.sub-menu li.menu-item-has-children > a:hover:after {
-  content: "\f068";
+  content: "\f054";
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -9384,7 +9381,7 @@ heding animation  end
 
 .breadcumb-title {
   margin: -0.23em 0 -0.18em 0;
-  font-size: 54px;
+  font-size: 40px;
   font-family: var(--title-font);
   color: var(--white-color);
   font-weight: 700;
@@ -22679,9 +22676,9 @@ span.select2-selection.select2-selection--single:focus {
 .testi-card3 {
   position: relative;
   z-index: 3;
-  height: 536px;
+  height: 436px;
   --space: 90px;
-  margin-bottom: 97px;
+  margin-bottom: 37px;
   /* Extra large devices */
   /* Medium Large devices */
   /* Large devices */
@@ -27888,11 +27885,11 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .accordion-card.style3 .accordion-button:after {
-  content: "\2b";
+  content: "\f054";
 }
 
 .accordion-card.style3 .accordion-button:not(.collapsed):after {
-  content: "\f068";
+  content: "\f054";
 }
 
 /* Medium devices */
@@ -28176,7 +28173,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .accordion-item .accordion-button:not(.collapsed):after {
-  content: '\f068';
+  content: '\f054';
 }
 
 .accordion-item .accordion-button.collapsed {

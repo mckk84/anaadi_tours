@@ -1,4 +1,4 @@
-<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/breadcumb-bg.jpg">
+<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">About Us</h1>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-35"><a href="<?=base_url('/Contact')?>" class="th-btn style3 th-icon">Contact With Us</a></div>
+                    <div class="mt-35"><a href="<?=base_url('/Contact')?>" class="th-btn th-icon">Contact With Us</a></div>
                 </div>
             </div>
         </div>

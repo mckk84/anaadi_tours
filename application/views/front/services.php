@@ -1,4 +1,4 @@
-<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/breadcumb-bg.jpg">
+<div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Services</h1>
@@ -16,12 +16,12 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="destination-item th-ani">
                     <div class="destination-item_img global-img">
-                        <img class="img-fluid" src="<?=base_url('assets/images/services/'.$row['image'])?>" alt="image">
+                        <img class="w-20 img-fluid" src="<?=base_url('assets/images/services/'.$row['image'])?>" alt="image">
                     </div>
                     <div class="destination-content">
-                        <h3 class="box-title"><a href="#"><?=$row['service_name']?></a></h3>
+                        <h3 class="box-title"><a href="<?=base_url()?>#"><?=$row['service_name']?></a></h3>
                         <span class="w-100 d-block p-2 text-left small m-2"><?=$row['description']?></span>
-                        <a href="contact.html" class="th-btn style4 th-icon">Book Now</a>
+                        <a href="<?=base_url('Contact')?>" class="th-btn style4 th-icon">Book Now</a>
                     </div>
                 </div>
             </div>

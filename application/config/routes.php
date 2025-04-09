@@ -54,6 +54,8 @@ $route['admin'] = "admin/Login";
 $route['admin/(:any)'] = "admin/$1";
 
 $route['Tour/(:any)'] = "Tour/index";
+$route['Booktour/(:any)'] = "Booktour/index";
+
 $route['Domestictours/(:any)'] = "Domestictours/index";
 $route['Domestictours/(:any)/(:any)'] = "Domestictours/index";
 
