@@ -19,11 +19,7 @@ class Logout extends CI_Controller
      */
     public function index()
     {
-        $sessionArray = array('userId' => 0, 'isLoggedIn' => 0);
-        $this->session->set_userdata($sessionArray);
-        
-        unset($sessionArray['userId'], $sessionArray['isLoggedIn']);
-        
+        $this->session->sess_destroy();
         $this->session->set_flashdata('success', 'Logged Out');
         redirect('admin');
     }
