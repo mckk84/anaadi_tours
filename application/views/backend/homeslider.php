@@ -7,7 +7,7 @@
 
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Services <button type="button" class="new-category btn btn-md btn-primary float-right">Add <i class="bi bi-plus-circle ms-1"></i></button></h5>
+                <h5 class="card-title">Home Slider <button type="button" class="new-category btn btn-md btn-primary float-right">Add <i class="bi bi-plus-circle ms-1"></i></button></h5>
                 <div class="col-lg-12 showalert">
                 <?php if( count($records) == 0 ){?>
                   <div class="alert alert-danger">No records found.</div>
@@ -33,9 +33,9 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Services</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Sub Title</th>
                       <th scope="col">Image</th>
-                      <th scope="col">Description</th>
                       <th scope="col">Added By</th>
                       <th scope="col">Added On</th>
                       <th scope="col">Action</th>
@@ -45,9 +45,9 @@
                     <?php foreach($records as $index => $row) {?>
                     <tr>
                       <th scope="row"><?=$row['id']?></th>
-                      <td><?=$row['service_name']?></td>
-                      <td><img style="max-width: 50px;" class="img-fluid" src="<?=base_url('assets/images/services/'.$row['image'])?>"></td>
-                      <td><?=$row['description']?></td>
+                      <td><?=$row['title']?></td>
+                      <td><?=$row['sub_title']?></td>
+                      <td><img style="max-width: 150px;" class="img-fluid mx-auto p-1 border rounded" src="<?=base_url('assets/images/homeslider/'.$row['image'])?>"></td>
                       <td><?=$row['created_by']?></td>
                       <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>
                       <td><div class="d-flex justify-content-center">
@@ -77,31 +77,32 @@
 <div class="modal fade" id="add-category" tabindex="-1" data-bs-backdrop="false">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <form id="addcategory" action="<?=base_url('admin/Services/save_record')?>" method="POST">
+      <form id="addcategory" action="<?=base_url('admin/Homeslider/save_record')?>" method="POST">
           <input type="hidden" name="record_id" value="">
           <div class="modal-header">
-            <h5 class="modal-title">Add Service</h5>
+            <h5 class="modal-title">Add Slider</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="row">
               <div class="col-md-8">
                 <div class="col-md-12 mx-auto mb-2">
-                  <label for="validationDefault02" class="form-label">Service</label>
-                  <input type="text" maxlength="100" autocomplete="off" class="form-control" name="service_name" id="validationDefault02" value="" required>
+                  <label for="validationDefault02" class="form-label">Title</label>
+                  <input type="text" maxlength="200" autocomplete="off" class="form-control" name="title" id="validationDefault02" value="" required>
                 </div>
                 <div class="col-md-12 mx-auto mb-2">
-                  <label for="validationDefault02" class="form-label">Service Description</label>
-                  <textarea class="form-control" name="description" rows="4"></textarea>
+                  <label for="validationDefault02" class="form-label">Sub Title</label>
+                  <input type="text" maxlength="250" autocomplete="off" class="form-control" name="sub_title" id="validationDefault02" value="" required>
                 </div>
                 <div class="col-md-12 mx-auto">
-                  <label for="validationDefault05" class="form-label">Service Icon Image</label>
-                  <input type="file" class="form-control" onchange="loadFile(event)" name="service_image" id="validationDefault05" value="" required>
+                  <label for="validationDefault05" class="form-label">Slider Image</label>
+                  <input type="file" class="form-control" onchange="loadFile(event)" name="image" id="validationDefault05" value="" required>
+                  <span class="p-1 small text-danger">Size less than 2MB. Min Resolution 1280x720.</span>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="w-100 px-2 mb-2 float-left">
-                    <img class="img-fluid" id="imagepreview" src="" />
+                    <img class="img-fluid border p-1 rounded" id="imagepreview" src="" />
                 </div>
               </div>
             </div>
@@ -122,13 +123,22 @@
     var output = document.getElementById("imagepreview");
     output.src = URL.createObjectURL(event.target.files[0]);
     output.onload = function() {
+      var height = this.naturalHeight;
+      var width = this.naturalWidth;
+      console.log(width+"x"+height);
+      if (height < 720 || width < 1280) {
+        alert("Image dimension should be greater or equal to 1280X720");
+        output.src = "";
+        $("#addcategory input[name='image']").val("");
+        return false;
+      }
       URL.revokeObjectURL(output.src) // free memory
     }      
   };
 
   $(document).ready(function(){
 
-    var module_url = '<?=base_url('/admin/Services')?>';
+    var module_url = '<?=base_url('/admin/Homeslider')?>';
 
     //edit customer
     $(".new-category").click(function (event) {
@@ -151,9 +161,9 @@
                 {
                   $('#add-category').modal('show');    
                   $('#add-category input[name="record_id"]').val(d.record.id);
-                  $('#add-category input[name="service_name"]').val(d.record.service_name);
-                  $('#add-category textarea[name="description"]').val(d.record.description);
-                  $('#add-category #imagepreview').attr('src', "<?=base_url('assets/images/services/')?>"+d.record.image);
+                  $('#add-category input[name="title"]').val(d.record.title);
+                  $('#add-category input[name="sub_title"]').val(d.record.sub_title);
+                  $('#add-category #imagepreview').attr('src', "<?=base_url('assets/images/homeslider/')?>"+d.record.image);
                 }
                 else
                 {
@@ -172,17 +182,17 @@
         
         let mbody = $("#addcategory .modal-body");
         
-        var service_name = $("#addcategory input[name='service_name']").val().trim();
-        if( service_name == "" )
+        var title = $("#addcategory input[name='title']").val().trim();
+        if( title == "" )
         {
-          $("#addcategory input[name='service_name']").focus();
+          $("#addcategory input[name='title']").focus();
           return false;
         }
 
-        var description = $("#addcategory textarea[name='description']").val().trim();
-        if( description == "" )
+        var sub_title = $("#addcategory input[name='sub_title']").val().trim();
+        if( sub_title == "" )
         {
-          $("#addcategory textarea[name='description']").focus();
+          $("#addcategory input[name='sub_title']").focus();
           return false;
         }
 

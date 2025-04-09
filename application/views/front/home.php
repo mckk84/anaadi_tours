@@ -1,18 +1,20 @@
 <div class="th-hero-wrapper hero-1" id="hero">
 	<div class="swiper th-slider hero-slider-1" id="heroSlide1" data-slider-options='{"effect":"fade","menu": ["", "", ""],"heroSlide1": {"swiper-container": {"pagination": {"el": ".swiper-pagination", "clickable": true }}}}'>
 		<div class="swiper-wrapper">
+			<?php foreach ($homeslider as $tour_category => $slider) { ?>
 			<div class="swiper-slide">
 				<div class="hero-inner">
-					<div class="th-hero-bg" data-bg-src="<?=base_url()?>assets/img/hero/hero_bg_1_2.jpg"></div>
+					<div class="th-hero-bg" data-bg-src="<?=base_url('assets/images/homeslider/'.$slider['image'])?>"></div>
 					<div class="container">
 						<div class="hero-style1">
-							<span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Get unforgetable pleasure with us</span>
-							<h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Let’s make your best trip with us</h1>
+							<span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s"><?=$slider['sub_title']?></span>
+							<h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s"><?=$slider['title']?></h1>
 							<div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="<?=base_url('Tours')?>" class="th-btn th-icon">Explore Tours</a> <a href="<?=base_url('Services')?>" class="th-btn style2 th-icon">Our Services</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
+		<?php } ?>
 		</div>
 	</div>
 </div>
@@ -310,76 +312,22 @@
 				<div class="space-extra">
 					<div class="title-area mb-40 pe-xl-5 me-xl-5">
 						<span class="sub-title">Testimonial</span>
-						<h2 class="sec-title">What Client Say About us Tourm?</h2>
+						<h2 class="sec-title">What Clients Say About Us?</h2>
 					</div>
 					<div class="swiper th-slider testiSlide13" id="testiSlide13" data-slider-options='{"paginationType":"progressbar","direction":"vertical","breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"1"}}}'>
 						<div class="swiper-wrapper">
+							<?php foreach($testimonial as $row){?>
 							<div class="swiper-slide">
 								<div class="testi-grid2 style2">
 									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<h4 class="box-title2">Popular Themes for Worldwide Tours</h4>
 									<div class="box-content">
-										<p class="box-text">“A worldwide tour involves visiting multiple destinations across the globe, often spanning several countries, continents, and iconic landmark. It can be customized based on personal interest, such as history, culture, nature, adventure, or luxury travel. A world tour may last anywhere from a few weeks to several months or even a year.”</p>
-										<h6 class="box-title">Sarah Rahman</h6>
-										<span class="box-desig">World Traveler</span>
+										<p class="box-text">“<?=$row['testimonial']?>”</p>
+										<h6 class="box-title"><?=$row['name']?></h6>
+										<span class="box-desig"><?=$row['sub_title']?></span>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="testi-grid2 style2">
-									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<h4 class="box-title2">Popular Themes for Worldwide Tours</h4>
-									<div class="box-content">
-										<p class="box-text">“A worldwide tour involves visiting multiple destinations across the globe, often spanning several countries, continents, and iconic landmark. It can be customized based on personal interest, such as history, culture, nature, adventure, or luxury travel. A world tour may last anywhere from a few weeks to several months or even a year.”</p>
-										<h6 class="box-title">Angelina Rose</h6>
-										<span class="box-desig">World Traveler</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="testi-grid2 style2">
-									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<h4 class="box-title2">Popular Themes for Worldwide Tours</h4>
-									<div class="box-content">
-										<p class="box-text">“A worldwide tour involves visiting multiple destinations across the globe, often spanning several countries, continents, and iconic landmark. It can be customized based on personal interest, such as history, culture, nature, adventure, or luxury travel. A world tour may last anywhere from a few weeks to several months or even a year.”</p>
-										<h6 class="box-title">Michel Smith</h6>
-										<span class="box-desig">World Traveler</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="testi-grid2 style2">
-									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<h4 class="box-title2">Popular Themes for Worldwide Tours</h4>
-									<div class="box-content">
-										<p class="box-text">“A worldwide tour involves visiting multiple destinations across the globe, often spanning several countries, continents, and iconic landmark. It can be customized based on personal interest, such as history, culture, nature, adventure, or luxury travel. A world tour may last anywhere from a few weeks to several months or even a year.”</p>
-										<h6 class="box-title">Jesmen</h6>
-										<span class="box-desig">World Traveler</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="testi-grid2 style2">
-									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<h4 class="box-title2">Popular Themes for Worldwide Tours</h4>
-									<div class="box-content">
-										<p class="box-text">“A worldwide tour involves visiting multiple destinations across the globe, often spanning several countries, continents, and iconic landmark. It can be customized based on personal interest, such as history, culture, nature, adventure, or luxury travel. A world tour may last anywhere from a few weeks to several months or even a year.”</p>
-										<h6 class="box-title">Sarah Rahman</h6>
-										<span class="box-desig">World Traveler</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="testi-grid2 style2">
-									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<h4 class="box-title2">Popular Themes for Worldwide Tours</h4>
-									<div class="box-content">
-										<p class="box-text">“A worldwide tour involves visiting multiple destinations across the globe, often spanning several countries, continents, and iconic landmark. It can be customized based on personal interest, such as history, culture, nature, adventure, or luxury travel. A world tour may last anywhere from a few weeks to several months or even a year.”</p>
-										<h6 class="box-title">Angelina Rose</h6>
-										<span class="box-desig">World Traveler</span>
-									</div>
-								</div>
-							</div>
+							<?php } ?>
 						</div>
 						<div class="slider-pagination"></div>
 						<div class="icon-box"><button data-slider-prev="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/left-arrow2.svg" alt=""></button></div>

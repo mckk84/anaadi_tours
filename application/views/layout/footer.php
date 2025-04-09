@@ -68,7 +68,7 @@
 									<div class="info-box_text">
 										<div class="icon"><img src="<?=base_url()?>assets/img/icon/location-dot.svg" alt="img"></div>
 										<div class="details">
-											<p>#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</p>
+											<p>#4, 2nd Floor, Maruthi Complex, Thindlu-Kodigehalli Main Road, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097, Karnataka, INDIA.</p>
 										</div>
 									</div>
 								</div>

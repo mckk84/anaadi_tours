@@ -132,6 +132,24 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-modules" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Modules</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-modules" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="<?=base_url('admin/Homeslider')?>">
+              <i class="bi bi-list"></i><span>Homeslider</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?=base_url('admin/Testimonial')?>">
+              <i class="bi bi-list"></i><span>Testimonial</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Admin</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
