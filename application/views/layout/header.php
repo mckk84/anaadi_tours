@@ -39,11 +39,11 @@
 	</head>
 	<body>
 		<div id="preloader" class="preloader">
-			<button class="th-btn preloaderCls">Cancel Preloader</button>
+			<!-- <button class="th-btn preloaderCls">Cancel Preloader</button> -->
 			<div class="preloader-inner"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt=""></div>
 			<div id="loader" class="th-preloader">
 				<div class="animation-preloader">
-					<div class="txt-loading"><span preloader-text="Anaadi" class="characters">Anaadi </span><span preloader-text="tours" class="characters">tours </span><span preloader-text="and" class="characters">and </span><span preloader-text="Travels" class="characters">Travels </span></div>
+					<div class="txt-loading"><span preloader-text="Anaadi" class="characters">Anaadi </span><span preloader-text="Tours" class="characters">Tours </span><span preloader-text="&" class="characters">& </span><span preloader-text="Travels" class="characters">Travels </span></div>
 				</div>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 				<button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
 				<div class="widget">
 					<div class="th-widget-about">
-						<div class="about-logo"><a href="home-travel.html"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels"></a></div>
+						<div class="about-logo"><a href="home-travel.html"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt="ANAADI Tours and Travels"></a></div>
 						<p class="about-text">Anaadi Tours and Travels is a trusted travel tour package operator based in Bangalore. Get the best deals, customized tour packages, and more from the best travel agency in Bangalore.</p>
 						<div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></div>
 					</div>
@@ -89,7 +89,13 @@
 		<div class="th-menu-wrapper onepage-nav">
 			<div class="th-menu-area text-center">
 				<button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-				<div class="mobile-logo"><a href="home-travel.html"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels"></a></div>
+				<div class="mobile-logo">
+					<a href="home-travel.html">
+						<img src="<?=base_url()?>assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels">
+						<span class="header_logo_mobile">Anaadi</span>	
+						<span class="header_logo_mobile_sub">Tours & Travels</span>	
+					</a>
+				</div>
 				<div class="th-mobile-menu">
 					<ul>
 						<li><a href="<?=base_url()?>">Home</a></li>
@@ -97,15 +103,39 @@
 						<li class="menu-item-has-children">
 							<a href="#">Domestic Tours</a>
 							<ul class="sub-menu">
-								<li><a href="<?=base_url('/Domestictours')?>">Domestic Tours</a></li>
-								<li><a href="<?=base_url('/Domesticdestination')?>">Domestic Destinations</a></li>
+								<?php foreach ($domestic_tours as $tourcategory => $tours) { ?>
+								<li class="menu-item-has-children">
+									<a href="#"><?=$tourcategory?></a>
+									<ul class="sub-menu">
+										<?php foreach ($tours as $key => $tour) { ?>
+										<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
+										<?php } ?>
+									</ul>
+								</li>
+								<?php } ?>
 							</ul>
 						</li>
+						
 						<li class="menu-item-has-children">
 							<a href="#">International Tours</a>
 							<ul class="sub-menu">
-								<li><a href="<?=base_url('/Internationaltours')?>">International Tours</a></li>
-								<li><a href="<?=base_url('/Internationaldestinations')?>">International Destinations</a></li>
+								<?php foreach ($international_tours as $tourcategory => $tours) { ?>
+								<li class="menu-item-has-children">
+									<a href="#"><?=$tourcategory?></a>
+									<ul class="sub-menu">
+										<?php foreach ($tours as $key => $tour) { ?>
+										<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
+										<?php } ?>
+									</ul>
+								</li>
+								<?php } ?>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">Media & Gallery</a>
+							<ul class="sub-menu">
+								<li><a href="<?=base_url('/Gallery')?>">Gallery</a></li>
+								<li><a href="<?=base_url('/Videos')?>">Videos</a></li>
 							</ul>
 						</li>
 						<li><a href="<?=base_url('/Services')?>">Services</a></li>
@@ -121,8 +151,8 @@
 						<div class="col-auto d-none d-md-block">
 							<div class="header-links">
 								<ul>
-									<li class="d-none d-xl-inline-block"><i class="fa-sharp fa-regular fa-location-dot"></i> <span>#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</span></li>
-									<li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock"></i> <span>Sun to Friday: 10.00 AM - 7.00 PM</span></li>
+									<li class="d-none d-xl-inline-block"><i class="fa-sharp text-danger fa-regular fa-location-dot"></i> <span class="font-semibold">#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</span></li>
+									<li class="d-none d-xl-inline-block"><i class="fa-regular text-danger fa-clock"></i> <span class="font-semibold">Sun to Friday: 10.00 AM - 7.00 PM</span></li>
 								</ul>
 							</div>
 						</div>
@@ -130,8 +160,8 @@
 							<div class="header-right">
 								<div class="header-links">
 									<ul>
-										<li class="d-none d-md-inline-block"><i class="fa-regular fa-phone"></i><a href="tel:+916364328383">+91 6364328383</a></li>
-										<li class="d-none d-md-inline-block"><i class="fa-regular fa-envelope"></i><a href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
+										<li class="d-none d-md-inline-block"><i class="fa-regular text-danger fa-phone"></i><a  class="font-semibold" href="tel:+916364328383">+91 6364328383</a></li>
+										<li class="d-none d-md-inline-block"><i class="fa-regular text-danger fa-envelope"></i><a  class="font-semibold" href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
 									</ul>
 								</div>
 							</div>
@@ -144,9 +174,9 @@
 					<div class="container">
 						<div class="row align-items-center justify-content-between">
 							<div class="col-auto p-0">
-								<div class="header-logo"><a title="Anaadi Tours and Travels" href="index.html">
+								<div class="header-logo"><a title="Anaadi Tours and Travels" href="<?=base_url()?>">
 									<img class="header_logo" src="<?=base_url()?>assets/img/alogo.png" alt="Anaadi Tours and Travels">
-									<span class="header_logo_title">Anaadi</span>
+									<span class="header_logo_title">ANAADI</span>
 									<span class="header_logo_title_sub">Tours & Travels</span>		
 								</a></div>
 							</div>
@@ -186,6 +216,13 @@
 												<?php } ?>
 											</ul>
 										</li>
+										<li class="menu-item-has-children">
+											<a href="#">Media & Gallery</a>
+											<ul class="sub-menu">
+												<li><a href="<?=base_url('/Gallery')?>">Gallery</a></li>
+												<li><a href="<?=base_url('/Videos')?>">Videos</a></li>
+											</ul>
+										</li>
 										<li><a href="<?=base_url('/Services')?>">Services</a></li>
 										<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
 									</ul>
@@ -194,7 +231,7 @@
 							</div>
 							<div class="col-auto p-0 d-none d-xl-block">
 								<div class="header-button">
-									<a href="booknow.html" class="th-btn">Book Now</a>
+									<a href="<?=base_url('Contact')?>" class="th-btn th-icon">Book your Tour</a>
 								</div>
 							</div>
 						</div>

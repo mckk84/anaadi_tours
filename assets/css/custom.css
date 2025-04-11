@@ -4,7 +4,7 @@
 }
 
 .header_logo {
-    width: 100px;
+    width: 80px;
     float: left;
     display: block;
     margin: 4px;
@@ -19,7 +19,7 @@
 .header_logo_title {
     display: block;
     float: left;
-    margin-top: 8px;
+    margin-top: 0px;
     font-size: 35px;
     color: var(--theme-color);
     width: 100px;
@@ -30,12 +30,81 @@
     float: left;
     display: block;
     margin-top: 0px;
-    font-size: 17px;
+    font-size: 19px;
     color: var(--theme-color);
-    width: 131px;
+    width: 150px;
     line-height: 25px;
     font-weight: 600;
 }
+
+span.header_logo_mobile {
+    font-size: 30px;
+    color: var(--theme-color);
+    width: 100%;
+    line-height: 30px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header_logo_mobile_sub{
+    font-size: 20px;
+    color: var(--theme-color);
+    width: 100%;
+    line-height: 30px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about-item:not(:last-child) {
+    margin-bottom: 25px;
+}
+.category-card .box-img img {
+    border-radius: 15px;
+    border: 3px solid white;
+    height: 220px;
+}
+.category-card .box-img {
+    border-radius: 15px;
+    margin-bottom: 22px;
+}
+.th-mobile-menu ul li a {
+    font-size: 15px;
+}
+.about-item_img {
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+.about-item_img img {
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-top: -5px;
+}
+.video-box4 .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.mobile-logo img {
+    width: 150px;
+    margin: auto;
+    display: block;
+}
+
+.th-mobile-menu {
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+    padding-bottom: 40px;
+    margin-top: 0;
+    text-align: left;
+}
+
 
 .th-btn.th-icon:after {
     content: '';

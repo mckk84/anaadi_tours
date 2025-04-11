@@ -15,8 +15,8 @@
             <?php foreach ($services as $key => $row) { ?>
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="destination-item th-ani">
-                    <div class="destination-item_img global-img">
-                        <img class="w-20 img-fluid" src="<?=base_url('assets/images/services/'.$row['image'])?>" alt="image">
+                    <div class="destination-item_img global-img" style="height:200px;">
+                        <img class="img-fluid" src="<?=base_url('assets/images/services/'.$row['image'])?>" alt="image">
                     </div>
                     <div class="destination-content">
                         <h3 class="box-title"><a href="<?=base_url()?>#"><?=$row['service_name']?></a></h3>

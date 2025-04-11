@@ -75,7 +75,7 @@ class Homeslider extends CI_Controller
 
         $image = "";
         $image_type = "";
-        $target_folder = $_SERVER['DOCUMENT_ROOT']."/anaadi_tours/assets/images/homeslider/";
+        $target_folder = IMAGE_UPLOAD_PATH."homeslider/";
 
         $slider_image = $_FILES['image']; // Get the uploaded file
         if ( $slider_image && $slider_image['name']) 

@@ -1,10 +1,10 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
- * Class : Services
- * Services class to control to authenticate user credentials and starts user's session.
+ * Class : Videos
+ * Videos class to control to authenticate user credentials and starts user's session.
  */
-class Services extends CI_Controller
+class Videos extends CI_Controller
 {
     /**
      * This is default constructor of the class
@@ -12,7 +12,7 @@ class Services extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('services_model');
+        $this->load->model('videos_model');
     }
 
     /**
@@ -28,11 +28,11 @@ class Services extends CI_Controller
         else
         {
             $data['user'] = $this->session->userdata();
-            $data['page_title'] = "Services";
-            $data['records'] = $this->services_model->getAll();
+            $data['page_title'] = "Videos";
+            $data['records'] = $this->videos_model->getAll();
 
             $this->load->view('layout_admin/header', $data);
-            $this->load->view('backend/services', $data);
+            $this->load->view('backend/videos', $data);
             $this->load->view('layout_admin/footer');
         }
     }
@@ -43,7 +43,7 @@ class Services extends CI_Controller
         $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
         if( $id )
         {
-            $record = $this->services_model->getById($id);
+            $record = $this->videos_model->getById($id);
             $response['error'] = 0;
             $response['error_message'] = "";
             $response['success_message'] = "Success";
@@ -63,8 +63,9 @@ class Services extends CI_Controller
         $response = array("error" => 0, "error_message" => "", "success_message" => "");
         $this->load->library('form_validation');       
         $id = $this->security->xss_clean($this->input->post('record_id'));     
-        $this->form_validation->set_rules('service_name','Service Name','trim|required|max_length[128]');
+        $this->form_validation->set_rules('title','Title','trim|required|max_length[128]');
         $this->form_validation->set_rules('description','Description','trim|required|max_length[500]');
+        $this->form_validation->set_rules('url','URl','trim|required|max_length[500]');
                 
         if($this->form_validation->run() == FALSE)
         {
@@ -72,84 +73,30 @@ class Services extends CI_Controller
             $response["error_message"] = $this->form_validation->error_string();
             die(json_encode($response));
         }
-
-        $image = "";
-        $image_type = "";
-        $target_folder = IMAGE_UPLOAD_PATH."services/";
-
-        $service_image = $_FILES['service_image']; // Get the uploaded file
-        if ( $service_image && $service_image['name']) 
-        {
-            $image = trim($service_image['name']);
-            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
-            
-            $result = getNewImage($target_folder, $this->security->xss_clean(trim($this->input->post('service_name'))), $imageFileType);
-            $new_image_name = $result[0];
-            $target_file = $result[1];
-            // Allow certain file formats
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) 
-            {
-                $response["error"] = 1;
-                $response["error_message"] = "Image format invalid. Upload jpg/jpeg/png.";
-                die(json_encode($response));
-            }
-            
-            // Check file size
-            if ( $service_image["size"] > 2000000 || $service_image["error"] == 1) 
-            {
-                $response["error"] = 1;
-                $response["error_message"] = "Image size too large. Upload size less than 2MB.";
-                die(json_encode($response));
-            }
-
-            // upload file
-            if (move_uploaded_file($service_image["tmp_name"], $target_file)) 
-            {
-                // upload suuccess 
-                $image = $new_image_name;
-            } else {
-                $response["error"] = 1;
-                $response["error_message"] = "Image upload failed";
-                die(json_encode($response));
-            }
-        } 
-        else 
-        {
-            if( $id == "" )
-            {
-                $response["error"] = 1;
-                $response["error_message"] = "Please upload Image";
-                die(json_encode($response));
-            }
-            else
-            {
-                $srecord = $this->services_model->getById($id);
-                $image = $srecord['image'];
-            }
-        }
         
         $user = $this->session->userdata();
         $id = $this->security->xss_clean($this->input->post('record_id'));
-        $service_name = $this->security->xss_clean($this->input->post('service_name'));
+        $title = $this->security->xss_clean($this->input->post('title'));
         $description = $this->security->xss_clean($this->input->post('description'));
+        $url = $this->security->xss_clean($this->input->post('url'));
                 
         $recordInfo = array(
-                'service_name' => $service_name,
+                'title' => $title,
                 'description' => $description,
-                'image' => $image,
+                'url' => $url,
                 'created_by' => $user['userId']
             );
 
         if( $id == "" )
         {
-            if( $this->services_model->checkRecordExists($service_name) )
+            if( $this->videos_model->checkRecordExists($title) )
             {
                 $response["error"] = 1;
                 $response["error_message"] = "Record already exists.";
             }
             else
             {
-                $result = $this->services_model->addNew($recordInfo);
+                $result = $this->videos_model->addNew($recordInfo);
                 if($result > 0)
                 {
                     $response["error"] = 0;
@@ -165,7 +112,7 @@ class Services extends CI_Controller
         }
         else
         {
-            $result = $this->services_model->checkRecordExists1($service_name,$id);
+            $result = $this->videos_model->checkRecordExists1($title,$id);
             if( $result )
             {
                 $response["error"] = 1;
@@ -174,7 +121,7 @@ class Services extends CI_Controller
             }
             else
             {
-                $result = $this->services_model->updateRecord($recordInfo, $id);
+                $result = $this->videos_model->updateRecord($recordInfo, $id);
                 if($result > 0)
                 {
                     $response["error"] = 0;
@@ -210,7 +157,7 @@ class Services extends CI_Controller
             die(json_encode($response));
         }
         
-        $data['record'] = $this->services_model->getById($record_id);
+        $data['record'] = $this->videos_model->getById($record_id);
         if( count($data['record']) == 0 )
         {   
             $response["error"] = 1;
@@ -218,7 +165,7 @@ class Services extends CI_Controller
         }
         else
         {
-            $this->services_model->deleteRecord($record_id);
+            $this->videos_model->deleteRecord($record_id);
             $response["error"] = 0;
             $response["error_message"] = "";
             $response["success_message"] = "Record deleted successfully";

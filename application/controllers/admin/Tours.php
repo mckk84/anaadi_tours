@@ -168,7 +168,7 @@ class Tours extends CI_Controller
             die(json_encode($response));
         }
 
-        $target_folder = $_SERVER['DOCUMENT_ROOT']."/anaadi_tours/assets/images/tours/";
+        $target_folder = IMAGE_UPLOAD_PATH."tours/";
         $result = $this->validate_images($_FILES['tour_images']);
 
         if( $id == "" && $result != "valid" )

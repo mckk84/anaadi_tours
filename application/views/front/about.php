@@ -2,10 +2,6 @@
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">About Us</h1>
-            <ul class="breadcumb-menu">
-                <li><a href="<?=base_url()?>">Home</a></li>
-                <li>About Us</li>
-            </ul>
         </div>
     </div>
 </div>
@@ -23,10 +19,10 @@
                 <div class="ps-xl-4">
                     <div class="title-area mb-20">
                         <span class="sub-title style1">Welcome To Anaadi</span>
-                        <h2 class="sec-title mb-20 pe-xl-5 me-xl-5 heading">Your one stop solution for all your travels needs.</h2>
+                        <h3 class="sec-title mb-20 pe-xl-5 me-xl-5 heading">Your one stop solution for all your travels needs.</h3>
                     </div>
                     <p class="pe-xl-5">Anaadi Tours and Travels enables you to discover a new destination and offer unique ideas to your travel. </p>
-                    <p class="mb-30 pe-xl-5">Anaadi Tours and Travels provide a wide range of holiday tour packages for all the domestic and international destinations across the world. </p>
+                    <p class="mb-20 pe-xl-5">Anaadi Tours and Travels provide a wide range of holiday tour packages for all the domestic and international destinations across the world. </p>
                     <div class="about-item-wrap">
                         <div class="about-item style2">
                             <div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_1.svg" alt=""></div>

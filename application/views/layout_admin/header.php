@@ -142,6 +142,16 @@
             </a>
           </li>
           <li>
+            <a href="<?=base_url('admin/Gallery')?>">
+              <i class="bi bi-list"></i><span>Gallery</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?=base_url('admin/Videos')?>">
+              <i class="bi bi-list"></i><span>Videos</span>
+            </a>
+          </li>
+          <li>
             <a href="<?=base_url('admin/Testimonial')?>">
               <i class="bi bi-list"></i><span>Testimonial</span>
             </a>

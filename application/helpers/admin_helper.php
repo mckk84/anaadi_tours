@@ -63,6 +63,30 @@ function create_slug($string)
    return $slug;
 }
 
+function getNewImage1($target_folder, $name, $imageFileType)
+{
+    $temp_image_name = ucwords(strtolower($name));
+    $temp_image_name = preg_replace('/\s+/', '', $temp_image_name);
+    $temp_image_name = preg_replace('/[^a-z\d ]/i', '', $temp_image_name);
+    $new_image_name = $temp_image_name.".".$imageFileType;
+    $target_file = $target_folder.$new_image_name;
+
+    if( file_exists($target_file) )
+    {
+        for($i=0; $i < 25; $i++)
+        {
+            $concat = time();
+            $new_image_name = $temp_image_name."_".$concat.".".$imageFileType;
+            if( !file_exists($target_folder.$new_image_name) )
+            {
+                $target_file = $target_folder.$new_image_name;
+                break;
+            }
+        }
+    }
+    return array($new_image_name, $target_file);
+}
+
 function getNewImage($target_folder, $name, $imageFileType)
 {
     $temp_image_name = ucwords(strtolower($name));

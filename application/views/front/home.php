@@ -30,28 +30,28 @@
 			</div>
 			<div class="col-xl-6">
 				<div class="ps-xl-5 ms-xl-3">
-					<div class="title-area mb-20">
-						<span class="sub-title style1">Welcome to Anaadi Tours & Travels</span>
-						<h3 class="sec-title mb-20">Begin Your Travel Story with Us</h3>
-						<p class="sec-text mb-30">We are here to provide you one stop solution for all your travel needs.</p>
+					<div class="title-area mb-10">
+						<span class="sub-title fs-2 style1">Welcome to Anaadi Tours & Travels</span>
+						<h3 class="sec-title mb-10">Begin Your Travel Story with Us</h3>
+						<p class="sec-text mb-20">We are here to provide you one stop solution for all your travel needs.</p>
 					</div>
 					<div class="about-item-wrap">
 						<div class="about-item">
 							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_1.svg" alt=""></div>
 							<div class="about-item_centent">
 								<h5 class="box-title">Exclusive Trip</h5>
-								<p class="about-item_text">We plan trip accordingly to customer requirement in best way to satisfy them. Also we provide unique and customized itineraries to our customers with 24/7 support.</p>
+								<p class="about-item_text">We plan trip according to customer requirement and also provide unique and customized itineraries to our customers.</p>
 							</div>
 						</div>
 						<div class="about-item">
 							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_2.svg" alt=""></div>
 							<div class="about-item_centent">
 								<h5 class="box-title">Safety First Always</h5>
-								<p class="about-item_text">No compromise for Safety, Comfort and On time travel. We provide utmost importance for safety and comfort for clients.</p>
+								<p class="about-item_text">We provide utmost importance for safety and comfort for clients.</p>
 							</div>
 						</div>
 					</div>
-					<div class="mt-35"><a href="<?=base_url('/About')?>" class="th-btn style3 th-icon">Learn More</a></div>
+					<div class="mt-30"><a href="<?=base_url('/About')?>" class="th-btn th-icon">Read More</a></div>
 				</div>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 					?>
 					<div class="swiper-slide">
 						<div class="category-card single2">
-							<div class="box-img global-img"><img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="<?=$tour_category?> Tours"></div>
+							<div class="box-img global-img shadow"><img class="shadow" src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="<?=$tour_category?> Tours"></div>
 							<h3 class="box-title"><a href="<?=base_url('Domestictours/'.$tour_category)?>"><?=$tour_category?></a></h3>
 							<a class="line-btn" href="<?=base_url('Domestictours/'.$tour_category)?>">See more</a>
 						</div>
@@ -87,7 +87,7 @@
 <?php } ?>
 
 <?php if( count($international_tours) > 0 ){ ?>
-<section class="category-area3 bg-smoke space" data-bg-src="assets/img/bg/line-pattern3.png">
+<section class="category-area3 bg-smoke space pt-0" data-bg-src="assets/img/bg/line-pattern3.png">
 	<div class="container th-container">
 		<div class="title-area text-center">
 			<span class="sub-title">Wornderful Place For You</span>
@@ -114,7 +114,7 @@
 </section>	
 <?php } ?>
 
-<section class="tour-area position-relative bg-top-center overflow-hidden space" id="service-sec" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
+<section class="tour-area position-relative bg-top-center overflow-hidden space pt-0" id="service-sec" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3">
