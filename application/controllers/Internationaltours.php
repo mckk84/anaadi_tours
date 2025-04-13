@@ -14,28 +14,32 @@ class Internationaltours extends CI_Controller {
 		$data['international_tours'] = $this->tours_model->getMenuByCategoryId(2);
 		$data['recent_tours'] = $this->tours_model->getLatest(5);
 
-		$tourcategory = $this->uri->segment(2);
-		$tour_type = $this->uri->segment(3);
+		$tourcategory = urldecode($this->uri->segment(2));
+		$tour_type = urldecode($this->uri->segment(3));
+
+		$this->load->view('layout/header', $data);
 
 		if( $tourcategory == "" )
 		{
-			redirect('/');
+			$data['tourcategory'] = $this->tours_model->getMenuByCategoryId(2);
+			$data['tour_types'] = $this->tours_model->getByTourTypes();
+			$this->load->view('front/internationaltourscategory', $data);
 		}
 		elseif( $tourcategory != "" && $tour_type == "")
 		{
 			$data['tourcategory'] = $tourcategory;
 			$data['tours'] = $this->tours_model->getByTourCategory($data['tourcategory']);
 			$data['tour_types'] = $this->tours_model->getByTourTypesByCategory($data['tourcategory']);
+			$this->load->view('front/internationaltours', $data);
 		}
 		else
 		{
 			$data['tourcategory'] = $tourcategory;
 			$data['tour_type'] = urldecode($tour_type);
 			$data['tours'] = $this->tours_model->getByTourCategoryType($data['tourcategory'], $data['tour_type']);	
+			$this->load->view('front/internationaltours', $data);
 		}
 		
-        $this->load->view('layout/header', $data);
-        $this->load->view('front/internationaltours', $data);
         $this->load->view('layout/footer');
 	}
 }

@@ -13,7 +13,9 @@ class Home extends CI_Controller {
 
 		$data['domestic_tours'] = $this->tours_model->getMenuByCategoryId(1);
 		$data['international_tours'] = $this->tours_model->getMenuByCategoryId(2);
-		
+
+		$data['destination_tours'] = $this->tours_model->getDestinationToursCount(10);
+				
 		$data['homeslider'] = $this->homeslider_model->getAll();
 		$data['testimonial'] = $this->testimonial_model->getAll();
 			

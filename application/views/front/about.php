@@ -1,7 +1,7 @@
 <div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
-            <h1 class="breadcumb-title">About Us</h1>
+            <h3 class="breadcumb-title">About Us</h3>
         </div>
     </div>
 </div>

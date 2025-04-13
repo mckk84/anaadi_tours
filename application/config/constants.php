@@ -85,3 +85,6 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 defined('IMAGE_UPLOAD_PATH')	OR define('IMAGE_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT']."/anaadi_tours/assets/images/");
+defined('INSTAGRAM')			OR define('INSTAGRAM', "https://www.instagram.com/anaaditours");
+defined('TWITTER')				OR define('TWITTER', "https://x.com/Anaaditours");
+defined('YOUTUBE')				OR define('YOUTUBE', "https://www.youtube.com/channel/UCt0CCoAj9SPluE_Do91QjRA");

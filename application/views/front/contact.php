@@ -1,14 +1,14 @@
 <div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
-            <h1 class="breadcumb-title">Contact Us</h1>
+            <h3 class="breadcumb-title">Contact Us</h3>
         </div>
     </div>
 </div>
 <div class="space">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title">Get In Touch</span>
+                
                 <h2 class="sec-title">Our Contact Information</h2>
             </div>
             <div class="row gy-4 justify-content-center">
@@ -84,7 +84,7 @@
         <div class="container-fluid">
             <div class="contact-map style2">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d971.6372383582382!2d77.57113926961212!3d13.064357305596577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAzJzUxLjciTiA3N8KwMzQnMTguNCJF!5e0!3m2!1sen!2sin!4v1744196078244!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="contact-icon"><img src="<?=base_url()?>assets/img/icon/location-dot3.svg" alt=""></div>
+                <!-- <div class="contact-icon"><img src="<?=base_url()?>assets/img/icon/location-dot3.svg" alt=""></div> -->
             </div>
         </div>
     </div>

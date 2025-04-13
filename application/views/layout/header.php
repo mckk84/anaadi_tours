@@ -38,15 +38,26 @@
 		<script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<?php if( isset($homeslider) ){ ?>
 		<div id="preloader" class="preloader">
-			<!-- <button class="th-btn preloaderCls">Cancel Preloader</button> -->
 			<div class="preloader-inner"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt=""></div>
 			<div id="loader" class="th-preloader">
-				<div class="animation-preloader">
-					<div class="txt-loading"><span preloader-text="Anaadi" class="characters">Anaadi </span><span preloader-text="Tours" class="characters">Tours </span><span preloader-text="&" class="characters">& </span><span preloader-text="Travels" class="characters">Travels </span></div>
+				<div id="loader" class="th-preloader">
+					<div class="animation-preloader">
+						<div class="txt-loading">
+							<span preloader-text="L" class="characters">L </span>
+							<span preloader-text="O" class="characters">O </span>
+							<span preloader-text="A" class="characters">A </span>
+							<span preloader-text="D" class="characters">D </span>
+							<span preloader-text="I" class="characters">I</span>
+							<span preloader-text="N" class="characters">N</span>
+							<span preloader-text="G" class="characters">G</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<?php } ?>
 		<div class="sidemenu-wrapper sidemenu-info">
 			<div class="sidemenu-content">
 				<button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
@@ -54,7 +65,11 @@
 					<div class="th-widget-about">
 						<div class="about-logo"><a href="home-travel.html"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt="ANAADI Tours and Travels"></a></div>
 						<p class="about-text">Anaadi Tours and Travels is a trusted travel tour package operator based in Bangalore. Get the best deals, customized tour packages, and more from the best travel agency in Bangalore.</p>
-						<div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></div>
+						<div class="th-social">
+							<a href="<?=TWITTER?>"><i class="fab fa-twitter"></i></a> 
+							<a href="<?=YOUTUBE?>"><i class="fab fa-youtube"></i></a> 
+							<a href="<?=INSTAGRAM?>"><i class="fab fa-instagram"></i></a>
+						</div>
 					</div>
 				</div>
 				<div class="widget">
@@ -105,7 +120,7 @@
 							<ul class="sub-menu">
 								<?php foreach ($domestic_tours as $tourcategory => $tours) { ?>
 								<li class="menu-item-has-children">
-									<a href="#"><?=$tourcategory?></a>
+									<a href="<?=base_url('/Domestictours/'.$tourcategory)?>"><?=$tourcategory?></a>
 									<ul class="sub-menu">
 										<?php foreach ($tours as $key => $tour) { ?>
 										<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
@@ -121,7 +136,7 @@
 							<ul class="sub-menu">
 								<?php foreach ($international_tours as $tourcategory => $tours) { ?>
 								<li class="menu-item-has-children">
-									<a href="#"><?=$tourcategory?></a>
+									<a href="<?=base_url('/Internationaltours/'.$tourcategory)?>"><?=$tourcategory?></a>
 									<ul class="sub-menu">
 										<?php foreach ($tours as $key => $tour) { ?>
 										<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
@@ -160,8 +175,8 @@
 							<div class="header-right">
 								<div class="header-links">
 									<ul>
-										<li class="d-none d-md-inline-block"><i class="fa-regular text-danger fa-phone"></i><a  class="font-semibold" href="tel:+916364328383">+91 6364328383</a></li>
-										<li class="d-none d-md-inline-block"><i class="fa-regular text-danger fa-envelope"></i><a  class="font-semibold" href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
+										<li class="d-md-inline-block"><i class="fa-regular text-danger fa-phone"></i><a  class="font-semibold" href="tel:+916364328383">+91 6364328383</a></li>
+										<li class="d-md-inline-block"><i class="fa-regular text-danger fa-envelope"></i><a  class="font-semibold" href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
 									</ul>
 								</div>
 							</div>
@@ -186,11 +201,11 @@
 										<li><a href="<?=base_url()?>">Home</a></li>
 										<li><a href="<?=base_url('/About')?>">About Us</a></li>
 										<li class="menu-item-has-children">
-											<a href="#">Domestic Tours</a>
+											<a href="<?=base_url('/Domestictours')?>">Domestic Tours</a>
 											<ul class="sub-menu">
 												<?php foreach ($domestic_tours as $tourcategory => $tours) { ?>
 												<li class="menu-item-has-children">
-													<a href="#"><?=$tourcategory?></a>
+													<a href="<?=base_url('/Domestictours/'.$tourcategory)?>"><?=$tourcategory?></a>
 													<ul class="sub-menu">
 														<?php foreach ($tours as $key => $tour) { ?>
 														<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>
@@ -202,11 +217,11 @@
 										</li>
 										
 										<li class="menu-item-has-children">
-											<a href="#">International Tours</a>
+											<a href="<?=base_url('/Internationaltours')?>">International Tours</a>
 											<ul class="sub-menu">
 												<?php foreach ($international_tours as $tourcategory => $tours) { ?>
 												<li class="menu-item-has-children">
-													<a href="#"><?=$tourcategory?></a>
+													<a href="<?=base_url('/Internationaltours/'.$tourcategory)?>"><?=$tourcategory?></a>
 													<ul class="sub-menu">
 														<?php foreach ($tours as $key => $tour) { ?>
 														<li><a href="<?=base_url('/Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></li>

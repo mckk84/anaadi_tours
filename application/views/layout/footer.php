@@ -1,3 +1,12 @@
+		<div id="whatsapp-widget" class="d-block dsm-none">
+	      <a title="Whatsapp Us" href="https://api.whatsapp.com/send?phone=916364328383&amp;text=Hi!%20Can%20I%20get%20more%20information%20on%20this?" target="_blank">
+	        <img width="64" height="64" style="border-radius:25px;" src="<?=base_url('assets/images/whatsapp.png')?>" alt="whatsapp--v1">
+	      </a>
+	      <a title="Call Us"  class="call-widget" href="tel:+916364328383" target="_blank">
+	        <img width="64" height="64" src="<?=base_url('assets/images/call.png')?>" alt="call">
+	      </a>
+	    </div>
+	    
 		<footer class="footer-wrapper footer-layout1">
 			<div class="widget-area">
 				<div class="container">
@@ -8,7 +17,20 @@
 									<h2 class="newsletter-title text-capitalize mb-0">get updated with latest newsletter</h2>
 								</div>
 								<div class="col-lg-7">
-									<form class="newsletter-form"><input class="form-control" type="email" placeholder="Enter Email" required=""> <button type="submit" class="th-btn">Subscribe Now <img src="<?=base_url()?>assets/img/icon/plane.svg" alt=""></button></form>
+									<?php $error = $this->session->flashdata('error');
+		                                  if($error) { ?>
+		                              <div class="alert alert-danger">
+		                                  <?php echo $this->session->flashdata('error'); ?>
+		                              </div>
+		                              <?php } ?>
+		                              <?php $success = $this->session->flashdata('success');
+		                                  if($success) {
+		                              ?>
+		                              <div class="alert alert-success alert-dismissable">
+		                                  <?php echo $this->session->flashdata('success'); ?>
+		                              </div>
+		                              <?php } ?>
+									<form method="Post" action="<?=base_url('Subscribe')?>" class="newsletter-form"><input class="form-control" type="email" name="subscribe_email" placeholder="Enter Email" required=""> <button type="submit" class="th-btn">Subscribe Now <img src="<?=base_url()?>assets/img/icon/plane.svg" alt=""></button></form>
 								</div>
 							</div>
 						</div>
@@ -24,11 +46,9 @@
 									</div>
 									<p class="about-text">Anaadi Tours and Travels is a trusted travel tour package operator based in Bangalore. Get the best deals, customized tour packages, and more from the best travel agency in Bangalore.</p>
 									<div class="th-social">
-										<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> 
-										<a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> 
-										<a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a> 
-										<a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> 
-										<a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+										<a href="<?=TWITTER?>"><i class="fab fa-twitter"></i></a> 
+										<a href="<?=YOUTUBE?>"><i class="fab fa-youtube"></i></a> 
+										<a href="<?=INSTAGRAM?>"><i class="fab fa-instagram"></i></a>
 									</div>
 								</div>
 							</div>
@@ -91,6 +111,17 @@
 				</div>
 			</div>
 		</footer>
+		<div class="d-none dsm-block" id="whatsapp-widget-mobile">
+	      <a title="Whatsapp Us" class="btn btn-warning" href="https://api.whatsapp.com/send?phone=916364328383&amp;text=Hi!%20Can%20I%20get%20more%20information%20on%20this?" target="_blank">
+	        <i class="fab fa-whatsapp"></i>
+	        &nbsp; Whatsapp Us
+	      </a>
+	      <a title="Call Us"  class="btn btn-warning call-widget" href="tel:+916364328383" target="_blank">
+	        <i class="fa-regular fa-phone"></i>
+	        &nbsp; Call Us
+	      </a>
+	    </div>
+
 		<div class="scroll-top">
 			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
 				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>

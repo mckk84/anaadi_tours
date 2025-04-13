@@ -345,3 +345,78 @@ select, .form-control, .form-select, textarea, input {
     display: block;
     background-color: var(--smoke-color);
 }
+
+.destination-box .destination-img img {
+    max-width: 430px;
+    height: 636px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+@media(max-width: 575.98px){
+    .dsm-none{
+        display: none !important;
+    }
+
+    .dsm-block{
+        display: flex !important;
+        justify-content: center;
+    }
+}
+
+#whatsapp-widget-mobile .btn{
+    width: 100%;
+    border-radius: 0;
+    border: 0 solid #000;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    color: #000;
+    font-size: 15px;
+    background-color: #FFDC00;
+}
+
+#whatsapp-widget-mobile .btn:nth-child(1){
+    border-right: 1px solid #fff;
+}
+
+#whatsapp-widget-mobile{
+    background-color: #FFF;
+    position: fixed;
+    bottom: -1px;
+    z-index: 999;
+    width: 100%;
+}
+
+#whatsapp-widget{
+    position: fixed;
+    left: 5px;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 990;
+}
+
+#whatsapp-widget a{
+    display:block;
+    margin-bottom:10px;
+}
+
+#whatsapp-widget a:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#whatsapp-widget img.call-widget{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#whatsapp-widget img.footer_whatsapp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);*/
+}

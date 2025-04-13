@@ -73,6 +73,40 @@ class Tours_model extends CI_Model
         }
     }
 
+    public function getDestinationToursCount($limit)
+    {
+        $this->db->limit($limit);
+        $this->db->group_by('tbl_tours.destination_location');
+        $this->db->select('tbl_tours.images,tbl_tours.destination_location, count(*) as count');
+        $this->db->from('tbl_tours');
+        $this->db->where('tbl_tours.start_location != tbl_tours.destination_location');
+        $query = $this->db->get();
+        if ($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        } else {
+            return array();
+        }
+    }
+
+    public function getDestinationTours($destination)
+    {
+        $this->db->group_by('tbl_tours.type_id');
+        $this->db->select('tbl_tours.*, tbl_category.category, tbl_tour_types.type, tbl_tourcategory.sub_category as tourcategory');
+        $this->db->from('tbl_tours');
+        $this->db->join('tbl_category', 'tbl_tours.category_id = tbl_category.id',  'left');
+        $this->db->join('tbl_tourcategory', 'tbl_tours.tourcategory_id = tbl_tourcategory.id',  'left');
+        $this->db->join('tbl_tour_types', 'tbl_tours.type_id = tbl_tour_types.id',  'left');
+        $this->db->where('tbl_tours.destination_location', $destination);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        } else {
+            return array();
+        }
+    }
+
     public function getMenuByCategoryId($category_id)
     {
         $this->load->model('tourcategory_model');
@@ -96,6 +130,22 @@ class Tours_model extends CI_Model
         $this->db->join('tbl_tourcategory', 'tbl_tours.tourcategory_id = tbl_tourcategory.id',  'left');
         $this->db->join('tbl_tour_types', 'tbl_tours.type_id = tbl_tour_types.id',  'left');
         $this->db->where('tbl_tourcategory.sub_category', $category);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        } else {
+            return array();
+        }
+    }
+
+    public function getByTourTypes()
+    {
+        $this->db->group_by('tbl_tours.type_id');
+        $this->db->select('tbl_tourcategory.sub_category as tourcategory,tbl_tours.type_id, tbl_tour_types.type, count(*) as count');
+        $this->db->from('tbl_tours');
+        $this->db->join('tbl_tourcategory', 'tbl_tours.tourcategory_id = tbl_tourcategory.id',  'left');
+        $this->db->join('tbl_tour_types', 'tbl_tours.type_id = tbl_tour_types.id',  'left');
         $query = $this->db->get();
         if ($query->num_rows() > 0)
         {

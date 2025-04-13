@@ -1,7 +1,7 @@
 <div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
-            <h3 class="breadcumb-title"><?=$tourcategory?> Tours</h3>
+            <h3 class="breadcumb-title"><?=$destination?> Tours</h3>
         </div>
     </div>
 </div>
@@ -70,6 +70,15 @@
                                 <?php } ?>
                             </div>
                         </div>
+                        <!-- <div class="th-pagination text-center mt-60">
+                            <ul>
+                                <li><a class="active" href="tour.html">1</a></li>
+                                <li><a href="tour.html">2</a></li>
+                                <li><a href="tour.html">3</a></li>
+                                <li><a href="tour.html">4</a></li>
+                                <li><a class="next-page" href="tour.html">Next <img src="<?=base_url()?>assets/img/icon/arrow-right4.svg" alt=""></a></li>
+                            </ul>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-5">

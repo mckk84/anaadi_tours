@@ -91,7 +91,7 @@ Last Update: 20-07-2024
   --theme-color:  #D62D20; /*#E3010F;*/
   --primary-color: #1CA3EC; /*;#1CA8CB;*/
   --title-color: #6E7070; /*#0057e7; #1CA8CB; #113D48*/
-  --body-color: #6E7070;
+  --body-color: #212529;
   --smoke-color: #E9F6F9;
   --smoke-color2: #F3F4F6;
   --black-color: #000000;
@@ -2405,9 +2405,10 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 .th-menu-toggle {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   padding: 0;
+  margin-right: 5px;
   font-size: 20px;
   border: none;
   border-radius: 8px;
@@ -7185,7 +7186,7 @@ ol.wp-block-rss {
   padding: 0;
   margin-bottom: 21px;
   font-family: var(--body-font);
-  color: #888C97;
+  color: #212529;
   display: block;
   max-width: 100%;
   width: -webkit-max-content;
@@ -7283,7 +7284,7 @@ ol.wp-block-rss {
 }
 
 .th-widget-about .about-text {
-  color: #666666;
+  color: #212529;
   margin-bottom: 20px;
   margin-top: -0.5em;
 }
@@ -8864,8 +8865,9 @@ heding animation  end
 }
 
 .widget-area {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 46px;
+  border-top:1px solid cadetblue;
 }
 
 .sticky-footer {

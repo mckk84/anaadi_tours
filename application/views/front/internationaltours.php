@@ -1,7 +1,7 @@
 <div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
-            <h1 class="breadcumb-title"><?=$tourcategory?> Tours</h1>
+            <h3 class="breadcumb-title"><?=$tourcategory?> Tours</h3>
         </div>
     </div>
 </div>
@@ -9,11 +9,11 @@
         <div class="container">
             <div class="th-sort-bar">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="search-form-area">
                             <form class="search-form"><input type="text" placeholder="Search"> <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button></form>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-auto">
                         <div class="sorting-filter-wrap">
                             <div class="nav" role="tablist"><a class="active" href="#" id="tab-destination-grid" data-bs-toggle="tab" data-bs-target="#tab-grid" role="tab" aria-controls="tab-grid" aria-selected="true"><i class="fa-light fa-grid-2"></i></a> <a href="#" id="tab-destination-list" data-bs-toggle="tab" data-bs-target="#tab-list" role="tab" aria-controls="tab-list" aria-selected="false" class=""><i class="fa-solid fa-list"></i></a></div>
