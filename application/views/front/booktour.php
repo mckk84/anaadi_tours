@@ -62,15 +62,15 @@
                             <select class="form-select" name="tourcategory">
                                 <option value="0">-Select-</option>
                                 <?php if(isset($tourcategory)){ foreach($tourcategory as $item){?>
-                                <option value="<?=$item['id']?>"><?=$item['sub_category']?></option>
+                                <option <?=(isset($tour) && count($tour) > 0 && $tour['tourcategory_id']==$item['id'])?"selected":""?> value="<?=$item['id']?>"><?=$item['sub_category']?></option>
                                 <?php } } ?>
                             </select>
                         </div>
                         <div class="form-group col-12 mb-2">
                             <label class="p-1 mb-1 fs-16">Tour</label>
-                            <select class="form-select" name="tour">
+                            <select class="form-select border-warning" name="tour">
                                 <?php if(isset($tour) && count($tour) > 0){ ?>
-                                <option data-price="<?=$tour['price']?>" value="<?=$tour['id']?>"><?=$tour['title']?></option>
+                                <option data-price="<?=$tour['price']?>"  value="<?=$tour['id']?>"><?=$tour['title']?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -84,7 +84,9 @@
                         </div>
                         <div class="col-6 form-group mb-2">
                             <label class="text-danger p-2 font-bold">Amount</label>
-                            <span style="display:none;font-size: 20px;font-weight:600;border: 1px solid lightgrey;" class="tour_amount mb-0 p-2 text-dark shadow-sm" id="amount" placeholder="0"></span>
+                            <span style="display:<?=(isset($tour) && count($tour) > 0 ) ? "inline;":"none"?>;font-size: 20px;font-weight:600;border: 1px solid lightgrey;" class="tour_amount mb-0 p-2 text-dark shadow-sm" id="amount" placeholder="0">
+                                <?=(isset($tour) && count($tour) > 0 ) ? "<i class='fa fa-indian-rupee'></i>".$tour['price']." / Per Person":""?>
+                            </span>
                         </div>
                         <div class="form-btn col-12 mt-24"><button id="booktour" type="button" class="th-btn">Book Now</button></div>
                     </div>
