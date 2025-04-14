@@ -53,6 +53,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['admin'] = "admin/Login";
 $route['admin/(:any)'] = "admin/$1";
 
+
+$route['Tour/getTourCategory'] = "Tour/getTourCategory";
+$route['Tour/getTours'] = "Tour/getTours";
 $route['Tour/(:any)'] = "Tour/index";
 $route['Booktour/(:any)'] = "Booktour/index";
 $route['Destination/(:any)'] = "Destination/index";

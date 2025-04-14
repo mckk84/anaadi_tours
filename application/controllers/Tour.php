@@ -28,4 +28,49 @@ class Tour extends CI_Controller {
         $this->load->view('front/tour', $data);
         $this->load->view('layout/footer');
 	}
+
+	public function getTourCategory()
+    {
+        $response = array("error" => 0, "error_message" => "", "success_message" => "");
+        $id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
+        if( $id )
+        {
+        	$this->load->model('tourcategory_model');
+            $record = $this->tourcategory_model->getByCategoryId($id);
+            $response['error'] = 0;
+            $response['error_message'] = "";
+            $response['success_message'] = "Success";
+            $response['record'] = $record;
+            die(json_encode($response));
+        }
+        else
+        {
+            $response['error'] = 1;
+            $response['error_message'] = "Invalid Request";
+            die(json_encode($response));
+        }
+
+    }
+
+    public function getTours()
+    {
+        $response = array("error" => 0, "error_message" => "", "success_message" => "");
+        $id = isset($_POST['tourcategory_id']) ? intval($_POST['tourcategory_id']) : 0;
+        if( $id )
+        {
+        	$this->load->model('tours_model');
+            $record = $this->tours_model->getByCategorySubId(intval($_POST['category_id']), $id);
+            $response['error'] = 0;
+            $response['error_message'] = "";
+            $response['success_message'] = "Success";
+            $response['record'] = $record;
+            die(json_encode($response));
+        }
+        else
+        {
+            $response['error'] = 1;
+            $response['error_message'] = "Invalid Request";
+            die(json_encode($response));
+        }
+    }
 }

@@ -145,13 +145,13 @@ span.header_logo_mobile {
 }
 
 select, .form-control, .form-select, textarea, input {
-    height: 50px;
-    padding: 0 15px 0 15px;
-    padding-right: 20px;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    padding-right: 10px;
     border: 1px solid var(--gray-color);
     color: var(--body-color);
     background-color: var(--white-color);
-    font-size: 16px;
+    font-size: 15px;
     width: 100%;
     font-family: var(--body-font);
     font-weight: 400;

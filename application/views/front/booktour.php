@@ -1,158 +1,217 @@
 <div class="breadcumb-wrapper" data-bg-src="<?=base_url()?>assets/img/bg/subscribe_bg_1.png">
     <div class="container">
         <div class="breadcumb-content">
-            <h3 class="breadcumb-title"><?=$tour['title']?></h3>
+            <h3 class="breadcumb-title">Book your Tour</h3>
         </div>
     </div>
 </div>
 <div class="about-area position-relative overflow-hidden overflow-hidden space" id="about-sec">
     <div class="container">
         <div class="row">
-            <div class="col-xl-8 p-2 px-4">
-                <div class="mt-0 title-area mb-20">
-                    <h4 class="sec-title mb-20 pe-xl-5 me-xl-5 heading"><?=$tour['title']?></h4>
+            <div class="col-xl-8 p-2 px-2">
+                <div class="mt-0 title-area mb-10">
+                    <h4 class="sec-title pe-xl-5 me-xl-5 heading">Book your Tour</h4>
                 </div>
-                <div class="slider-area">
-                    <div class="swiper th-slider" data-slider-options='{"centeredSlides":true,"centeredSlidesBounds":true,"spaceBetween":20,"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"1"},"1200":{"slidesPerView":"1"}}}'>
-                        <div class="swiper-wrapper">
-                            <?php $images = explode(",", $tour['images']);
-                                foreach($images as $i => $img){?>
-                            <div class="swiper-slide">
-                                <div class="testi-card3">
-                                    <div class="box-img">
-                                        <img class="border rounded" src="<?=base_url('assets/images/tours/'.$img)?>" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="widget widget_offer">
-                    <div class="offer-banner">
-                        <div class="offer">
-                            <h6 class="box-title">Need Help? We Are Here To Help You</h6>
-                            <div class="banner-logo"><img src="<?=base_url()?>assets/img/alogo.png" alt="Anaadi Tours & Travels"></div>
-                            <div class="offer">
-                                <h6 class="offer-title">You Get Online support</h6>
-                                <a class="offter-num" href="tel:+91 6364328383">+91 6364328383</a>
-                            </div>
-                            <a href="<?=base_url('Contact')?>" class="th-btn th-icon">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <form class="row p-2 px-4 border rounded" name="tour_contact" method="POST" action="<?=base_url('Tour/contact')?>">
-                    <div class="col-12">
-                        <h5 class="mt-1">Contact Us</h5>
-                    </div>
-                    <div class="col-12 mb-2">
-                        <input type="text" placeholder="Name" name="contact_name" value="" class="form-control p-1 px-2">
-                    </div>
-                    <div class="col-12 mb-2">
-                        <input type="number" placeholder="Mobile" name="contact_phone" value="" class="form-control p-1 px-2">
-                    </div>
-                    <div class="col-12 mb-2">
-                        <input type="email" placeholder="Email" name="contact_phone" value="" class="form-control p-1 px-2">
-                    </div>  
-                    <div class="col-12 mb-2">
-                        <input type="text" placeholder="Your Location" name="contact_location" value="" class="form-control p-1 px-2">
-                    </div>
-                    <div class="col-12 text-center">
-                        <button type="button" class="th-btn mt-2">Submit</button>
-                    </div>
-                </form> -->
-            </div>
+            </div>  
         </div>
         <div class="row">
             <div class="col-xl-8">
-                <div class="ps-xl-2">
-                    <div class="mt-4 title-area mb-20">
-                        <span class="sub-title style1">Tour Details</span>
-                        <h4 class="sec-title mb-20 pe-xl-5 me-xl-5 heading"><?=$tour['title']?></h4>
-                    </div>
-                    <div class="about-item-wrap position-relative">
-                        <span class="d-block w-100 fs-16 text-dark">Starting Location: <b><?=$tour['start_location']?></b></span>
-                        <span class="d-block w-100 fs-16 text-dark">Trip Destination: <b><?=$tour['destination_location']?></b></span>
-                        <span class="d-block w-100 fs-16 text-dark">Covered Locations: <b><?=$tour['covered_locations']?></b></span>
-                        <span class="d-block w-100 fs-16 text-dark">Accommodations: <b><?=$tour['accomodations']?></b></span>
-                        <span class="d-block w-100 fs-16 text-dark">Activities: <b><?=$tour['activities']?></b></span>
-
-                        <span class="price_block shadow"><i class="fa-solid fa-indian-rupee-sign me-1"></i><?=$tour['price']?> / Per Person</span>
-                    </div>
-                    <div class="itinerary mb-2 mt-4 fs-16 text-dark text-left w-100">
-                        <?=$tour['itinerary']?>
-                    </div>
-                    <div class="w-100 mt-4">
-                        <h2 class="box-title">Included and Excluded</h2>
-                        <?php $inclusions = json_decode($tour['inclusions']);
-                        $exclusions = json_decode($tour['exclusions']);?>
-
-                        <div class="destination-checklist">
-                            <div class="checklist style2 style4">
-                                <ul>
-                                    <?php foreach($inclusions as $item){?>
-                                    <li><?=$item?></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                            <div class="checklist style5">
-                                <ul>
-                                    <?php foreach($exclusions as $item){?>
-                                    <li><?=$item?></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
+                <form action="<?=base_url('Booktour/booknow')?>" method="POST" class="book-form style2">
+                    <?php $error = $this->session->flashdata('error');
+                          if($error) { ?>
+                      <div class="alert alert-danger">
+                          <?php echo $this->session->flashdata('error'); ?>
+                      </div>
+                      <?php } ?>
+                      <?php $success = $this->session->flashdata('success');
+                          if($success) {
+                      ?>
+                      <div class="alert alert-success alert-dismissable">
+                          <?php echo $this->session->flashdata('success'); ?>
+                      </div>
+                      <?php } ?>
+                    <div class="row">
+                        <div id="error_div" class="col-12">
                         </div>
+                        <div class="col-12 form-group mb-2">
+                            <label class="p-1 mb-1 fs-16">Name</label>
+                            <input type="text" class="form-control" name="name" id="name3" placeholder="">
+                        </div>
+                        <div class="col-6 form-group mb-2">
+                            <label class="p-1 mb-1 fs-16">Email</label>
+                            <input type="email" class="form-control" name="email" id="email3" placeholder="">
+                        </div>
+                        <div class="col-6 form-group mb-2">
+                            <label class="p-1 mb-1 fs-16">Phone</label>
+                            <input type="number" class="form-control" name="phone" id="phone" placeholder="">
+                        </div>
+                        <div class="col-12 form-group mb-2">
+                            <label class="p-1 mb-1 fs-16">Address</label>
+                            <input type="text" class="form-control" name="address" id="address" placeholder="">
+                        </div>
+                        <div class="form-group col-6 mb-2">
+                            <label class="p-1 mb-1 fs-16">Category</label>
+                            <select class="form-select" name="category">
+                                <option <?=(isset($tour) && count($tour) > 0)?"":"selected"?> value="0">-Select-</option>
+                                <option <?=(isset($tour) && count($tour) > 0 && $tour['category_id']==1)?"selected":""?> value="1">Domestic Tours</option>
+                                <option <?=(isset($tour) && count($tour) > 0 && $tour['category_id']==2)?"selected":""?> value="2">International Tours</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6 mb-2">
+                            <label class="p-1 mb-1 fs-16">Tour Category</label>
+                            <select class="form-select" name="tourcategory">
+                                <option value="0">-Select-</option>
+                                <?php if(isset($tourcategory)){ foreach($tourcategory as $item){?>
+                                <option value="<?=$item['id']?>"><?=$item['sub_category']?></option>
+                                <?php } } ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 mb-2">
+                            <label class="p-1 mb-1 fs-16">Tour</label>
+                            <select class="form-select" name="tour">
+                                <?php if(isset($tour) && count($tour) > 0){ ?>
+                                <option data-price="<?=$tour['price']?>" value="<?=$tour['id']?>"><?=$tour['title']?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="col-6 form-group mb-2">
+                            <label class="p-1 mb-1 fs-16">No. of Adults</label>
+                            <input type="number" class="form-control" name="adults" id="adults" placeholder="1">
+                        </div>
+                        <div class="col-6 form-group mb-4">
+                            <label class="p-1 mb-1 fs-16">No. of Children</label>
+                            <input type="number" class="form-control" name="children" id="children" placeholder="0">
+                        </div>
+                        <div class="col-6 form-group mb-2">
+                            <label class="text-danger p-2 font-bold">Amount</label>
+                            <span style="display:none;font-size: 20px;font-weight:600;border: 1px solid lightgrey;" class="tour_amount mb-0 p-2 text-dark shadow-sm" id="amount" placeholder="0"></span>
+                        </div>
+                        <div class="form-btn col-12 mt-24"><button id="booktour" type="button" class="th-btn">Book Now</button></div>
                     </div>
-                    <div class="mt-35"><a href="<?=base_url('/Booktour/'.$tour['url_title'])?>" class="th-btn th-icon">Book Now</a></div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                
+                    <p class="form-messages mb-0 mt-3"></p>
+                </form>
             </div>
         </div>
-        <?php if( isset($related_tours) && count($related_tours) > 0) { ?>
-        <section class="tour-area position-relative bg-top-center overflow-hidden space" id="service-sec" >
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="title-area text-left">
-                            <span class="h4">Related Tours</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-area tour-slider">
-                    <div class="swiper th-slider has-shadow slider-drag-wrap" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"},"1300":{"slidesPerView":"4"}}}'>
-                        <div class="swiper-wrapper">
-                            <?php foreach($related_tours as $tour){
-                                $images = explode(",", $tour['images']);
-                            ?>
-                            <div class="swiper-slide">
-                                <div class="tour-box th-ani gsap-cursor">
-                                    <div class="tour-box_img global-img">
-                                        <img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="<?=$tour['title']?>">
-                                    </div>
-                                    <div class="tour-content">
-                                        <h3 class="box-title mb-1"><a href="<?=base_url('Tour/'.$tour['url_title'])?>"><?=$tour['title']?></a></h3>
-                                        <!-- <h4 class="tour-box_price"><span class="currency"><?=$tour['price']?></span>/Person</h4> -->
-                                        <div class="tour-action"><span><i class="fa-light fa-clock"></i><?=$tour['duration_days']?> Days</span> 
-                                            <a href="<?=base_url('Contact')?>" class="th-btn style4 th-icon">View</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php } ?>
         <div class="shape-mockup movingX d-none d-xxl-block" data-top="0%" data-left="-18%"><img src="<?=base_url()?>assets/img/shape/shape_2_1.png" alt="shape"></div>
         <div class="shape-mockup jump d-none d-xxl-block" data-top="28%" data-right="-15%"><img src="<?=base_url()?>assets/img/shape/shape_2_2.png" alt="shape"></div>
         <div class="shape-mockup spin d-none d-xxl-block" data-bottom="18%" data-left="-112%"><img src="<?=base_url()?>assets/img/shape/shape_2_3.png" alt="shape"></div>
         <div class="shape-mockup movixgX d-none d-xxl-block" data-bottom="18%" data-right="-12%"><img src="<?=base_url()?>assets/img/shape/shape_2_4.png" alt="shape"></div>
     </div>
 </div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $(".book-form select[name='category']").change(function(){
+            $("#booktour").html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Please wait..");
+            var params = {};
+            params.category_id = $(this).val();
+            var url = "<?=base_url('Tour/getTourCategory')?>";
+            if( $(this).val() == 0 )
+            {
+              $(".book-form select[name='tourcategory']").empty();
+              return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: params,
+                dataType:'JSON', 
+                success: function (data) {
+                    console.log(data);
+                    if( data.error == 1 )
+                    {
+                        $("#error_div").append("<div class='alert alert-danger mb-1 py-1 px-2 small'>"+data.error_message+"</div>");
+                        $("#booktour").prop('disabled', false);
+                        $("#booktour").html("Submit");
+                    }
+                    else
+                    {
+                        $("#booktour").html("Submit");
+                        var records = data.record;
+                        $(".book-form select[name='tourcategory']").empty();
+                        $(".book-form select[name='tourcategory']").append("<option value='0'>-Select-</option>");
+                        for(var i=0; i< records.length;i++)
+                        {
+                          $(".book-form select[name='tourcategory']").append("<option value='"+records[i].id+"'>"+records[i].sub_category+"</option>");
+                        }
+                    }
+                },
+                error: function (data) {
+                    $("#error_div").append("<div class='alert alert-danger mb-1 py-1 px-2 small'>Error Occured. Try again later.</div>");
+                    $("#booktour").prop('disabled', false);
+                    $("#booktour").html("Submit");
+                }
+            });
+
+            setTimeout(function(){
+                $("#error_div").html("");
+            }, 2000);
+            return true;
+        });
+
+        $(".book-form select[name='tourcategory']").change(function(){
+            $("#booktour").html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Please wait..");
+            var params = {};
+            params.category_id = $(".book-form select[name='category']").val();
+            params.tourcategory_id = $(this).val();
+            var url = "<?=base_url('Tour/getTours')?>";
+            if( $(this).val() == 0 )
+            {
+              $(".book-form select[name='tourcategory']").empty();
+              return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: params,
+                dataType:'JSON', 
+                success: function (data) {
+                    console.log(data);
+                    if( data.error == 1 )
+                    {
+                        $("#error_div").append("<div class='alert alert-danger mb-1 py-1 px-2 small'>"+data.error_message+"</div>");
+                        $("#booktour").prop('disabled', false);
+                        $("#booktour").html("Submit");
+                    }
+                    else
+                    {
+                        $("#booktour").html("Submit");
+                        var records = data.record;
+                        $(".book-form select[name='tour']").empty();
+                        $(".book-form select[name='tour']").append("<option value='0'>-Select-</option>");
+                        for(var i=0; i< records.length;i++)
+                        {
+                          $(".book-form select[name='tour']").append("<option data-price='"+records[i].price+"' value='"+records[i].id+"'>"+records[i].title+"</option>");
+                        }
+                    }
+                },
+                error: function (data) {
+                    $("#error_div").append("<div class='alert alert-danger mb-1 py-1 px-2 small'>Error Occured. Try again later.</div>");
+                    $("#booktour").prop('disabled', false);
+                    $("#booktour").html("Submit");
+                }
+            });
+
+            setTimeout(function(){
+                $("#error_div").html("");
+            }, 2000);
+            return true;
+        });
+
+        $(".book-form select[name='tour']").change(function()
+        {
+            $(".book-form .tour_amount").css('display', 'inline');
+            function toCurrencyString(price)
+            {
+                price = parseInt(price);
+                return price.toFixed(2).replace(/(\d)(?=(\d{3})+\b)/g, '$1,');
+            }
+
+            var price = $(this).find('option:selected').attr('data-price');
+            $("#amount").html("<i class='fa fa-indian-rupee'></i>"+toCurrencyString(price)+" / Per Person");
+        });
+
+    });
+
+</script>

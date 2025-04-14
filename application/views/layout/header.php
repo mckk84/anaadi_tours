@@ -246,7 +246,7 @@
 							</div>
 							<div class="col-auto p-0 d-none d-xl-block">
 								<div class="header-button">
-									<a href="<?=base_url('Contact')?>" class="th-btn th-icon">Book your Tour</a>
+									<a href="<?=base_url('Booktour')?>" class="th-btn th-icon">Book your Tour</a>
 								</div>
 							</div>
 						</div>
