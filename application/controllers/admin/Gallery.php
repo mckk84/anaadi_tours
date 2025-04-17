@@ -88,6 +88,8 @@ class Gallery extends CI_Controller
     {
         $response = array("error" => 0, "error_message" => "", "success_message" => "");
         $this->load->library('form_validation');   
+
+        $id = $this->security->xss_clean($this->input->post('record_id'));
         $this->form_validation->set_rules('album','Album','trim|required|max_length[255]');
 
         if($this->form_validation->run() == FALSE)
@@ -146,24 +148,49 @@ class Gallery extends CI_Controller
         $user = $this->session->userdata();
         $album = $this->security->xss_clean($this->input->post('album'));
 
-        $recordInfo = array(
+        if( $id != "" )
+        {
+            $recordInfo = array(
+                'album' => $album,
+                'images' => implode(",", $gallery_images_array),
+                'created_by' => $user['userId']
+            );
+            $result = $this->gallery_model->updateRecord($recordInfo, $id);
+            if($result > 0)
+            {
+                $response["error"] = 0;
+                $response["error_message"] = "";
+                $response["success_message"] = "Record added successfully";
+            } 
+            else 
+            {
+                $response["error"] = 1;
+                $response["error_message"] = "Record add failed.";
+            }
+        }
+        else
+        {
+            $recordInfo = array(
                 'album' => $album,
                 'images' => implode(",", $gallery_images_array),
                 'created_by' => $user['userId']
             );
 
-        $result = $this->gallery_model->addNew($recordInfo);
-        if($result > 0)
-        {
-            $response["error"] = 0;
-            $response["error_message"] = "";
-            $response["success_message"] = "Record added successfully";
-        } 
-        else 
-        {
-            $response["error"] = 1;
-            $response["error_message"] = "Record add failed.";
-        }                
+            $result = $this->gallery_model->addNew($recordInfo);
+            if($result > 0)
+            {
+                $response["error"] = 0;
+                $response["error_message"] = "";
+                $response["success_message"] = "Record added successfully";
+            } 
+            else 
+            {
+                $response["error"] = 1;
+                $response["error_message"] = "Record add failed.";
+            }
+        }
+
+                        
         die(json_encode($response));        
     }
 

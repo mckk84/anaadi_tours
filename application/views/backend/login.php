@@ -24,6 +24,7 @@
 
   <!-- Template Main CSS File -->
   <link href="<?=base_url()?>assets/admin/assets/css/style.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/admin/assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body style="background-image: url('<?=base_url()?>assets/admin/assets/img/bgadmin.png');background-repeat: no-repeat;background-size: cover;">
@@ -67,7 +68,6 @@
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Please enter your username.</div>
                       </div>

@@ -53,6 +53,7 @@
                       <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>
                       <?php if( isset($user['user_type']) && $user['user_type'] == 'Admin' ){?>
                       <td><div class="d-flex justify-content-center">
+                        <a title="Edit Record" href="javascript:void(0)" record-data="<?=$row['id']?>" class="edit-record fs-6 text-warning float-right mx-2"><i class="bi bi-pencil-fill"></i></a>
                         <a title="Delete Record" href="javascript:void(0)" record-data="<?=$row['id']?>" class="delete-record fs-6 text-danger float-right mx-2"><i class="bi bi-trash-fill"></i></a>
                       </div></td>
                       <?php } ?>
@@ -90,12 +91,15 @@
                 </div>
                 <div class="col-md-10 float-left mx-auto">
                   <label for="validationDefault05" class="form-label">Images</label>
-                  <input type="file" class="form-control" multiple onchange="loadFile(event)" name="images[]" id="validationDefault05" value="" required>
+                  <div id="drag-drop-area" class="upload-area">
+                      <p>Drag and drop files here</p>
+                      <div id="file-previews"></div>
+                  </div>                  
                   <span class="p-1 small text-danger">Size less than 2MB. Min Resolution 800x500.</span>
                 </div>
               </div>
               <div class="col-md-12">
-                <div id="imagepreview" style="height: 250px;" class="imagepreview w-100 p-2 mb-2 float-left">
+                <div id="imagepreview" style="height: 250px;" class="image_preview w-100 p-2 mb-2 float-left">
                     
                 </div>
               </div>
@@ -108,34 +112,177 @@
       </form>
     </div>
   </div>
-</div><!-- End Disabled Backdrop Modal-->
+</div>
 
 <script type="text/javascript">
 
-  var loadFile = function(event) 
+  $(document).on('dragenter', function (e) 
   {
-    document.getElementById("imagepreview").innerHTML = "";
-    var files = event.target.files;
-    for(var i=0; i< files.length;i++)
-    {
-      var output = document.createElement('img');
-      output.src = URL.createObjectURL(files[i]);
-      output.onload = function() {
-        URL.revokeObjectURL(output.src) // free memory
-      }  
-      document.getElementById("imagepreview").appendChild(output);
-    }
-    
-  };
+      e.stopPropagation();
+      e.preventDefault();
+  });
+  $(document).on('dragover', function (e) 
+  {
+    e.stopPropagation();
+    e.preventDefault();
+  });
+  $(document).on('drop', function (e) 
+  {
+      e.stopPropagation();
+      e.preventDefault();
+  });
 
   $(document).ready(function(){
+
+    var droppped_files = [];
+
+    const dragDropArea = document.getElementById('drag-drop-area');
+    dragDropArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dragDropArea.classList.add('drag-over');
+    });
+    dragDropArea.addEventListener('dragleave', () => {
+        dragDropArea.classList.remove('drag-over');
+    });
+    dragDropArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dragDropArea.classList.remove('drag-over');
+        const files = e.dataTransfer.files;
+        for( const file of files )
+        {
+          droppped_files.push(file);
+        }
+        var uniqueCountries = [];
+        var new_files = []
+        console.log(droppped_files);
+        $.each(droppped_files, function(i, el){
+            if($.inArray(el.name, uniqueCountries) === -1) {
+              uniqueCountries.push(el.name);
+              new_files.push(el);
+            }
+        });
+        droppped_files = new_files;
+        handleDroppedFiles();
+    });
+
+    function deleteObj(e)
+    {
+      var name = e.target.getAttribute('data-title');
+      var new_files = []
+      $.each(droppped_files, function(i, el)
+      {
+          if( el.name !== name) {
+            new_files.push(el);
+          }
+      });
+      droppped_files = new_files;
+      e.target.remove();
+      const filePreviews = document.getElementById('file-previews');
+      filePreviews.innerHTML = droppped_files.length+" files";
+    }
+
+    function handleDroppedFiles() 
+    {
+        const imagepreviews = document.getElementById('imagepreview');
+        const filePreviews = document.getElementById('file-previews');
+        filePreviews.innerHTML = droppped_files.length+" files";
+        imagepreviews.innerHTML = "";
+        console.log(droppped_files);
+        for (const file of droppped_files) 
+        {
+          var div_p = document.createElement('div');
+          div_p.setAttribute('class','img_obj');
+          div_p.setAttribute('data-title', file.name);
+          div_p.addEventListener("click", deleteObj);
+          var output = document.createElement('img');
+          output.classList.add('uimage');
+          output.src = URL.createObjectURL(file);
+          output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+          }  
+          div_p.appendChild(output);
+          document.getElementById("imagepreview").appendChild(div_p);
+        }
+    }
 
     var module_url = '<?=base_url('/admin/Gallery')?>';
 
     //edit customer
     $(".new-category").click(function (event) {
         event.preventDefault(); // Prevent default form submission
-        $("#add-category").modal('show');        
+        $("#add-category").modal('show');       
+        droppped_files = []; 
+        $("#add-category .modal-title").html('Add Album');
+        $("#addcategory input[name='record_id']").val("");
+        $("#addcategory input[name='album']").val("");
+        document.getElementById('imagepreview').innerHTML = "";
+        document.getElementById('file-previews').innerHTML = "";
+    });
+
+    //edit customer
+    $(".edit-record").click(function (event) {
+        event.preventDefault(); // Prevent default form submission
+        $("#add-category").modal('show');   
+        $("#add-category .modal-title").html('Edit Album');   
+
+        droppped_files = []; 
+        document.getElementById('imagepreview').innerHTML = "";
+        document.getElementById('file-previews').innerHTML = "";
+
+        let id = $(this).attr('record-data');
+        let url = module_url+"/getRecord?id="+id;
+            
+        $.ajax({
+          url: url,
+          success: function(data) 
+          {
+            var d = JSON.parse(data);
+            if( d.error == 1 )
+            {
+              alert(d.error_message);
+              return false;
+            }
+            var record = d.record;
+            $("#addcategory input[name='album']").val(record.album);
+            $("#addcategory input[name='record_id']").val(record.id);
+            const imagepreviews = document.getElementById('imagepreview');
+            var images = record.images.split(",");
+            async function loadimages() 
+            {
+              for(var i=0; i < images.length;i++)
+              {
+                var file = {};
+                file.name = images[i];
+                console.log("call="+file.name);
+                await fetch("<?=base_url('assets/images/gallery/')?>"+file.name)
+                .then((res) => res.blob())
+                .then((myBlob) => {
+                   const myFile = new File([myBlob], file.name, {type: myBlob.type});
+                   myFile.name = file.name;
+                   console.log(file.name);
+                   droppped_files.push(myFile);
+                });              
+                var div_p = document.createElement('div');
+                div_p.setAttribute('class','img_obj');
+                div_p.setAttribute('data-title', file.name);
+                div_p.addEventListener("click", deleteObj);
+                var output = document.createElement('img');
+                output.classList.add('uimage');
+                output.src = "<?=base_url('assets/images/gallery/')?>"+file.name;
+                div_p.appendChild(output);
+                imagepreviews.appendChild(div_p);
+              }
+            }
+            loadimages();
+            const filePreviews = document.getElementById('file-previews');
+            filePreviews.innerHTML = images.length+" files";
+            
+          },
+          error: function(request,msg,error) {
+              console.log(error);
+          }
+        });
+
     });
 
     // submit booking
@@ -146,6 +293,11 @@
         
         let form = $("#addcategory")[0];
         var formData = new FormData(form);
+
+        for (const file of droppped_files) {
+            formData.append('images[]', file);
+        }
+        
         let url = $("#addcategory").attr('action');
 
         var service_name = $("#addcategory input[name='album']").val().trim();
@@ -205,26 +357,26 @@
         }     
 
         let id = $(this).attr('record-data');
-            let url = module_url+"/deleteRecord/"+id;
+        let url = module_url+"/deleteRecord/"+id;
             
-            $.ajax({
-            url: url,
-            method: 'DELETE',
-            contentType: 'application/json',
-            success: function(data) {
-                var d = JSON.parse(data);
-                    //console.log(d);
-                    if( d.error == 1 )
-                    {
-                      $(".showalert").append("<div class='alert alert-danger mt-1 mb-0'>"+d.error_message+"</div>");
-                    }
-                    else
-                    {
-                      $(".showalert").append("<div class='alert alert-success mt-1 mb-0'>"+d.success_message+"</div>");
-                      setTimeout(function(){
-                        window.location.reload();
-                      }, 500);
-                    }
+        $.ajax({
+        url: url,
+        method: 'DELETE',
+        contentType: 'application/json',
+        success: function(data) {
+            var d = JSON.parse(data);
+                //console.log(d);
+                if( d.error == 1 )
+                {
+                  $(".showalert").append("<div class='alert alert-danger mt-1 mb-0'>"+d.error_message+"</div>");
+                }
+                else
+                {
+                  $(".showalert").append("<div class='alert alert-success mt-1 mb-0'>"+d.success_message+"</div>");
+                  setTimeout(function(){
+                    window.location.reload();
+                  }, 500);
+                }
             },
             error: function(request,msg,error) {
                 console.log(error);
