@@ -122,7 +122,7 @@ body {
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: var(--title-font);
   font-size: 16px;
   font-weight: 400;
   color: var(--body-color);
@@ -3172,8 +3172,8 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 .sec-text {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .sec-text.style2 {
@@ -3783,7 +3783,7 @@ hr.title-line {
 }
 
 .bg-title {
-  background-color: var(--title-color) !important;
+  background-color: #113D48 !important;
 }
 
 .gradient-body {
@@ -8867,7 +8867,6 @@ heding animation  end
 .widget-area {
   padding-top: 50px;
   padding-bottom: 46px;
-  border-top:1px solid cadetblue;
 }
 
 .sticky-footer {
@@ -8883,7 +8882,7 @@ heding animation  end
 }
 
 .copyright-wrap .copyright-text {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .copyright-wrap .copyright-text a {
@@ -18170,7 +18169,7 @@ span.select2-selection.select2-selection--single:focus {
   height: 70px;
   line-height: 68px;
   text-align: center;
-  background: var(--title-color);
+  background: var(--theme-color);
   border-radius: 50%;
   color: var(--white-color);
   -webkit-transition: all 0.4s ease-in-out;

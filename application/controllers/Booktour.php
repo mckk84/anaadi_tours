@@ -9,6 +9,7 @@ class Booktour extends CI_Controller {
 		$data['user'] = $this->session->userdata("Auth");
 		$this->load->model('tours_model');
 		$this->load->model('tourcategory_model');
+		
 
 		$data['domestic_tours'] = $this->tours_model->getMenuByCategoryId(1);
 		$data['international_tours'] = $this->tours_model->getMenuByCategoryId(2);

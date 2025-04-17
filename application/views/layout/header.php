@@ -40,18 +40,11 @@
 	<body>
 		<?php if( isset($homeslider) ){ ?>
 		<div id="preloader" class="preloader">
-			<div class="preloader-inner"><img src="<?=base_url()?>assets/img/anaadi_logo.png" alt=""></div>
 			<div id="loader" class="th-preloader">
 				<div id="loader" class="th-preloader">
 					<div class="animation-preloader">
 						<div class="txt-loading">
-							<span preloader-text="L" class="characters">L </span>
-							<span preloader-text="O" class="characters">O </span>
-							<span preloader-text="A" class="characters">A </span>
-							<span preloader-text="D" class="characters">D </span>
-							<span preloader-text="I" class="characters">I</span>
-							<span preloader-text="N" class="characters">N</span>
-							<span preloader-text="G" class="characters">G</span>
+							<img style="width: 100px;" src="<?=base_url()?>assets/img/loading.gif" alt="">
 						</div>
 					</div>
 				</div>
@@ -146,6 +139,7 @@
 								<?php } ?>
 							</ul>
 						</li>
+						<li><a href="<?=base_url('/Services')?>">Services</a></li>
 						<li class="menu-item-has-children">
 							<a href="#">Media & Gallery</a>
 							<ul class="sub-menu">
@@ -153,7 +147,7 @@
 								<li><a href="<?=base_url('/Videos')?>">Videos</a></li>
 							</ul>
 						</li>
-						<li><a href="<?=base_url('/Services')?>">Services</a></li>
+						
 						<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
 					</ul>
 				</div>
@@ -166,8 +160,8 @@
 						<div class="col-auto d-none d-md-block">
 							<div class="header-links">
 								<ul>
-									<li class="d-none d-xl-inline-block"><i class="fa-sharp text-danger fa-regular fa-location-dot"></i> <span class="font-semibold">#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</span></li>
-									<li class="d-none d-xl-inline-block"><i class="fa-regular text-danger fa-clock"></i> <span class="font-semibold">Sun to Friday: 10.00 AM - 7.00 PM</span></li>
+									<li class="d-none d-xl-inline-block"><i class="fa-sharp text-danger fa-regular fa-location-dot"></i> <span class="fw-semibold">#4, Virupakshapura, Vidyaranyapura Post, Bengaluru - 560097</span></li>
+									<li class="d-none d-xl-inline-block"><i class="fa-regular text-danger fa-clock"></i> <span class="fw-semibold">Sun to Friday: 10.00 AM - 7.00 PM</span></li>
 								</ul>
 							</div>
 						</div>
@@ -175,8 +169,8 @@
 							<div class="header-right">
 								<div class="header-links">
 									<ul>
-										<li class="d-md-inline-block"><i class="fa-regular text-danger fa-phone"></i><a  class="font-semibold" href="tel:+916364328383">+91 6364328383</a></li>
-										<li class="d-md-inline-block"><i class="fa-regular text-danger fa-envelope"></i><a  class="font-semibold" href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
+										<li class="d-md-inline-block"><i class="fa-regular text-danger fa-phone"></i><a  class="fw-semibold" href="tel:+916364328383">+91 6364328383</a></li>
+										<li class="d-md-inline-block"><i class="fa-regular text-danger fa-envelope"></i><a  class="fw-semibold" href="toursandtravels@anaadi.co">toursandtravels@anaadi.co</a></li>
 									</ul>
 								</div>
 							</div>
@@ -231,6 +225,7 @@
 												<?php } ?>
 											</ul>
 										</li>
+										<li><a href="<?=base_url('/Services')?>">Services</a></li>
 										<li class="menu-item-has-children">
 											<a href="#">Media & Gallery</a>
 											<ul class="sub-menu">
@@ -238,7 +233,7 @@
 												<li><a href="<?=base_url('/Videos')?>">Videos</a></li>
 											</ul>
 										</li>
-										<li><a href="<?=base_url('/Services')?>">Services</a></li>
+										
 										<li><a href="<?=base_url('/Contact')?>">Contact us</a></li>
 									</ul>
 								</nav>

@@ -31,7 +31,7 @@
                             <select name="category_id" class="form-select">
                                 <option value="0">-Select-</option>
                                 <?php foreach($category as $row){ ?>
-                                  <option <?=($record['category_id'] == $row['id'])?"selected":""?> value="<?=$row['id']?>"><?=$row['category']?></option>
+                                  <option <?=(isset($record) && $record['category_id'] == $row['id'])?"selected":""?> value="<?=$row['id']?>"><?=$row['category']?></option>
                                 <?php } ?>
                             </select>
                           </div>
@@ -40,7 +40,18 @@
                             <select name="tourcategory_id" class="form-select">
                               <?php if( isset($tourcategory)) { 
                                 foreach($tourcategory as $row) { ?>
-                                  <option <?=($record['tourcategory_id'] == $row['id'])?"selected":""?>  value="<?=$row['id']?>"><?=$row['sub_category']?></option>
+                                  <option <?=(isset($record) && $record['tourcategory_id'] == $row['id'])?"selected":""?>  value="<?=$row['id']?>"><?=$row['sub_category']?></option>
+                                <?php }
+                              } ?>
+                            </select>
+                          </div>
+                          <div class="form-group w-50 mb-2">
+                            <label>Tour Type</label>
+                            <select name="type_id" class="form-select">
+                              <option value="0">-Select-</option>
+                              <?php if( isset($tour_types)) { 
+                                foreach($tour_types as $row) { ?>
+                                  <option <?=(isset($record) && $record['type_id'] == $row['id'])?"selected":""?>  value="<?=$row['id']?>"><?=$row['type']?></option>
                                 <?php }
                               } ?>
                             </select>

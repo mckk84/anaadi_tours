@@ -73,6 +73,60 @@ class Testimonial extends CI_Controller
             $response["error_message"] = $this->form_validation->error_string();
             die(json_encode($response));
         }
+        $image = "";
+        $image_type = "";
+        $target_folder = IMAGE_UPLOAD_PATH."testimonial/";
+
+        $service_image = $_FILES['image']; // Get the uploaded file
+        if ( $service_image && $service_image['name']) 
+        {
+            $image = trim($service_image['name']);
+            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
+            
+            $result = getNewImage($target_folder, $this->security->xss_clean(trim($this->input->post('service_name'))), $imageFileType);
+            $new_image_name = $result[0];
+            $target_file = $result[1];
+            // Allow certain file formats
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) 
+            {
+                $response["error"] = 1;
+                $response["error_message"] = "Image format invalid. Upload jpg/jpeg/png.";
+                die(json_encode($response));
+            }
+            
+            // Check file size
+            if ( $service_image["size"] > 2000000 || $service_image["error"] == 1) 
+            {
+                $response["error"] = 1;
+                $response["error_message"] = "Image size too large. Upload size less than 2MB.";
+                die(json_encode($response));
+            }
+
+            // upload file
+            if (move_uploaded_file($service_image["tmp_name"], $target_file)) 
+            {
+                // upload suuccess 
+                $image = $new_image_name;
+            } else {
+                $response["error"] = 1;
+                $response["error_message"] = "Image upload failed";
+                die(json_encode($response));
+            }
+        } 
+        else 
+        {
+            if( $id == "" )
+            {
+                $response["error"] = 1;
+                $response["error_message"] = "Please upload Image";
+                die(json_encode($response));
+            }
+            else
+            {
+                $srecord = $this->services_model->getById($id);
+                $image = $srecord['image'];
+            }
+        }
         
         $user = $this->session->userdata();
         $id = $this->security->xss_clean($this->input->post('record_id'));
@@ -84,6 +138,7 @@ class Testimonial extends CI_Controller
                 'name' => $name,
                 'sub_title' => $sub_title,
                 'testimonial' => $testimonial,
+                'image' => $image,
                 'created_by' => $user['userId']
             );
 

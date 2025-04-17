@@ -6,9 +6,7 @@
 
   <title><?=$page_title?></title>
     <!-- Favicons -->
-  <link href="<?=base_url()?>assets/admin/assets/img/favicon-32x32.png" rel="icon">
-  <link href="<?=base_url()?>assets/admin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+    <link rel="icon" type="image/x-icon" href="<?=base_url()?>assets/img/favicons/favicon.ico">
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -123,11 +121,11 @@
               <i class="bi bi-list"></i><span>Services</span>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="<?=base_url('admin/Customers')?>">
               <i class="bi bi-people"></i><span>Customers</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </li><!-- End Components Nav -->
 

@@ -20,6 +20,22 @@ class Gallery_model extends CI_Model
         }
     }
 
+    function getAlbum($album)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_gallery');
+        $this->db->where('album', $album);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        } 
+        else 
+        {
+            return array();
+        }
+    }
+
     function getById($id)
     {
         $this->db->select('*');

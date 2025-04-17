@@ -36,6 +36,7 @@
                       <th scope="col">Customer Name</th>
                       <th scope="col">Sub Title</th>
                       <th scope="col">Testimonial</th>
+                      <th scope="col">Image</th>
                       <th scope="col">Added By</th>
                       <th scope="col">Added On</th>
                       <th scope="col">Action</th>
@@ -48,6 +49,7 @@
                       <td><?=$row['name']?></td>
                       <td><?=$row['sub_title']?></td>
                       <td><?=substr($row['testimonial'], 0, 100)?>..</td>
+                      <td><img class="img-fluid" style="width:100px;" src="<?=base_url('assets/images/testimonial/'.$row['image'])?>"></td>
                       <td><?=$row['created_by']?></td>
                       <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>
                       <td><div class="d-flex justify-content-center">
@@ -85,7 +87,7 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-8">
                 <div class="col-md-12 mx-auto mb-2">
                   <label for="validationDefault02" class="form-label">Customer Name</label>
                   <input type="text" maxlength="200" autocomplete="off" class="form-control" name="name" id="validationDefault02" value="" required>
@@ -97,6 +99,15 @@
                 <div class="col-md-12 mx-auto">
                   <label for="validationDefault05" class="form-label">Testimonial</label>
                   <textarea class="form-control" name="testimonial" rows="5"></textarea>
+                </div>
+                <div class="col-md-12 mx-auto">
+                  <label for="validationDefault05" class="form-label">Image</label>
+                  <input type="file" class="form-control" onchange="loadFile(event)" name="image" id="validationDefault05" value="" required>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="w-100 px-2 mb-2 float-left">
+                    <img class="img-fluid" id="imagepreview" src="" />
                 </div>
               </div>
             </div>
@@ -111,6 +122,15 @@
 </div><!-- End Disabled Backdrop Modal-->
 
 <script type="text/javascript">
+
+  var loadFile = function(event) 
+  {
+    var output = document.getElementById("imagepreview");
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }      
+  };
 
   $(document).ready(function(){
 
@@ -140,6 +160,7 @@
                   $('#add-category input[name="name"]').val(d.record.name);
                   $('#add-category input[name="sub_title"]').val(d.record.sub_title);
                   $('#add-category textarea[name="testimonial"]').val(d.record.testimonial);
+                  $('#add-category #imagepreview').attr('src', "<?=base_url('assets/images/testimonial/')?>"+d.record.image);
                 }
                 else
                 {

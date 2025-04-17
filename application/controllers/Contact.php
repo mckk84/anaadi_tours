@@ -10,10 +10,9 @@ class Contact extends CI_Controller {
 
 		$this->load->model('tours_model');
 
-
 		$data['domestic_tours'] = $this->tours_model->getMenuByCategoryId(1);
 		$data['international_tours'] = $this->tours_model->getMenuByCategoryId(2);
-		
+        
         $this->load->view('layout/header', $data);
         $this->load->view('front/contact', $data);
         $this->load->view('layout/footer');
@@ -26,6 +25,7 @@ class Contact extends CI_Controller {
         $this->load->library('form_validation');       
         $name = $this->security->xss_clean($this->input->post('name'));     
         $this->form_validation->set_rules('name','Name','trim|required|max_length[128]');
+        $this->form_validation->set_rules('phone','Phone','trim|required|max_length[10]');
         $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[200]');
         $this->form_validation->set_rules('subject','Subject','trim|required|max_length[200]');
         $this->form_validation->set_rules('message','Message','trim|required|max_length[250]');
@@ -37,12 +37,14 @@ class Contact extends CI_Controller {
         }
 
         $name = $this->security->xss_clean($this->input->post('name'));
+        $phone = $this->security->xss_clean($this->input->post('phone'));
         $email = $this->security->xss_clean($this->input->post('email'));
         $subject = $this->security->xss_clean($this->input->post('subject'));
         $message = $this->security->xss_clean($this->input->post('message'));
                 
         $recordInfo = array(
                 'name' => $name,
+                'phone' => $phone,
                 'email' => $email,
                 'subject' => $subject,
                 'message' => $message

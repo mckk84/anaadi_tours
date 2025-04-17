@@ -15,6 +15,7 @@ class Tours extends CI_Controller
         $this->load->model('tours_model');
         $this->load->model('category_model');
         $this->load->model('tourcategory_model');
+        $this->load->model('tourtypes_model');
     }
 
     /**
@@ -55,6 +56,7 @@ class Tours extends CI_Controller
             $data['page_title'] = "Add Tour";
                         
             $data['category'] = $this->category_model->getAll();
+            $data['tour_types'] = $this->tourtypes_model->getAll();
 
             $this->load->view('layout_admin/header', $data);
             $this->load->view('backend/addtour', $data);
@@ -86,6 +88,7 @@ class Tours extends CI_Controller
             $data['category'] = $this->category_model->getAll();
             $data['record'] = $this->tours_model->getById($record_id);
             $data['tourcategory'] = $this->tourcategory_model->getByCategoryId($data['record']['category_id']);
+            $data['tour_types'] = $this->tourtypes_model->getAll();
 
             $this->load->view('layout_admin/header', $data);
             $this->load->view('backend/addtour', $data);
@@ -145,8 +148,9 @@ class Tours extends CI_Controller
         $response = array("error" => 0, "error_message" => "", "success_message" => "");
         $this->load->library('form_validation');       
         $id = $this->security->xss_clean($this->input->post('record_id'));     
-        $this->form_validation->set_rules('category_id','Category','trim|required|max_length[128]');
-        $this->form_validation->set_rules('tourcategory_id','Tour Category','trim|required|max_length[128]');
+        $this->form_validation->set_rules('category_id','Category','trim|required|max_length[12]');
+        $this->form_validation->set_rules('tourcategory_id','Tour Category','trim|required|max_length[12]');
+        $this->form_validation->set_rules('type_id','Tour Type','trim|required|max_length[12]');
 
         $this->form_validation->set_rules('title','Title','trim|required|max_length[255]');
         $this->form_validation->set_rules('nights','Nights','trim|required|integer');
@@ -219,6 +223,7 @@ class Tours extends CI_Controller
         $id = $this->security->xss_clean($this->input->post('record_id'));
         $category_id = $this->security->xss_clean($this->input->post('category_id'));
         $tourcategory_id = $this->security->xss_clean($this->input->post('tourcategory_id'));
+        $type_id = $this->security->xss_clean($this->input->post('type_id'));
         $title = $this->security->xss_clean($this->input->post('title'));
         $nights = $this->security->xss_clean($this->input->post('nights'));
         $days = $this->security->xss_clean($this->input->post('days'));
@@ -236,6 +241,7 @@ class Tours extends CI_Controller
         $recordInfo = array(
                 'category_id' => $category_id,
                 'tourcategory_id' => $tourcategory_id,
+                'type_id' => $type_id,
                 'title' => $title,
                 'url_title' => create_slug($title),
                 'duration_nights' => $nights,

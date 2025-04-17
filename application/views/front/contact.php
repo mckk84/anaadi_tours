@@ -50,7 +50,7 @@
                 <div class="col-lg-6">
                     <div>
                         <form action="<?=base_url('Contact/send_message')?>" method="POST" class="contact-form style2 ajax-contact">
-                            <h3 class="sec-title mb-30 text-capitalize">Book a tour</h3>
+                            <h3 class="sec-title mb-30 text-capitalize">Send Message</h3>
                             <?php $error = $this->session->flashdata('error');
                                   if($error) { ?>
                               <div class="alert alert-danger">
@@ -65,8 +65,9 @@
                               </div>
                               <?php } ?>
                             <div class="row">
-                                <div class="col-12 form-group"><input type="text" class="form-control" name="name" id="name3" placeholder="First Name"> <img src="<?=base_url()?>assets/img/icon/user.svg" alt=""></div>
+                                <div class="col-12 form-group"><input type="text" class="form-control" name="name" id="name3" placeholder="Name"> <img src="<?=base_url()?>assets/img/icon/user.svg" alt=""></div>
                                 <div class="col-12 form-group"><input type="email" class="form-control" name="email" id="email3" placeholder="Your Mail"> <img src="<?=base_url()?>assets/img/icon/mail.svg" alt=""></div>
+                                <div class="col-12 form-group"><input type="number" class="form-control" name="phone" id="phone3" placeholder="Phone"> <img style="filter: brightness(0.5) invert(1);" src="<?=base_url()?>assets/img/icon/call.svg" alt=""></div>
                                 <div class="form-group col-12">
                                     <input type="text" name="subject" class="form-control" placeholder="Subject" >
                                 </div>

@@ -32,7 +32,8 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Image</th>
+                      <th scope="col">Album</th>
+                      <th scope="col">Images</th>
                       <th scope="col">Added By</th>
                       <th scope="col">Added On</th>
                       <?php if( isset($user['user_type']) && $user['user_type'] == 'Admin' ){?>
@@ -41,10 +42,13 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php foreach($records as $index => $row) {?>
+                    <?php foreach($records as $index => $row) {
+                      $images = explode(",", $row['images']);
+                    ?>
                     <tr>
                       <th scope="row"><?=$row['id']?></th>
-                      <td><img style="max-width: 150px;" class="img-fluid mx-auto p-1 border rounded" src="<?=base_url('assets/images/gallery/'.$row['image'])?>"></td>
+                      <td><?=$row['album']?></td>
+                      <td><img style="max-width: 150px;" class="img-fluid mx-auto p-1 border rounded" src="<?=base_url('assets/images/gallery/'.$images[0])?>"></td>
                       <td><?=$row['created_by']?></td>
                       <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>
                       <?php if( isset($user['user_type']) && $user['user_type'] == 'Admin' ){?>
@@ -71,24 +75,28 @@
 <div class="modal fade" id="add-category" tabindex="-1" data-bs-backdrop="false">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <form id="addcategory" action="<?=base_url('admin/Gallery/save_record')?>" method="POST">
+      <form id="addcategory" action="<?=base_url('admin/Gallery/save_record')?>" method="POST" encypt="multipart/data">
           <input type="hidden" name="record_id" value="">
           <div class="modal-header">
-            <h5 class="modal-title">Add Image</h5>
+            <h5 class="modal-title">Add Album</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="row text-center">
-              <div class="col-md-10">
-                <div class="col-md-12 mx-auto">
-                  <label for="validationDefault05" class="form-label">Image</label>
-                  <input type="file" class="form-control" onchange="loadFile(event)" name="image" id="validationDefault05" value="" required>
+            <div class="row">
+              <div class="col-md-12 mb-2">
+                <div class="col-md-10 float-left mx-auto mb-2">
+                  <label for="validationDefault01" class="form-label">Album</label>
+                  <input type="text" class="form-control" name="album" id="validationDefault01" value="" required>
+                </div>
+                <div class="col-md-10 float-left mx-auto">
+                  <label for="validationDefault05" class="form-label">Images</label>
+                  <input type="file" class="form-control" multiple onchange="loadFile(event)" name="images[]" id="validationDefault05" value="" required>
                   <span class="p-1 small text-danger">Size less than 2MB. Min Resolution 800x500.</span>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="w-100 px-2 mb-2 float-left">
-                    <img class="img-fluid border p-1 rounded" id="imagepreview" src="" />
+              <div class="col-md-12">
+                <div id="imagepreview" style="height: 250px;" class="imagepreview w-100 p-2 mb-2 float-left">
+                    
                 </div>
               </div>
             </div>
@@ -106,20 +114,18 @@
 
   var loadFile = function(event) 
   {
-    var output = document.getElementById("imagepreview");
-    output.src = URL.createObjectURL(event.target.files[0]);
-    output.onload = function() {
-      var height = this.naturalHeight;
-      var width = this.naturalWidth;
-      console.log(width+"x"+height);
-      if (height < 500 || width < 800) {
-        alert("Image dimension should be greater or equal to 1280X720");
-        output.src = "";
-        $("#addcategory input[name='image']").val("");
-        return false;
-      }
-      URL.revokeObjectURL(output.src) // free memory
-    }      
+    document.getElementById("imagepreview").innerHTML = "";
+    var files = event.target.files;
+    for(var i=0; i< files.length;i++)
+    {
+      var output = document.createElement('img');
+      output.src = URL.createObjectURL(files[i]);
+      output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+      }  
+      document.getElementById("imagepreview").appendChild(output);
+    }
+    
   };
 
   $(document).ready(function(){
@@ -141,6 +147,13 @@
         let form = $("#addcategory")[0];
         var formData = new FormData(form);
         let url = $("#addcategory").attr('action');
+
+        var service_name = $("#addcategory input[name='album']").val().trim();
+        if( service_name == "" )
+        {
+          $("#addcategory input[name='album']").focus();
+          return false;
+        }
         
         $(this).prop('disabled', true);
         $(this).html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Please wait..");

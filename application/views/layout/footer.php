@@ -1,13 +1,22 @@
 		<div id="whatsapp-widget" class="d-block dsm-none">
 	      <a title="Whatsapp Us" href="https://api.whatsapp.com/send?phone=916364328383&amp;text=Hi!%20Can%20I%20get%20more%20information%20on%20this?" target="_blank">
-	        <img width="64" height="64" style="border-radius:25px;" src="<?=base_url('assets/images/whatsapp.png')?>" alt="whatsapp--v1">
+	        <img width="54" height="54" style="border-radius:25px;" src="<?=base_url('assets/images/whatsapp.png')?>" alt="whatsapp--v1">
 	      </a>
 	      <a title="Call Us"  class="call-widget" href="tel:+916364328383" target="_blank">
-	        <img width="64" height="64" src="<?=base_url('assets/images/call.png')?>" alt="call">
+	        <img width="54" height="54" src="<?=base_url('assets/images/call.png')?>" alt="call">
 	      </a>
 	    </div>
+
+	    <div id="social-widget" class="d-block dsm-none">
+		  <div class="widget-social">
+		      <a href="<?=TWITTER?>"><img src="<?=base_url('assets/img/social/twitter.svg')?>"></a>
+		      <a href="<?=YOUTUBE?>"><img src="<?=base_url('assets/img/social/youtube.svg')?>"></a>
+		      <a href="<?=INSTAGRAM?>"><img src="<?=base_url('assets/img/social/instagram.svg')?>"></a>
+		    </div>
+		</div>
 	    
-		<footer class="footer-wrapper footer-layout1">
+		<footer class="footer-wrapper footer-layout1 space-top">
+			
 			<div class="widget-area">
 				<div class="container">
 					<div class="newsletter-area">
@@ -40,11 +49,11 @@
 							<div class="widget footer-widget">
 								<div class="th-widget-about">
 									<div class="about-logo">
-										<img class="header_logo" src="<?=base_url()?>assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels">
-										<span class="w-60 header_logo_title">Anaadi</span>
-										<span class="w-60 header_logo_title_sub">Tours & Travels</span>
+										<img class="header_logo" style="width:100px;" src="<?=base_url()?>assets/img/anaadi_logo.png" alt="Anaadi Tours and Travels">
+										<span class="w-60 header_logo_title fs-1">ANAADI</span>
+										<span style="font-size: 22px;" class="w-60 header_logo_title_sub mt-1">Tours & Travels</span>
 									</div>
-									<p class="about-text">Anaadi Tours and Travels is a trusted travel tour package operator based in Bangalore. Get the best deals, customized tour packages, and more from the best travel agency in Bangalore.</p>
+									<p class="about-text"><b>Anaadi Tours and Travels</b> bring you an exciting opportunity to escape, explore and experience all the exotic locales within India and across the world. <br/><br/>We provide one stop solution to all your travel requirements - <b>affordable packages</b> and tie-ups with the best overseas DMCs, besides an entire gamut of additional services like <b>flight booking, travel insurance, visa and hotel bookings</b>.</p>
 									<div class="th-social">
 										<a href="<?=TWITTER?>"><i class="fab fa-twitter"></i></a> 
 										<a href="<?=YOUTUBE?>"><i class="fab fa-youtube"></i></a> 
@@ -98,18 +107,20 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright-wrap" data-bg-src="<?=base_url()?>assets/img/bg/copyright_bg_1.jpg">
+			<div class="copyright-wrap" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
 						<div class="col-md-6">
 							<p class="copyright-text">Copyright 2025 <a href="<?=base_url()?>">Anaadi Tours and Travels</a>. All Rights Reserved.</p>
 						</div>
 						<div class="col-md-6 text-end d-none d-md-block">
-							<div class="footer-card"><span class="title">We Accept</span> <img src="<?=base_url()?>assets/img/shape/cards.png" alt=""></div>
+							<div class="footer-card"><span class="title text-dark">Design and Developed By <a target="_blank" class="text-theme" href="https://jvmtech.in">JVM TECH SOLUTIONS</a></span></div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="shape-mockup movingX d-none d-xxl-block" data-top="10%" data-left="5%"><img src="<?=base_url()?>assets/img/shape/shape_2_10.png" alt="shape"></div>
+            <div class="shape-mockup movingX d-none d-xxl-block" data-top="20%" data-right="5%"><img src="<?=base_url()?>assets/img/shape/shape_2_2.png" alt="shape"></div>
 		</footer>
 		<div class="d-none dsm-block" id="whatsapp-widget-mobile">
 	      <a title="Whatsapp Us" class="btn btn-warning" href="https://api.whatsapp.com/send?phone=916364328383&amp;text=Hi!%20Can%20I%20get%20more%20information%20on%20this?" target="_blank">

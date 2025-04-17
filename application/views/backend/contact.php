@@ -35,6 +35,7 @@
                       <th scope="col">#</th>
                       <th scope="col">Customer Name</th>
                       <th scope="col">Email</th>
+                      <th scope="col">Phone</th>
                       <th scope="col">Subject</th>
                       <th scope="col">Message</th>
                       <th scope="col">Created Date</th>
@@ -49,6 +50,7 @@
                       <th scope="row"><?=$row['id']?></th>
                       <td><?=$row['name']?></td>
                       <td><?=$row['email']?></td>
+                      <td><?=$row['phone']?></td>
                       <td><?=$row['subject']?></td>
                       <td><?=$row['message']?></td>
                       <td><?=date("d-m-Y h:m A", strtotime($row['created_date']))?></td>

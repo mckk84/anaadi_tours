@@ -58,79 +58,97 @@ class Gallery extends CI_Controller
         }
     }
 
+    public function validate_images($tour_images)
+    {
+        $error = "";
+        $total = count($tour_images['name']);
+        if( $total == 0 )
+        {
+            return "Please upload Tour images";
+        }
+        for( $i=0 ; $i < $total ; $i++ ) 
+        {
+            $image = $tour_images['name'][$i];
+            $imageFileType = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) 
+            {
+                return "Image file type not supported. Upload jpg/jpeg/png.";
+            }
+
+            // Check file size
+            if ( $tour_images["size"][$i] > 2000000 || $tour_images["error"][$i] == 1) 
+            {
+                return "Image size too large. Upload size less than 2MB.";
+            }
+        }
+        return "valid";
+    }
+
     public function save_record()
     {
         $response = array("error" => 0, "error_message" => "", "success_message" => "");
+        $this->load->library('form_validation');   
+        $this->form_validation->set_rules('album','Album','trim|required|max_length[255]');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $response["error"] = 1;
+            $response["error_message"] = $this->form_validation->error_string();
+            die(json_encode($response));
+        }
         
         $image = "";
         $image_type = "";
         $target_folder = IMAGE_UPLOAD_PATH."gallery/";
 
-        $slider_image = $_FILES['image']; // Get the uploaded file
-        if ( $slider_image && $slider_image['name']) 
+        $result = $this->validate_images($_FILES['images']);
+        if( $result != "valid" )
         {
-            $image = trim($slider_image['name']);
-            $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
+            $response["error"] = 1;
+            $response["error_message"] = $result;
+            die(json_encode($response));
+        }
+
+        $gallery_images_array = [];
+        $gallery_images = $_FILES['images'];
+        $total = count($gallery_images['name']);
+        for( $i=0 ; $i < $total ; $i++ ) 
+        {
+            $image = $gallery_images['name'][$i];
+            $tmp_name = $gallery_images['tmp_name'][$i];
+            $imageFileType = strtolower(pathinfo($image, PATHINFO_EXTENSION));
             
-            $result = getNewImage1($target_folder, 'gallery', $imageFileType);
+            $result = getNewImage($target_folder, $this->security->xss_clean(trim($this->input->post('album'))), $imageFileType);
             $new_image_name = $result[0];
             $target_file = $result[1];
-            // Allow certain file formats
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) 
-            {
-                $response["error"] = 1;
-                $response["error_message"] = "Image format invalid. Upload jpg/jpeg/png.";
-                die(json_encode($response));
-            }
-
-            $fileinfo = @getimagesize($_FILES["image"]["tmp_name"]);
-            $width = $fileinfo[0];
-            $height = $fileinfo[1];
-            
-            if ($width < "800" || $height < "500") {
-                $response["error"] = 1;
-                $response["error_message"] = "Image dimension should be greater or equal to 800X500";
-                die(json_encode($response));
-            }
-
-            // Check file size
-            if ( $slider_image["size"] > 2000000 || $slider_image["error"] == 1) 
-            {
-                $response["error"] = 1;
-                $response["error_message"] = "Image size too large. Upload size less than 2MB.";
-                die(json_encode($response));
-            }
 
             // upload file
-            if (move_uploaded_file($slider_image["tmp_name"], $target_file)) 
+            if (move_uploaded_file($tmp_name, $target_file)) 
             {
                 // upload suuccess 
-                $image = $new_image_name;
-            } else {
+                $gallery_images_array[] = $new_image_name;
+            } 
+            else 
+            {
                 $response["error"] = 1;
                 $response["error_message"] = "Image upload failed";
                 die(json_encode($response));
             }
-        } 
-        else 
+        }
+
+        if( count($gallery_images_array) == 0 )
         {
-            if( $id == "" )
-            {
-                $response["error"] = 1;
-                $response["error_message"] = "Please upload Image";
-                die(json_encode($response));
-            }
-            else
-            {
-                $srecord = $this->gallery_model->getById($id);
-                $image = $srecord['image'];
-            }
+            $response["error"] = 1;
+            $response["error_message"] = "Images not uploaded";
+            die(json_encode($response));
         }
         
         $user = $this->session->userdata();
-                
+        $album = $this->security->xss_clean($this->input->post('album'));
+
         $recordInfo = array(
-                'image' => $image,
+                'album' => $album,
+                'images' => implode(",", $gallery_images_array),
                 'created_by' => $user['userId']
             );
 

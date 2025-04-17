@@ -11,7 +11,7 @@
 							<span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s"><?=$slider['sub_title']?></span>
 							<h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s"><?=$slider['title']?></h1>
 							<div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
-								<a href="<?=base_url('Tours')?>" class="th-btn th-icon">Explore Tours</a> 
+								<a href="<?=base_url('Domestictours')?>" class="th-btn th-icon">Book your Tour</a> 
 								<a href="<?=base_url('Services')?>" class="th-btn style2 th-icon">Our Services</a>
 							</div>
 						</div>
@@ -23,38 +23,34 @@
 	</div>
 </div>
 <?php } ?>
-<div class="about-area position-relative overflow-hidden space" id="about-sec" data-bg-src="<?=base_url()?>assets/img/bg/about_bg_1.jpg">
+<div class="about-area position-relative overflow-hidden space" id="about-sec">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-6">
 				<div class="img-box6">
-					<div class="img1"><img src="<?=base_url()?>assets/img/travel/OmBeach.jpg" alt="About"></div>
-					<div class="img2"><img src="<?=base_url()?>assets/img/travel/JogFallsSmall.jpg" alt="About"></div>
-					<div class="img3"><img src="<?=base_url()?>assets/img/travel/MysorepalaceSmall.jpg" alt="About"></div>
+					<div class="img1">
+						<img src="<?=base_url()?>assets/img/normal/about_1_1.jpg" alt="About">
+					</div>
+					<div class="img2">
+						<img src="<?=base_url()?>assets/img/normal/about_1_2.jpg" alt="About">
+					</div>
+					<div class="img3">
+						<img src="<?=base_url()?>assets/img/category/category_1_5.jpg" alt="About">
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-6">
 				<div class="ps-xl-5 ms-xl-3">
 					<div class="title-area mb-10">
 						<span class="sub-title fs-2 style1">Welcome to Anaadi Tours & Travels</span>
-						<h3 class="sec-title mb-10">Begin Your Travel Story with Us</h3>
-						<p class="sec-text mb-20">We are here to provide you one stop solution for all your travel needs.</p>
-					</div>
-					<div class="about-item-wrap">
-						<div class="about-item">
-							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_1.svg" alt=""></div>
-							<div class="about-item_centent">
-								<h5 class="box-title">Exclusive Trip</h5>
-								<p class="about-item_text">We plan trip according to customer requirement and also provide unique and customized itineraries to our customers.</p>
-							</div>
-						</div>
-						<div class="about-item">
-							<div class="about-item_img"><img src="<?=base_url()?>assets/img/icon/about_1_2.svg" alt=""></div>
-							<div class="about-item_centent">
-								<h5 class="box-title">Safety First Always</h5>
-								<p class="about-item_text">We provide utmost importance for safety and comfort for clients.</p>
-							</div>
-						</div>
+						<h3 class="sec-title mb-20">Begin Your Travel Story with Us</h3>
+						
+						<p class="sec-text mb-20">To all the globe-trotters and to all the wanderlust folks out there, we at <b>Anaadi Tours and Travels</b> bring you an exciting opportunity to escape, explore and experience all the exotic locales within India and across the world.</p>
+
+						<p class="sec-text mb-20">As a new venture established in the year 2025, we have already begun curating exceptional travel experiences and innovative packages touching upon all the 7 A’s of tourism – <b>attraction, accessibility, affordability, accommodation, amenities, adventure and activities</b>.</p>
+						
+						<p class="sec-text mb-20">At Anaadi, we provide one stop solution to all your travel requirements - <b>affordable packages</b> and tie-ups with the best overseas DMCs, besides an entire gamut of additional services like <b>flight booking, travel insurance, visa and hotel bookings</b>. </p>
+
 					</div>
 					<div class="mt-30"><a href="<?=base_url('/About')?>" class="th-btn th-icon">Read More</a></div>
 				</div>
@@ -151,88 +147,24 @@
     </div>
 </div>
 <?php } ?>
-<!-- <div class="gallery-area">
-	<div class="overflow-hidden space">
-		<div class="container">
-			<div class="row gy-3 justify-content-between align-items-center">
-				<div class="col-lg-6">
-					<div class="title-area">
-						<span class="sub-title style1">Why Choose Anaadi</span>
-						<h2 class="sec-title">Making Every Journey Extraordinary.</h2>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<p class="mb-60">Anaadi Tours and Travels combines the thrill of travel with the comfort of world-class amenities, a offers something for everyone—adventure seekers, relaxation enthusiasts, and even families.</p>
-				</div>
-			</div>
-			<div class="row gy-80">
-				<div class="col-md-6 col-xl-4">
-					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_1.svg" alt="Convenience"></div>
-						<div class="media-body">
-							<h3 class="box-title">Convenience</h3>
-							<p class="box-text">We will provide you all type of solutions accordingly with convenience. As we are the trusted travel partner you will be offered with lot of benefits.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4">
-					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/about_1_2.svg"alt="Comfort & Saftey"></div>
-						<div class="media-body">
-							<h3 class="box-title">Comfort & Saftey</h3>
-							<p class="box-text">No compromise for Safety, Comfort and On time travel. We provide utmost importance for safety and comfort for clients.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-4">
-					<div class="choose-item">
-						<div class="box-icon"><img src="<?=base_url()?>assets/img/icon/choose_3_3.svg" alt="Perfect for All Ages"></div>
-						<div class="media-body">
-							<h3 class="box-title">Perfect for All Ages</h3>
-							<p class="box-text">With activities for kids, teens, adults, and seniors, we offer tour packages for family vacations.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
-<!-- <div class="counter-area space">
-	<div class="container">
-		<div class="counter-sec7">
-			<div class="row gy-5 align-items-center justify-content-center">
-				<div class="col-md-6 col-xl-3">
-					<div class="counter-item">
-						<div class="counter-shape"></div>
-						<div class="media-body">
-							<h3 class="box-number"><span class="counter-number">12</span></h3>
-							<h6 class="counter-title">Years Experience</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-3">
-					<div class="counter-item">
-						<div class="counter-shape"></div>
-						<div class="media-body">
-							<h3 class="box-number"><span class="counter-number">8</span>k</h3>
-							<h6 class="counter-title">Tour Completed</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-xl-3">
-					<div class="counter-item">
-						<div class="counter-shape"></div>
-						<div class="media-body">
-							<h3 class="box-number"><span class="counter-number">19</span>k</h3>
-							<h6 class="counter-title">Happy Travellers</h6>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
-
+<div class="position-relative overflow-hidden space">
+    <div class="cta-sec6 bg-title position-relative overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cta-area6 space">
+                        <div class="title-area mb-30">
+                            <h2 class="sec-title cta-title2 text-white mt-n3">Grab up to <span class="sec-title2">35% off</span><span class="d-block"> on your favorite </span>Destination</h2>
+                            <p class="text-white">Limited time offer, don't miss the opportunity</p>
+                        </div>
+                        <div class="btn-group"><a href="<?=base_url('Contact')?>" class="th-btn th-icon">Book Now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-mockup" data-bottom="0%" data-right="-2%"><img src="<?=base_url()?>assets/img/normal/cta-img-6.jpg" alt=""></div>
+    </div>
+</div>
 <div class="bg-smoke overflow-hidden space">
     <div class="container">
         <div class="row gy-4 align-items-center">
@@ -276,6 +208,78 @@
         <div class="shape-mockup d-none d-xxl-block" data-bottom="-17%" data-left="-20%"><img src="<?=base_url()?>assets/img/shape/shape_20.png" alt=""></div>
     </div>
 </div>
+<section class="tour-area3 position-relative bg-top-center overflow-hidden space" id="service-sec" data-bg-src="<?=base_url()?>assets/img/bg/tour_bg_1.jpg">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="title-area text-center">
+					<span class="sub-title">Best Experience</span>
+					<h2 class="sec-title">Amazing Travel Experience</h2>
+				</div>
+			</div>
+		</div>
+		<div class="nav nav-tabs tour-tabs" id="nav-tab" role="tablist">
+			<button class="nav-link active" id="nav-step1-tab" data-bs-toggle="tab" data-bs-target="#nav-step1" type="button"><img src="<?=base_url()?>assets/img/icon/tour_icon_1.svg" alt="">Domestic Tour Packages</button> 
+			<button class="nav-link" id="nav-step2-tab" data-bs-toggle="tab" data-bs-target="#nav-step2" type="button"><img src="<?=base_url()?>assets/img/icon/tour_icon_1.svg" alt="">International Tour Packages</button> 
+		</div>
+		<div class="tab-content" id="nav-tabContent">
+			<div class="tab-pane fade active show" id="nav-step1" role="tabpanel">
+				<div class="slider-area tour-slider slider-drag-wrap">
+					<div class="swiper th-slider has-shadow" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"4"}}}'>
+						<div class="swiper-wrapper">
+							<?php foreach ($domestic_tour_packages as $i => $tours) { 
+								$images = explode(",", $tours['images']);
+							?>
+							<div class="swiper-slide">
+								<div class="tour-box th-ani gsap-cursor">
+									<div class="tour-box_img global-img">
+										<img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="image">
+									</div>
+									<div class="tour-content">
+										<h3 class="box-title fs-16"><a title="View Tour Itinerary" href="<?=base_url('Tour/'.$tours['url_title'])?>"><?=$tours['title']?></a></h3>
+										<h4 class="tour-box_price">
+											<span class="currency"><i class="fa-solid fa-indian-rupee-sign me-1"></i><?=$tours['price']?></span> / Person
+										</h4>
+										<div class="tour-action"><span><i class="fa-light fa-clock"></i><?=$tours['duration_days']?> Days</span><a href="<?=base_url('Booktour/'.$tours['url_title'])?>" class="th-btn style4 th-icon">Book Now</a></div>
+									</div>
+								</div>
+							</div>
+							<?php } ?>
+						</div>
+						<div class="slider-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="nav-step2" role="tabpanel">
+				<div class="slider-area tour-slider slider-drag-wrap">
+					<div class="swiper th-slider has-shadow" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"4"}}}'>
+						<div class="swiper-wrapper">
+							<?php foreach ($international_tour_packages as $i => $tours) { 
+								$images = explode(",", $tours['images']);
+							?>
+							<div class="swiper-slide">
+								<div class="tour-box th-ani gsap-cursor">
+									<div class="tour-box_img global-img">
+										<img src="<?=base_url('assets/images/tours/'.$images[0])?>" alt="image">
+									</div>
+									<div class="tour-content">
+										<h3 class="box-title fs-16"><a title="View Tour Itinerary" href="<?=base_url('Tour/'.$tours['url_title'])?>"><?=$tours['title']?></a></h3>
+										<h4 class="tour-box_price">
+											<span class="currency"><i class="fa-solid fa-indian-rupee-sign me-1"></i><?=$tours['price']?></span> / Person
+										</h4>
+										<div class="tour-action"><span><i class="fa-light fa-clock"></i><?=$tours['duration_days']?> Days</span><a href="<?=base_url('Booktour/'.$tours['url_title'])?>" class="th-btn style4 th-icon">Book Now</a></div>
+									</div>
+								</div>
+							</div>
+							<?php } ?>							
+						</div>
+						<div class="slider-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <div class="counter-sec2 space">
     <div class="container">
         <div class="row gy-4 align-items-center justify-content-center">
@@ -315,162 +319,83 @@
         <div class="shape-mockup spin d-none d-xl-block" data-bottom="-10%" data-right="-14%"><img src="<?=base_url()?>assets/img/shape/shape_2_5.png" alt="shape"></div>
     </div>
 </div>
-
-<!-- <section class="testi-area13 overflow-hidden" id="testi-sec">
+<div class="overflow-hidden space-bottom">
 	<div class="container">
-		<div class="row justify-content-center align-items-center">
-			<div class="col-xl-6">
-				<div class="testi-image2">
-					<div class="testi-img"><img src="<?=base_url()?>assets/img/normal/testimonials.png" alt="Testimonials"></div>
-				</div>
-			</div>
-			<div class="col-xl-6">
-				<div class="space-extra">
-					<div class="title-area mb-40 pe-xl-5 me-xl-5">
-						<span class="sub-title">Testimonial</span>
-						<h2 class="sec-title">What Clients Say About Us?</h2>
-					</div>
-					<div class="swiper th-slider testiSlide13" id="testiSlide13" data-slider-options='{"paginationType":"progressbar","direction":"vertical","breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"1"}}}'>
-						<div class="swiper-wrapper">
-							<?php foreach($testimonial as $row){?>
-							<div class="swiper-slide">
-								<div class="testi-grid2 style2">
-									<div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-									<div class="box-content">
-										<p class="box-text">“<?=$row['testimonial']?>”</p>
-										<h6 class="box-title"><?=$row['name']?></h6>
-										<span class="box-desig"><?=$row['sub_title']?></span>
-									</div>
-								</div>
-							</div>
-							<?php } ?>
-						</div>
-						<div class="slider-pagination"></div>
-						<div class="icon-box"><button data-slider-prev="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide13" class="slider-arrow style7 default"><img src="<?=base_url()?>assets/img/icon/left-arrow2.svg" alt=""></button></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-
-<section class="testi-area11 overflow-hidden space" id="testi-sec">
-	<div class="container-fluid p-0">
 		<div class="title-area text-center">
-			<span class="sub-title">Testimonial</span>
-			<h2 class="sec-title">What Client Say About us</h2>
+			<span class="sub-title">Make Your Tour More Pleasure</span>
+			<h2 class="sec-title">Recent Gallery</h2>
 		</div>
-		<div class="slider-area">
-			<div class="swiper th-slider slider-drag-wrap testiSlider11" id="testiSlider0" data-slider-options='{"centeredSlides":true,"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1300":{"slidesPerView":"4"}}}'>
-				<div class="swiper-wrapper">
-					<?php foreach($testimonial as $row){?>
-					<div class="swiper-slide">
-						<div class="testi-card4 gsap-cursor" style="height:277px;">
-							<div class="testi-card4_review">
-								<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
-							</div>
-							<div class="box-content">
-								<div style="max-height: 78px;" class="box-text overflow-hidden">“<?=$row['testimonial']?>”</div>
-								<div class="box-profile">
-									<div class="box-avater"><img src="<?=base_url()?>assets/img/testimonial/avatar.jpg" alt=""></div>
-									<div class="media-body">
-										<h3 class="box-title"><?=$row['name']?></h3>
-										<span class="box-desig"><?=$row['sub_title']?></span>
-									</div>
-								</div>
-							</div>
-						</div>
+		<div class="row gy-24 gx-24 justify-content-center">
+			<?php if( count($gallery) > 0 ){
+                foreach($gallery as $i => $row) { 
+                	if( $i == 8 ) { 
+                		break; 
+              		}
+              		$images = explode(",", $row['images']);
+             ?>  
+			<div class="col-lg-3">
+				<div class="gallery-box style2">
+					<div class="gallery-img global-img">
+						<a href="<?=base_url('assets/images/gallery/'.$images[0])?>" class="popup-image">
+							<div class="icon-btn"><i class="fal fa-magnifying-glass-plus"></i></div>
+							<img style="height: 200px;" src="<?=base_url('assets/images/gallery/'.$images[0])?>" alt="gallery image">
+						</a>
 					</div>
-					<?php } ?>
 				</div>
-				<div class="slider-pagination"></div>
+			</div>
+			<?php } } ?>
+		</div>
+		<div class="row gy-24 gx-24 justify-content-center">
+			<div class="col-auto">
+				<a href="<?=base_url('Gallery')?>" class="th-btn th-icon">View More Gallery</a>
 			</div>
 		</div>
 	</div>
+</div>
+ <section class="testi-area7 bg-smoke overflow-hidden space" id="testi-sec" data-bg-src="<?=base_url()?>assets/img/bg/map.png">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="title-area mb-40">
+                    <span class="sub-title">Testimonial</span>
+                    <h2 class="sec-title">What Our Customers are Saying</h2>
+                </div>
+                <div class="swiper th-slider testiSlide5" id="testiSlide7" data-slider-options='{"effect":"slide","loop":false,"thumbs":{"swiper":".testi-grid2-thumb"}}'>
+                    <div class="swiper-wrapper">
+                    	<?php foreach($testimonial as $row){?>
+                        <div class="swiper-slide">
+                            <div class="testi-grid2">
+                                <div class="box-content">
+                                    <p class="box-text">“<?=$row['testimonial']?>”</p>
+                                    <h6 class="box-title"><?=$row['name']?></h6>
+                                    <span class="box-desig"><?=$row['sub_title']?></span>
+                                    <div class="box-review"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    	<?php } ?>
+                    </div>
+                </div>
+                <div class="swiper th-slider testi-grid2-thumb style2" data-slider-options='{"effect":"slide","slidesPerView":"6","spaceBetween":7,"loop":false}'>
+                    <div class="icon-box"><button data-slider-prev="#testiSlide7" class="slider-arrow default"><img src="<?=base_url()?>assets/img/icon/right-arrow2.svg" alt=""></button> <button data-slider-next="#testiSlide7" class="slider-arrow default"><img src="<?=base_url()?>assets/img/icon/left-arrow2.svg" alt=""></button></div>
+                    <div class="swiper-wrapper">
+                    	<?php foreach($testimonial as $row){?>
+                        <div class="swiper-slide">
+                            <div class="box-img"><img src="<?=base_url('assets/images/testimonial/'.$row['image'])?>" alt="<?=$row['name']?>"></div>
+                        </div>
+                    	<?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="testi-image-wrapp2">
+                    <div class="testi-img" data-mask-src="<?=base_url()?>assets/img/testimonial/testi_shape_1.png"><img src="<?=base_url()?>assets/img/testimonial/testi-img1.jpg" alt=""></div>
+                    <div class="testi-shape2"><img src="<?=base_url()?>assets/img/testimonial/testi_shape_1.png" alt=""></div>
+                    <div class="testi-img2"><img src="<?=base_url()?>assets/img/testimonial/testi-img2.jpg" alt=""></div>
+                    <div class="testi-shape"><img src="<?=base_url()?>assets/img/testimonial/testi_shape_2.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape-mockup z-index-3 d-none d-xl-block" data-bottom="0%" data-right="0%"><img src="<?=base_url()?>assets/img/shape/shape_21.png" alt="shape"></div>
 </section>
-
-<!-- BLogs -->
-<!-- <section class="bg-smoke overflow-hidden space overflow-hidden" id="blog-sec">
-	<div class="container">
-		<div class="mb-30 text-center text-md-start">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-md-7">
-					<div class="title-area mb-md-0">
-						<span class="sub-title">About Us Restaurant</span>
-						<h2 class="sec-title">News & Articles From Anaadi Tours and Travels</h2>
-					</div>
-				</div>
-				<div class="col-md-auto"><a href="blog.html" class="th-btn style4 th-icon">See More Articles</a></div>
-			</div>
-		</div>
-		<div class="slider-area">
-			<div class="swiper th-slider has-shadow" id="blogSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
-							<div class="blog-box_content">
-								<div class="blog-meta"><a class="author" href="blog.html">July 05 2024</a> <a href="blog.html">6 min read</a></div>
-								<h3 class="box-title"><a href="blog-details.html">10 Reason why you should visit New Jersy</a></h3>
-								<a href="blog-details.html" class="th-btn style4 th-icon">Read More</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
-							<div class="blog-box_content">
-								<div class="blog-meta"><a class="author" href="blog.html">July 06 2024</a> <a href="blog.html">7 min read</a></div>
-								<h3 class="box-title"><a href="blog-details.html">The best time to visit japan & enjoy the cherry blossoms</a></h3>
-								<a href="blog-details.html" class="th-btn style4 th-icon">Read More</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
-							<div class="blog-box_content">
-								<div class="blog-meta"><a class="author" href="blog.html">July 07 2024</a> <a href="blog.html">8 min read</a></div>
-								<h3 class="box-title"><a href="blog-details.html">The 7 amazing destinations for adventure seekers</a></h3>
-								<a href="blog-details.html" class="th-btn style4 th-icon">Read More</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
-							<div class="blog-box_content">
-								<div class="blog-meta"><a class="author" href="blog.html">July 09 2024</a> <a href="blog.html">9 min read</a></div>
-								<h3 class="box-title"><a href="blog-details.html">10 Reason why you should visit New Jersy</a></h3>
-								<a href="blog-details.html" class="th-btn style4 th-icon">Read More</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
-							<div class="blog-box_content">
-								<div class="blog-meta"><a class="author" href="blog.html">July 10 2024</a> <a href="blog.html">10 min read</a></div>
-								<h3 class="box-title"><a href="blog-details.html">The best time to visit japan & enjoy the cherry blossoms</a></h3>
-								<a href="blog-details.html" class="th-btn style4 th-icon">Read More</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="blog-box th-ani">
-							<div class="blog-img global-img"><img src="<?=base_url()?>assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
-							<div class="blog-box_content">
-								<div class="blog-meta"><a class="author" href="blog.html">July 12 2024</a> <a href="blog.html">11 min read</a></div>
-								<h3 class="box-title"><a href="blog-details.html">The 7 amazing destinations for adventure seekers</a></h3>
-								<a href="blog-details.html" class="th-btn style4 th-icon">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="shape-mockup shape1 d-none d-xxl-block" data-bottom="20%" data-left="-17%"><img src="<?=base_url()?>assets/img/shape/shape_1.png" alt="shape"></div>
-		<div class="shape-mockup shape2 d-none d-xl-block" data-bottom="5%" data-left="-17%"><img src="<?=base_url()?>assets/img/shape/shape_2.png" alt="shape"></div>
-		<div class="shape-mockup shape3 d-none d-xxl-block" data-bottom="12%" data-left="-10%"><img src="<?=base_url()?>assets/img/shape/shape_3.png" alt="shape"></div>
-	</div>
-</section> -->
